@@ -12,7 +12,17 @@ function pesquisarUsuario($conexão, $idusuario) {}
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-function salvarCliente($conexão, $cpf, $endereço, $pontos) {}
+function salvarCliente($conexão, $cpf, $endereço, $pontos) {
+    $sql = "INSERT INTO tb_cliente (cpf, endereco, pontos) VALUES (?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ssd', $cpf, $endereco, $pontos);
+    
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+}
 
 function listarClientes($conexao,) {}
 
