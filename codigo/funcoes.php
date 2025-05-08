@@ -11,8 +11,21 @@ function salvarUsuario($conexão, $nome, $email, $senha, $tipo) {
     mysqli_stmt_close($comando);
 }
 
-function listarUsuario($conexão) {}
+function listarUsuario($conexão) {
+    $sql = "SELECT * FROM tb_usuario";
+    $comando = mysqli_prepare($conexao, $sql);
 
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+
+    $lista_usuario = [];
+    while ($cliente = mysqli_fetch_assoc($resultados)) {
+        $lista_usuario[] = $usuario;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_usuario;
+}
 function editarUsuario($nome, $email, $senha, $tipo, $id) {}
 
 function deletarUsuario($conexao, $idusuario) {}
