@@ -1,85 +1,100 @@
 <?php
 
-function salvarUsuario($conexão, $nome, $email, $senha) {}
+function salvarUsuario($conexão, $nome, $email, $senha, $tipo) {}
 
 function listarUsuario($conexão) {}
 
-function editarUsuario($nome, $email, $senha) {}
+function editarUsuario($nome, $email, $senha, $tipo, $id) {}
 
-function deletarUsuario($conexao) {}
+function deletarUsuario($conexao, $idusuario) {}
 
-function pesquisarUsuario($conexão) {}
+function pesquisarUsuario($conexão, $idusuario) {}
 
-function salvarCliente($conexão, $nome, $cpf, $endereço) {}
+////////////////////////////////////////////////////////////////////////////////////
+
+function salvarCliente($conexão, $cpf, $endereço, $pontos) {}
 
 function listarClientes($conexao,) {}
 
-function editarCliente($conexao, $nome, $cpf, $endereco, $idcliente) {}
+function editarCliente($conexao, $cpf, $endereco, $idcliente) {}
 
 function deletarCliente($conexao, $idcliente){}
 
 function pesquisarClienteId($conexao, $idcliente) {}
 
+///////////////////////////////////////////////////////////////////////////////////
+
 function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura) {}
 
 function listarProduto($conexao) {}
 
-function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idProduto) {}
+function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto) {}
 
 function deletarProduto($conexao, $idproduto) {}
 
 function pesquisarProdutoId($conexao, $idproduto) {}
 
-//function salvarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entraga, $data, $nota_atedente,) {}
+///////////////////////////////////////////////////////////////////////////////////
+
+function salvarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entraga, $data, $nota_atedente) {}
 
 function listarPedidio ($conexao, $idpedido) {}
 
-function editarPedido($conexao, $nome, $cpf, $endereco, $id) {}
+function editarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entraga, $data, $nota_atedente, $idpedido) {}
 
 function deletarPedidio($conexao, $idpedido) {}
 
 function pesquisarPedidoId($conexao, $idpedido) {}
+///////////////////////////////////////////////////////////////////////////////////
 
-function salvarPagamento($conexao,$forma_p, data , $valor_total) {}
+function salvarPagamento($conexao,$forma_p, $data , $valor_total) {}
 
-function listaPagamento($conexao) {}
+function listaPagamento($conexao, $idpagamento) {}
 
-function editarPagamento($conexao, ) {}
-
-function editarPagamento($conexao, ) {}
+function editarPagamento($conexao,$forma_p, $data , $valor_total, $idpagamento) {}
 
 function deletarPagamento($conexao, $idcliente) {}
 
 function pesquisarPagamentoId($conexao, $idcliente) {}
 
-function salvarAtendente($conexao, $idade, $nome, $cpf, $endereco) {}
+///////////////////////////////////////////////////////////////////////////////////
 
-function listarAtendente($conexao) {}
 
-function editarAtendente($conexao,) {}
+function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao) {}
 
-function deletarAtentende($conexao, $nome , $tamanho, $complemento_g , $complemento_p , $idproduto) {}
+function listarAtendente($conexao, $idatendente) {}
 
-function pesquisarAtentendeId($conexao, $idproduto) {}
+function editarAtendente($conexao, $nome , $tamanho, $complemento_g , $complemento_p , $idatendente) {}
 
-function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido) {}
+function deletarAtentende($conexao, $nome , $tamanho, $complemento_g , $complemento_p , $idatendente) {}
 
-function listarEntrega($conexao) {}
+function pesquisarAtentendeId($conexao, $idatendente) {}
 
-function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $identrega) {}
+///////////////////////////////////////////////////////////////////////////////////
+
+
+function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega) {}
+
+function listarEntrega($conexao, $identrega) {}
+
+function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega, $identrega) {}
 
 function deletarEntrega($conexao, $identrega) {}
 
 function pesquisarEntregaId($conexao, $identrega) {}
 
-function salvarAvaliacao($conexao, $nome, $cpf, $endereco) {}
+///////////////////////////////////////////////////////////////////////////////////
 
-function listarAvaliacao($conexao) {}
 
-function editarAvaliacao($conexao, $nome, $cpf, $endereco, $id) {}
+//function salvarAvaliacao($conexao, $nome, $cpf, $endereco) {}
 
-function deletarAvaliacao($conexao, $idcliente) {}
+//function listarAvaliacao($conexao) {}
 
-function pesquisarAvaliacaoId($conexao, $idcliente) {}
+//function editarAvaliacao($conexao, $nome, $cpf, $endereco, $id) {}
 
+//function deletarAvaliacao($conexao, $idcliente) {}
+
+//function pesquisarAvaliacaoId($conexao, $idcliente) {}
+ 
+// A TABELA DE ENDEREÇO PEÇO AO SENHOR PARA AJUDAR NOIS, POIS TEM DUAS LIGAÇÕES NELA.
 ?>
