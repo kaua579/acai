@@ -7,5 +7,5 @@
     $senha = "123";
     $tipo = "Cliente"
 
-    salvarUsuario($conexao, $nome, $email, $senha , $Tipo);
+    salvarUsuario($conexao, $nome, $email, $senha , $tipo);
 ?>
