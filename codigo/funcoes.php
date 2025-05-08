@@ -1,6 +1,15 @@
 <?php
 
-function salvarUsuario($conexão, $nome, $email, $senha, $tipo) {}
+function salvarUsuario($conexão, $nome, $email, $senha, $tipo) {
+    $sql = "INSERT INTO tb_usuario (nome, email, senha, tipo) VALUES (?, ?, ? ,?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ssss', $nome, $email , $senha , $tipo);
+    
+    mysqli_stmt_execute($comando);
+    
+    mysqli_stmt_close($comando);
+}
 
 function listarUsuario($conexão) {}
 
