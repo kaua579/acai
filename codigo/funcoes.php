@@ -26,12 +26,48 @@ function listarUsuario($conexão) {
 
     return $lista_usuario;
 }
-function editarUsuario($nome, $email, $senha, $tipo, $id) {}
 
-function deletarUsuario($conexao, $idusuario) {}
+function editarUsuario($conexao, $nome, $email, $senha, $tipo, $id) {
 
-function pesquisarUsuario($conexão, $idusuario) {}
+    $sql = "UPDATE tb_usuario SET nome=?, email=?, senha=?, tipo=? WHERE idusuario=?";
+    $comando = mysqli_prepare($conexao, $sql);
+     mysqli_stmt_bind_param($comando, 'ssss', $nome, $email, $senha, $tipo, $id);
+    
+}
 
+
+function deletarUsuario($conexao, $idusuario) {
+
+    $sql = "DELETE FROM tb_usuario WHERE idusuario = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'i', $idusuario);
+ 
+    $funcionou = mysqli_stmt_execute($comando);
+     
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+    
+}
+
+function pesquisarUsuario($conexão, $idusuario)  {
+    $sql = "SELECT * FROM tb_usuario WHERE idusuario = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idusuario);
+
+    mysqli_stmt_execute($comando);
+
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $cliente = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+
+    return $usuario;
+}
+    
 ////////////////////////////////////////////////////////////////////////////////////
 
 function salvarCliente($conexão, $cpf, $endereço, $pontos) {
