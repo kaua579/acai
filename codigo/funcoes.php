@@ -1,5 +1,5 @@
 <?php
-
+// usuario
 function salvarUsuario($conexão, $nome, $email, $senha, $tipo) {
     $sql = "INSERT INTO tb_usuario (nome, email, senha, tipo) VALUES (?, ?, ? ,?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -70,6 +70,7 @@ function pesquisarUsuario($conexão, $idusuario)  {
     
 ////////////////////////////////////////////////////////////////////////////////////
 
+// cliente
 function salvarCliente($conexão, $cpf, $endereço, $pontos) {
     $sql = "INSERT INTO tb_cliente (cpf, endereco, pontos) VALUES (?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -138,6 +139,7 @@ function pesquisarClienteId($conexao, $idcliente) {
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+// produto
 function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura) {}
 
 function listarProduto($conexao) {}
@@ -150,6 +152,7 @@ function pesquisarProdutoId($conexao, $idproduto) {}
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+// pedido
 function salvarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entraga, $data, $nota_atedente) {}
 
 function listarPedidio ($conexao, $idpedido) {}
@@ -161,6 +164,7 @@ function deletarPedidio($conexao, $idpedido) {}
 function pesquisarPedidoId($conexao, $idpedido) {}
 ///////////////////////////////////////////////////////////////////////////////////
 
+// pagamento
 function salvarPagamento($conexao,$forma_p, $data , $valor_total) {}
 
 function listaPagamento($conexao, $idpagamento) {}
@@ -173,7 +177,7 @@ function pesquisarPagamentoId($conexao, $idcliente) {}
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-
+// atendente
 function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao) {}
 
 function listarAtendente($conexao, $idatendente) {}
@@ -186,7 +190,7 @@ function pesquisarAtentendeId($conexao, $idatendente) {}
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-
+// entrega
 function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega) {}
 
 function listarEntrega($conexao, $identrega) {}
