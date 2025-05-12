@@ -140,15 +140,69 @@ function pesquisarClienteId($conexao, $idcliente) {
 ///////////////////////////////////////////////////////////////////////////////////
 
 // produto
-function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura) {}
+function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura){
+    $sql = "INSERT INTO tb_produto (nome, tamanho, complemento_g, complemento_p, cobertura) VALUES (?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sisss', $nome, $tipo, $preco_compra, $preco_venda, $margem_lucro, $quantidade);
+    
+    mysqli_stmt_execute($comando);
+    
+    mysqli_stmt_close($comando);
+}
 
-function listarProduto($conexao) {}
+function listarProduto($conexao) {
+    $sql = "SELECT * FROM tb_produto";
+    $comando = mysqli_prepare($conexao, $sql);
 
-function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto) {}
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
 
-function deletarProduto($conexao, $idproduto) {}
+    $lista_produto = [];
+    while ($produto = mysqli_fetch_assoc($resultados)) {
+        $lista_produto[] = $produto;
+    }
+    mysqli_stmt_close($comando);
 
-function pesquisarProdutoId($conexao, $idproduto) {}
+    return $lista_produto;
+}
+
+
+function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto) {
+    $sql = "UPDATE tb_produto SET nome=?, tamanho=?, complemento_g=?, complemento_p=?, cobertura=? WHERE idproduto=?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'ssdddii', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto);
+
+
+function deletarProduto($conexao, $idproduto) {
+    $sql = "DELETE FROM tb_produto WHERE idproduto = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'i', $idproduto);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    
+    mysqli_stmt_close(statement: $comando);
+    
+    return $funcionou;
+
+function pesquisarProdutoId($conexao, $idproduto) {
+    $sql = "SELECT * FROM tb_produto WHERE idproduto = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idproduto);
+
+    mysqli_stmt_execute($comando);
+
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $produto = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+
+    return $produto;
+}    
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -162,6 +216,7 @@ function editarPedido($conexao, $observacao,$horario_inicio,$horario_final,$stat
 function deletarPedidio($conexao, $idpedido) {}
 
 function pesquisarPedidoId($conexao, $idpedido) {}
+
 ///////////////////////////////////////////////////////////////////////////////////
 
 // pagamento
