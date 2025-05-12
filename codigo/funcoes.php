@@ -98,7 +98,16 @@ function listarClientes($conexao,) {
     return $lista_clientes;
 }
 
-function editarCliente($conexao, $cpf, $endereco, $idcliente) {}
+function editarCliente($conexao, $cpf, $endereco, $idcliente) {
+    $sql = "UPDATE tb_cliente SET cpf=?, endereco=? WHERE idcliente=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ssi', $cpf, $endereco, $id);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;    
+}
 
 function deletarCliente($conexao, $idcliente){}
 
