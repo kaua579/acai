@@ -153,11 +153,44 @@ function pesquisarProdutoId($conexao, $idproduto) {}
 ///////////////////////////////////////////////////////////////////////////////////
 
 // pedido
-function salvarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entraga, $data, $nota_atedente) {}
+function salvarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entraga, $data, $nota_atedente) {
+    $sql = "INSERT INTO tb_pedido (observacao, horario_inicio, horario_final, status, valor_p, taxa_entraga, data, nota_atedente) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sttsddsd',$observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entraga, $data, $nota_atedente);
+    
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+}
 
-function listarPedidio ($conexao, $idpedido) {}
+function listarPedido ($conexao, $idpedido) {
+    $sql = "SELECT * FROM tb_pedido";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+    
+    $lista_pedido = [];
+    while ($pedido = mysqli_fetch_assoc($resultados)) {
+        $lista_pedido[] = $pedido;
+    }
+    mysqli_stmt_close($comando);
 
-function editarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entraga, $data, $nota_atedente, $idpedido) {}
+    return $lista_pedido;
+}
+
+function editarPedido($conexao, $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entrega, $data, $nota_atedente, $idpedido) {
+    $sql = "UPDATE tb_cliente SET observacao=?, horario_inicio=?, horario_final=?, status=?, valor_p=?, taxa_entrega=?, data=?, nota_atendente=? WHERE idpedido=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sttsddsdi',  $observacao,$horario_inicio,$horario_final,$status,$valor_p, $taxa_entrega, $data, $nota_atedente, $idpedido);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;    
+}
 
 function deletarPedidio($conexao, $idpedido) {}
 
