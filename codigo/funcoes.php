@@ -186,6 +186,7 @@ function deletarProduto($conexao, $idproduto) {
     mysqli_stmt_close(statement: $comando);
     
     return $funcionou;
+}
 
 function pesquisarProdutoId($conexao, $idproduto) {
     $sql = "SELECT * FROM tb_produto WHERE idproduto = ?";
@@ -246,9 +247,32 @@ function editarPedido($conexao, $observacao,$horario_inicio,$horario_final,$stat
     return $funcionou;    
 }
 
-function deletarPedidio($conexao, $idpedido) {}
+function deletarPedidio($conexao, $idpedido) {
+    $sql = "DELETE FROM tb_pedido WHERE idpedido = ?";
+    $comando = mysqli_prepare($conexao, $sql);
 
-function pesquisarPedidoId($conexao, $idpedido) {}
+    mysqli_stmt_bind_param($comando, 'i', $id);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+
+    return $funcionou;
+}
+
+function pesquisarPedidoId($conexao, $idpedido) {
+    $sql = "SELECT * FROM tb_pedido WHERE idpedido = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idproduto);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $pedido = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $pedido;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -266,15 +290,71 @@ function pesquisarPagamentoId($conexao, $idcliente) {}
 ///////////////////////////////////////////////////////////////////////////////////
 
 // atendente
-function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao) {}
+function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao) {
+    $sql = "INSERT INTO tb_atendente (idade, horario_chegada, horario_saida, descricao) VALUES (?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'stts', $idade, $horario_chegada, $horario_saida, $descricao);
+    
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+}
 
-function listarAtendente($conexao, $idatendente) {}
+function listarAtendente($conexao, $idatendente) {
+    $sql = "SELECT * FROM tb_atendente";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+    
+    $lista_atendentes = [];
+    while ($atendente = mysqli_fetch_assoc($resultados)) {
+        $lista_atendentes[] = $atendente;
+    }
+    mysqli_stmt_close($comando);
 
-function editarAtendente($conexao, $nome , $tamanho, $complemento_g , $complemento_p , $idatendente) {}
+    return $lista_atendentes;
+}
 
-function deletarAtentende($conexao, $nome , $tamanho, $complemento_g , $complemento_p , $idatendente) {}
+function editarAtendente($conexao, $nome , $tamanho, $complemento_g , $complemento_p , $idatendente) {
+    $sql = "UPDATE tb_atendente SET nome=?, tamanho=?,  complemento_g=?, complemento_p=?,  idatendente=?,  WHERE idatendente=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ssssi', $nome , $tamanho, $complemento_g , $complemento_p , $idatendente);
+    $funcionou = mysqli_stmt_execute($comando);
 
-function pesquisarAtentendeId($conexao, $idatendente) {}
+    mysqli_stmt_close($comando);
+    return $funcionou;    
+}
+
+function deletarAtentende($conexao, $nome , $tamanho, $complemento_g , $complemento_p , $idatendente) {
+    $sql = "DELETE FROM tb_atendente WHERE idatendente = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'i', $idatendente);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+}
+
+function pesquisarAtentendeId($conexao, $idatendente) {
+    $sql = "SELECT * FROM tb_atendente WHERE idatendente = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idatendente);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $atendente = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $atendente;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////
 
