@@ -359,15 +359,71 @@ function pesquisarAtentendeId($conexao, $idatendente) {
 ///////////////////////////////////////////////////////////////////////////////////
 
 // entrega
-function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega) {}
+function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega) {
+     $sql = "INSERT INTO tb_entrega (data_entrega, horario_entrega, localizacao, idpedido, nota_entrega) VALUES (?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sssis', $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega);
+    
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+}
 
-function listarEntrega($conexao, $identrega) {}
+function listarEntrega($conexao, $identrega) {
+    $sql = "SELECT * FROM tb_entrega";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+    
+    $lista_entregas = [];
+    while ($entrega = mysqli_fetch_assoc($resultados)) {
+        $lista_entregas[] = $entrega;
+    }
+    mysqli_stmt_close($comando);
 
-function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega, $identrega) {}
+    return $lista_entregas;
+}
 
-function deletarEntrega($conexao, $identrega) {}
+function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega, $identrega) {
+    $sql = "UPDATE tb_entrega SET data_entrega=?, horario_entrega=?,  localização=?, idpedido=?,  nota_entrega=?, identrega=?,  WHERE identrega=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sssisi', $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega, $identrega);
+    $funcionou = mysqli_stmt_execute($comando);
 
-function pesquisarEntregaId($conexao, $identrega) {}
+    mysqli_stmt_close($comando);
+    return $funcionou;    
+}
+
+function deletarEntrega($conexao, $identrega) {
+    $sql = "DELETE FROM tb_entrega WHERE identrega = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'i', $identrega);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+}
+
+function pesquisarEntregaId($conexao, $identrega) {
+    $sql = "SELECT * FROM tb_entrega WHERE identrega = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $identrega);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $entrega = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $entrega;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////
 
