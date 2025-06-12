@@ -4,7 +4,7 @@
 
     $cpf = "123.456.789-99";
     $endereco = "rua 1";
-    $pontos = "10";
+    $pontos = "12";
 
     salvarCliente($conexao, $cpf, $endereco, $pontos);
 ?>

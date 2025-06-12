@@ -290,7 +290,7 @@ function pesquisarPedidoId($conexao, $idpedido)
     $sql = "SELECT * FROM tb_pedido WHERE idpedido = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $idproduto);
+    mysqli_stmt_bind_param($comando, 'i', $idpedido);
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
