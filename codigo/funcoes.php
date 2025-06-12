@@ -113,7 +113,7 @@ function editarCliente($conexao, $cpf, $endereco, $idcliente)
     $sql = "UPDATE tb_cliente SET cpf=?, endereco=? WHERE idcliente=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssi', $cpf, $endereco, $id);
+    mysqli_stmt_bind_param($comando, 'ssi', $cpf, $endereco, $idcliente);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
