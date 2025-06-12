@@ -304,11 +304,37 @@ function pesquisarPedidoId($conexao, $idpedido)
 ///////////////////////////////////////////////////////////////////////////////////
 
 // pagamento
-function salvarPagamento($conexao, $forma_p, $data, $valor_total) {}
+function salvarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido) {
+    $sql = "INSERT INTO tb_pagamento (forma_p, data_pagamento, valor_total, tb_pedido_idpedido) VALUES (?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
 
-function listaPagamento($conexao, $idpagamento) {}
+    mysqli_stmt_bind_param($comando, 'ssdi', $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+
+    return $funcionou;
+}
+
+function listarPagamento($conexao) {
+
+    $sql = "SELECT * FROM tb_pagamento";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+
+    $lista_atendentes = [];
+    while ($pagamento = mysqli_fetch_assoc($resultados)) {
+        $lista_pagamento[] = $pagamento;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_pagamento; 
+}
 
 function editarPagamento($conexao, $forma_p, $data, $valor_total, $idpagamento) {}
+
 
 function deletarPagamento($conexao, $idcliente) {}
 
