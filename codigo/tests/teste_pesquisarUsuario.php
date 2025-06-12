@@ -5,7 +5,7 @@
     $idusuario = 1;
 
     echo "<pre>";
-    print_r(pesquisarUsuarioId($conexao, $idusuario));
+    print_r(pesquisarUsuario($conexao, $idusuario));
     echo "<pre>";
 
 ?>
