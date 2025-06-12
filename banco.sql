@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `acai`.`tb_usuario` (
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `senha` VARCHAR(80) NOT NULL,
-  `tipo` VARCHAR(50) NULL,
+  `tipo` VARCHAR(1) NULL,
   PRIMARY KEY (`idusuario`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
 ENGINE = InnoDB;
