@@ -208,3 +208,86 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+--------------- INSERTS ------------------
+
+--------------- TB USUARIO ---------------
+INSERT INTO tb_usuario (idusuario, nome, email, senha, tipo)
+VALUES 
+(1, 'Ana Silva', 'ana.silva@email.com', '123', 'C'),
+(2, 'Carlos Souza', 'carlos.souza@email.com', '156', 'A'),
+(3, 'Marina Lima', 'marina.lima@email.com', '123', 'C'),
+(4, 'João Mendes', 'joao.mendes@email.com', '789', 'A'),
+(5, 'Luciana Costa', 'luciana.costa@email.com', '3467', 'C');
+
+
+--------------- TB ATENDENTE ---------------
+INSERT INTO tb_atendente (idatendente, idade, horario_chegada, horario_saida, descricao, tb_usuario_idusuario)
+VALUES
+(1, '25', '08:00:00', '16:00:00', 'Atendente com experiência em atendimento ao cliente.', 1),
+(2, '30', '09:00:00', '17:00:00', 'Especialista em pedidos e organização de entregas.', 2),
+(3, '28', '10:00:00', '18:00:00', 'Responsável por suporte técnico aos clientes.', 3),
+(4, '35', '07:00:00', '15:00:00', 'Supervisor da equipe de atendimento.', 4),
+(5, '22', '11:00:00', '19:00:00', 'Novo atendente em treinamento.', 5);
+
+--------------- TB CLIENTE ---------------
+INSERT INTO tb_cliente (idcliente, cpf, endereco, pontos, tb_usuario_idusuario)
+VALUES
+(1, '123.456.789-00', 'Rua das Flores, 100', 120, 1),
+(2, '987.654.321-00', 'Av. Brasil, 200', 90, 3),
+(3, '111.222.333-44', 'Rua A, 50', 45, 2),
+(4, '555.666.777-88', 'Rua B, 77', 60, 4),
+(5, '999.888.777-66', 'Travessa Central, 10', 150, 5);
+
+
+--------------- TB ENDERECO ---------------
+INSERT INTO tb_endereco (idendereco, endereco, bairro, cidade, tb_cliente_idcliente)
+VALUES
+(1, 'Rua das Flores, 100', 'Jardim Primavera', 'São Paulo', 1),
+(2, 'Av. Brasil, 200', 'Centro', 'Rio de Janeiro', 2),
+(3, 'Rua A, 50', 'Bela Vista', 'Belo Horizonte', 3),
+(4, 'Rua B, 77', 'Santa Cecília', 'Porto Alegre', 4),
+(5, 'Travessa Central, 10', 'Vila Nova', 'Curitiba', 5);
+
+
+--------------- TB PEDIDO ---------------
+INSERT INTO tb_pedido (
+  idpedido, observacao, horario_inicio, horario_final, status, valor_p, taxa_entrega, data,
+  nota_atendente, tb_endereco_idendereco, tb_atendente_idatendente, tb_cliente_idcliente
+)
+VALUES
+(1, 'Sem cebola', '12:00:00', '12:45:00', 'Entregue', 45.50, 5, '2025-06-01 12:00:00', 4.5, 1, 1, 1),
+(2, 'Entrega no portão', '13:15:00', '14:00:00', 'Entregue', 32.00, 4, '2025-06-02 13:15:00', 5.0, 2, 2, 2),
+(3, 'Cliente pediu sem gelo', '11:30:00', '12:10:00', 'Entregue', 28.90, 3, '2025-06-03 11:30:00', 4.0, 3, 3, 3),
+(4, 'Troco para 100', '18:00:00', '18:50:00', 'Saiu para entrega', 60.75, 6, '2025-06-04 18:00:00', 3.5, 4, 4, 4),
+(5, 'Entrega rápida', '10:20:00', '11:00:00', 'Entregue', 25.00, 2, '2025-06-05 10:20:00', 4.8, 5, 5, 5);
+
+
+--------------- TB PRODUTO ---------------
+INSERT INTO tb_produto (idproduto, nome, tamanho, complemento_g,complemento_p, cobertura)
+VALUES
+(1, 'Açai', '200 ml, avelã, morango, whey','chocolate','amendoin'),
+(2, 'Açai', '200 ml, avelã, morango, whey','chocolate','amendoin'),
+(3, 'Açai', '200 ml, avelã, morango, whey','chocolate','amendoin'),
+(4, 'Açai', '200 ml, avelã, morango, whey','chocolate','amendoin'),
+(5, 'Açai', '200 ml, avelã, morango, whey','chocolate','amendoin');
+
+
+--------------- TB PAGAMENTO ---------------
+INSERT INTO tb_pagamento (idpagamento, forma_p, data_pagamento, valor_total, tb_pedido_idpedido)
+VALUES
+(1, 'Cartão de Crédito', '2025-06-11 12:00:00', 'Aprovado', 10.00, 1),
+(2, 'Dinheiro', '2025-06-15 12:00:00', 'Pago', 100.0, 2),
+(3, 'Pix', '2025-06-01 12:00:00', 'Confirmado', 310.0, 3),
+(4, 'Cartão de Débito', '2025-08-01 12:00:00', 'Aprovado', 106.0, 4),
+(5, 'Cartão de Crédito', '2025-09-01 12:00:00', 'Aguardando', 104.0, 5);
+
+
+--------------- TB ENTREGA ---------------
+INSERT INTO tb_entrega (identrega, data_entrega, horario_entraga. localizacao,nota_entrega, tb_pedido_idpedido)
+VALUES
+(1, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 1),
+(2, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 2),
+(3, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 3),
+(4, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 4),
+(5, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 5);
