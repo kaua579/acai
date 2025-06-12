@@ -6,3 +6,4 @@ require_once "../funcoes.php";
 echo "<pre>";
 print_r(listarPedido($conexao));
 echo "</pre>";
+?>
