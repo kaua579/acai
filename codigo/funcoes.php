@@ -89,6 +89,7 @@ function salvarCliente($conexao, $cpf, $endereco, $pontos)
     mysqli_stmt_close($comando);
 
     return $funcionou;
+
 }
 
 function listarClientes($conexao,)
@@ -243,7 +244,7 @@ function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $s
     return $funcionou;
 }
 
-function listarPedido($conexao, $idpedido)
+function listarPedido($conexao,)
 {
     $sql = "SELECT * FROM tb_pedido";
     $comando = mysqli_prepare($conexao, $sql);
