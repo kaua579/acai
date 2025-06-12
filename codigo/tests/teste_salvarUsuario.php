@@ -5,7 +5,7 @@
     $nome = "Fulano";
     $email = "fulano@gmail.com";
     $senha = "9999";
-    $tipo = "Cliente";
+    $tipo = "C";
 
     salvarUsuario($conexao, $nome, $email, $senha , $tipo);
 ?>
