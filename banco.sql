@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `acai`.`tb_pedido` (
   `horario_inicio` TIME NOT NULL,
   `horario_final` TIME NOT NULL,
   `status` VARCHAR(45) NOT NULL,
-  ` valor_p` DECIMAL(10,2) NOT NULL,
+  `valor_p` DECIMAL(10,2) NOT NULL,
   `taxa_entrega` INT NOT NULL,
   `data` TIMESTAMP NULL,
   `nota_atendente` DECIMAL(2,1) NULL,
@@ -284,13 +284,15 @@ VALUES
 
 
 --------------- TB ENTREGA ---------------
-INSERT INTO tb_entrega (identrega, data_entrega, horario_entraga. localizacao,nota_entrega, tb_pedido_idpedido)
-VALUES
-(1, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 1),
-(2, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 2),
-(3, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 3),
-(4, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 4),
-(5, '2025-06-01', '12:00:00' 'sla, rua tal', 5.0, 5);
+INSERT INTO tb_entrega (
+  identrega, data_entrega, horario_entraga, localizacao, nota_entrega, tb_pedido_idpedido
+) VALUES 
+(1, '2025-06-01', '12:00:00', 'sla, rua tal', 5.0, 1), 
+(2, '2025-06-01', '12:00:00', 'sla, rua tal', 5.0, 2), 
+(3, '2025-06-01', '12:00:00', 'sla, rua tal', 5.0, 3), 
+(4, '2025-06-01', '12:00:00', 'sla, rua tal', 5.0, 4), 
+(5, '2025-06-01', '12:00:00', 'sla, rua tal', 5.0, 5);
+
 
 --------------- TB ITENS PEDIDO ---------------
 INSERT INTO tb_itens_pedido (tb_produto_idproduto, tb_pedido_idpedido)
