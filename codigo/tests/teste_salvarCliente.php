@@ -1,10 +1,9 @@
 <?php
-    require_once "../conexao.php";
-    require_once "../funcoes.php";
+require_once "../conexao.php";
+require_once "../funcoes.php";
 
-    $cpf = "123.456.789-99";
-    $endereco = "rua 1";
-    $pontos = "12";
+$cpf = "123.456.789-11";
+$endereco = "rua1";
+$pontos = "12";
 
-    salvarCliente($conexao, $cpf, $endereco, $pontos);
-?>
+salvarCliente($conexao, $cpf, $endereco, $pontos);

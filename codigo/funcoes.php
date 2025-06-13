@@ -38,7 +38,7 @@ function editarUsuario($conexao, $nome, $email, $senha, $tipo, $id)
     mysqli_stmt_bind_param($comando, 'ssssi', $nome, $email, $senha, $tipo, $id);
     $funcionou = mysqli_stmt_execute($comando);
 
-    
+
     mysqli_stmt_close($comando);
     return $funcionou;
 }
@@ -85,13 +85,10 @@ function salvarCliente($conexao, $cpf, $endereco, $pontos)
     $sql = "INSERT INTO tb_cliente (cpf, endereco, pontos) VALUES (?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssd', $cpf, $endereco, $pontos);
+    mysqli_stmt_bind_param($comando, 'sss', $cpf, $endereco, $pontos);
 
-    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
-
-    return $funcionou;
-
 }
 
 function listarClientes($conexao,)
@@ -129,7 +126,6 @@ function deletarCliente($conexao, $idcliente)
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'i', $idcliente);
-
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
 
@@ -307,7 +303,8 @@ function pesquisarPedidoId($conexao, $idpedido)
 ///////////////////////////////////////////////////////////////////////////////////
 
 // pagamento
-function salvarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido) {
+function salvarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido)
+{
     $sql = "INSERT INTO tb_pagamento (forma_p, data_pagamento, valor_total, tb_pedido_idpedido) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -319,7 +316,8 @@ function salvarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_
     return $funcionou;
 }
 
-function listarPagamento($conexao) {
+function listarPagamento($conexao)
+{
 
     $sql = "SELECT * FROM tb_pagamento";
     $comando = mysqli_prepare($conexao, $sql);
@@ -333,7 +331,7 @@ function listarPagamento($conexao) {
     }
     mysqli_stmt_close($comando);
 
-    return $lista_pagamento; 
+    return $lista_pagamento;
 }
 
 function editarPagamento($conexao, $forma_p, $data, $valor_total, $idpagamento) {}
