@@ -190,7 +190,7 @@ function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p
     $sql = "UPDATE tb_produto SET nome=?, tamanho=?, complemento_g=?, complemento_p=?, cobertura=? WHERE idproduto=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssdddii', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto);
+    mysqli_stmt_bind_param($comando, 'sssssi', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);

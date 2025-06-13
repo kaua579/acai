@@ -8,6 +8,7 @@
     $complemento_p = "paçoca";
     $cobertura = "chocolate trufado";
     $idproduto = 3;
+    
 
-    editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto)
+    editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto);
 ?>
