@@ -128,7 +128,7 @@ function deletarCliente($conexao, $idcliente)
     $sql = "DELETE FROM tb_cliente WHERE idcliente = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $idcliente);
+    mysqli_stmt_bind_param($comandotb_pagamento, 'i', $idcliente);
 
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -336,7 +336,17 @@ function listarPagamento($conexao) {
     return $lista_pagamento; 
 }
 
-function editarPagamento($conexao, $forma_p, $data, $valor_total, $idpagamento) {}
+function editarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $idpagamento){
+    $sql = "UPDATE tb_pagamento SET forma_p=?, data_pagamento=?,  valor_total=?, idpagamento=?,  WHERE idpagamen=?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'ssdi', $forma_p, $data_pagamento, $valor_total, $idpagamento);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;
+}
+
 
 
 function deletarPagamento($conexao, $idcliente) {}
