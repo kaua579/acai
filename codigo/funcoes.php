@@ -156,7 +156,7 @@ function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p
     $sql = "INSERT INTO tb_produto (nome, tamanho, complemento_g, complemento_p, cobertura) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sisss', $nome, $tipo, $preco_compra, $preco_venda, $margem_lucro, $quantidade);
+    mysqli_stmt_bind_param($comando, 'ssddds', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura);
 
     mysqli_stmt_execute($comando);
 
