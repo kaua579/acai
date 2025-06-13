@@ -231,15 +231,15 @@ function pesquisarProdutoId($conexao, $idproduto)
 // pedido
 function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entraga, $data, $nota_atedente)
 {
-    $sql = "INSERT INTO tb_pedido (observacao, horario_inicio, horario_final, status, valor_p, taxa_entraga, data, nota_atedente) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_produto (observacao, horario_inicio, horario_final, status, valor_p, taxa_entraga, data, nota_atedente) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sttsddsd', $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entraga, $data, $nota_atedente);
+    mysqli_stmt_bind_param($comando, 'sssssss', $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entraga, $data, $nota_atedente);
 
-    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_execute($comando);
+
     mysqli_stmt_close($comando);
-
-    return $funcionou;
+    
 }
 
 function listarPedido($conexao,)
