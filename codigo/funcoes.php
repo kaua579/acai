@@ -79,14 +79,15 @@ function pesquisarUsuario($conexao, $idusuario)
 ////////////////////////////////////////////////////////////////////////////////////
 
 // cliente feito
-function salvarCliente($conexao, $cpf, $endereco, $pontos)
+function salvarCliente($conexao, $cpf, $endereco, $pontos, $tb_usuario_idusuario)
 {
-    $sql = "INSERT INTO tb_cliente (cpf, endereco, pontos) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO tb_cliente (cpf, endereco, pontos, tb_usuario_idusuario) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sss', $cpf, $endereco, $pontos);
+    mysqli_stmt_bind_param($comando, 'ssii', $cpf, $endereco, $pontos, $tb_usuario_idusuario);
 
-    
+    mysqli_stmt_execute($comando);
+
     mysqli_stmt_close($comando);
 }
 
