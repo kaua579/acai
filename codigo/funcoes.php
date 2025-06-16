@@ -1,8 +1,7 @@
 <?php
-// usuario
-function salvarUsuario($conexao, $nome, $email, $senha, $tipo)
-{
-    $sql = "INSERT INTO tb_usuario (nome, email, senha, tipo) VALUES (?, ?, ? ,?)";
+// usuario feito
+function salvarUsuario($conexao, $nome, $email, $senha, $tipo){
+    $sql = "INSERT INTO tb_usuario (nome, email, senha, tipo) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'ssss', $nome, $email, $senha, $tipo);
@@ -302,7 +301,7 @@ function pesquisarPedidoId($conexao, $idpedido)
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-// pagamento
+// pagamento feito
 function salvarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido)
 {
     $sql = "INSERT INTO tb_pagamento (forma_p, data_pagamento, valor_total, tb_pedido_idpedido) VALUES (?, ?, ?, ?)";
@@ -334,13 +333,43 @@ function listarPagamento($conexao)
     return $lista_pagamento;
 }
 
-function editarPagamento($conexao, $forma_p, $data, $valor_total, $idpagamento) {}
+function editarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $idpagamento){
+    $sql = "UPDATE tb_pagamento SET forma_p=?, data_pagamento=?,  valor_total=?, idpagamento=?,  WHERE idpagamen=?";
+    $comando = mysqli_prepare($conexao, $sql);
 
+    mysqli_stmt_bind_param($comando, 'ssdi', $forma_p, $data_pagamento, $valor_total, $idpagamento);
+    $funcionou = mysqli_stmt_execute($comando);
 
-function deletarPagamento($conexao, $idcliente) {}
+    mysqli_stmt_close($comando);
+    return $funcionou;
+}
 
-function pesquisarPagamentoId($conexao, $idcliente) {}
+function deletarPagamento($conexao, $idpagamento){
+    $sql = "DELETE FROM tb_pagamento WHERE idpagamento = ?";
+    $comando = mysqli_prepare($conexao, $sql);
 
+    mysqli_stmt_bind_param($comando, 'i', $idpagamento);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+
+    return $funcionou;
+}
+
+function pesquisarPagamentoId($conexao, $idpagamento){
+    $sql = "SELECT * FROM tb_pagamento WHERE idpagamento = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idpagamento);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $pagar = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $pagar;
+}
 ///////////////////////////////////////////////////////////////////////////////////
 
 // atendente
