@@ -86,7 +86,7 @@ function salvarCliente($conexao, $cpf, $endereco, $pontos)
 
     mysqli_stmt_bind_param($comando, 'sss', $cpf, $endereco, $pontos);
 
-  
+    
     mysqli_stmt_close($comando);
 }
 
@@ -155,12 +155,13 @@ function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p
     $sql = "INSERT INTO tb_produto (nome, tamanho, complemento_g, complemento_p, cobertura) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssss', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura);
+    mysqli_stmt_bind_param($comando, 'sssss', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura );
 
     mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
 }
+
 
 function listarProduto($conexao)
 {
@@ -189,6 +190,7 @@ function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
+
     return $funcionou;
 }
 
