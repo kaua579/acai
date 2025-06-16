@@ -284,7 +284,7 @@ function deletarPedido($conexao, $idpedido) // feito
     return $funcionou;
 }
 
-function pesquisarPedidoId($conexao, $idpedido)
+function pesquisarPedidoId($conexao, $idpedido) // feito
 {
     $sql = "SELECT * FROM tb_pedido WHERE idpedido = ?";
     $comando = mysqli_prepare($conexao, $sql);
