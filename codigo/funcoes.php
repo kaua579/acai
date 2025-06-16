@@ -270,12 +270,13 @@ function editarPedido($conexao, $observacao, $horario_inicio, $horario_final, $s
     return $funcionou;
 }
 
-function deletarPedido($conexao, $idpedido)
+function deletarPedido($conexao, $idpedido) // feito
 {
     $sql = "DELETE FROM tb_pedido WHERE idpedido = ?";
+    
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $id);
+    mysqli_stmt_bind_param($comando, 'i', $idpedido);
 
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
