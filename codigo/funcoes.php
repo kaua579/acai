@@ -453,12 +453,12 @@ function pesquisarAtendenteId($conexao, $idatendente)
 ///////////////////////////////////////////////////////////////////////////////////
 
 // entrega
-function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega)
+function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $tb_pedido_idpedido, $nota_entrega)
 {
-    $sql = "INSERT INTO tb_entrega (data_entrega, horario_entrega, localizacao, idpedido, nota_entrega) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_entrega (data_entrega, horario_entrega, localizacao, nota_entrega, tb_pedido_idpedido) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssis', $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega);
+    mysqli_stmt_bind_param($comando, 'sssis', $data_entrega, $horario_entrega, $localizacao, $nota_entrega, $tb_pedido_idpedido);
 
      mysqli_stmt_execute($comando);
 
