@@ -285,7 +285,7 @@ VALUES
 
 --------------- TB ENTREGA ---------------
 INSERT INTO tb_entrega (
-  identrega, data_entrega, horario_entraga, localizacao, nota_entrega, tb_pedido_idpedido
+  identrega, data_entrega, horario_entrega, localizacao, nota_entrega, tb_pedido_idpedido
 ) VALUES 
 (1, '2025-06-01', '12:00:00', 'sla, rua tal', 5.0, 1), 
 (2, '2025-06-01', '12:00:00', 'sla, rua tal', 5.0, 2), 
