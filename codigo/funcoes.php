@@ -391,7 +391,7 @@ function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $de
     return $funcionou;
 }
 
-function listarAtendente($conexao, $idatendente)
+function listarAtendente($conexao)
 {
     $sql = "SELECT * FROM tb_atendente";
     $comando = mysqli_prepare($conexao, $sql);
@@ -408,24 +408,26 @@ function listarAtendente($conexao, $idatendente)
     return $lista_atendentes;
 }
 
-function editarAtendente($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $idatendente)
+function editarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
 {
-    $sql = "UPDATE tb_atendente SET nome=?, tamanho=?,  complemento_g=?, complemento_p=?,  idatendente=?,  WHERE idatendente=?";
+    $sql = "UPDATE tb_atendente SET idade=?, horario_chegada=?,  horario_saida=?, descricao=?  WHERE tb_usuario_idusuario=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssssi', $nome, $tamanho, $complemento_g, $complemento_p, $idatendente);
+    mysqli_stmt_bind_param($comando, 'ssssi', $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
     return $funcionou;
 }
 
-function deletarAtentende($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $idatendente)
+
+
+function deletarAtentende($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
 {
-    $sql = "DELETE FROM tb_atendente WHERE idatendente = ?";
+    $sql = "DELETE FROM tb_atendente WHERE tb_usuario_idusuario = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $idatendente);
+    mysqli_stmt_bind_param($comando, 'i', $tb_usuario_idusuario);
 
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -433,7 +435,7 @@ function deletarAtentende($conexao, $nome, $tamanho, $complemento_g, $complement
     return $funcionou;
 }
 
-function pesquisarAtentendeId($conexao, $idatendente)
+function pesquisarAtendenteId($conexao, $idatendente)
 {
     $sql = "SELECT * FROM tb_atendente WHERE idatendente = ?";
     $comando = mysqli_prepare($conexao, $sql);
