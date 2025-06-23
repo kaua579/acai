@@ -482,12 +482,12 @@ function listarEntregas($conexao,)
 }
 
 
-function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega, $identrega)
+function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $nota_entrega, $tb_pedido_idpedido, $identrega)
 {
-    $sql = "UPDATE tb_entrega SET data_entrega=?, horario_entrega=?,  localização=?, idpedido=?,  nota_entrega=?,  WHERE identrega=?";
+    $sql = "UPDATE tb_entrega SET data_entrega=?, horario_entrega=?,  localizacao=?,  nota_entrega=?, tb_pedido_idpedido=?  WHERE identrega=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssisi', $data_entrega, $horario_entrega, $localizacao, $idpedido, $nota_entrega, $identrega);
+    mysqli_stmt_bind_param($comando, 'sssisi', $data_entrega, $horario_entrega, $localizacao,  $nota_entrega, $tb_pedido_idpedido, $identrega);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
