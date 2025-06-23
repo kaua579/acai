@@ -108,18 +108,17 @@ function listarClientes($conexao,)
     return $lista_clientes;
 }
 
-function editarCliente($conexao, $cpf, $endereco, $idcliente, $tb_usuario_idusuario) // tem q fazer
+function editarCliente($conexao, $cpf, $endereco,$pontos, $idcliente, $tb_usuario_idusuario) // feito
 {
-    $sql = "UPDATE tb_cliente SET cpf=?, endereco=?, tb_usuario_idusuario=? WHERE idcliente=?";
+    $sql = "UPDATE tb_cliente SET cpf=?, endereco=?, pontos=?, tb_usuario_idusuario=? WHERE idcliente=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssii', $cpf, $endereco, $idcliente, $tb_usuario_idusuario);
+    mysqli_stmt_bind_param($comando, 'ssiii', $cpf, $endereco, $pontos, $idcliente, $tb_usuario_idusuario);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
     return $funcionou;
 }
-
 function deletarCliente($conexao, $idcliente)
 {
     $sql = "DELETE FROM tb_cliente WHERE idcliente = ?";
