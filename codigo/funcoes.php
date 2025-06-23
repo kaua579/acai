@@ -379,7 +379,7 @@ function pesquisarPagamentoId($conexao, $idpagamento){
 // atendente
 function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
 {
-    $sql = "INSERT INTO tb_atendente (idade, horario_chegada, horario_saida, descricao) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_atendente (idade, horario_chegada, horario_saida, descricao, tb_usuario_idusuario) VALUES (?, ?, ?, ?, ?)";
     
     $comando = mysqli_prepare($conexao, $sql);
 
