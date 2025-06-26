@@ -465,7 +465,7 @@ function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, 
     mysqli_stmt_close($comando);
 }
 
-function listarEntregas($conexao,)
+function listarEntregas($conexao)
 {
     $sql = "SELECT * FROM tb_entrega";
     $comando = mysqli_prepare($conexao, $sql);
@@ -525,16 +525,16 @@ function pesquisarEntregaid($conexao, $identrega)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
+// avaliação atendente
 
+function avaliarAtendente($conexao, $nota_atedente, $idpedido)
+{
+ $sql = "UPDATE tb_pedido SET nota_atedente=? WHERE  idpedido=?" ;
+    $comando = mysqli_prepare($conexao, $sql);
 
-//function salvarAvaliacao($conexao, $nome, $cpf, $endereco) {}
+    mysqli_stmt_bind_param($comando, 'di', $nota_atedente, $idpedido);
+    $funcionou = mysqli_stmt_execute($comando);
 
-//function listarAvaliacao($conexao) {}
-
-//function editarAvaliacao($conexao, $nome, $cpf, $endereco, $id) {}
-
-//function deletarAvaliacao($conexao, $idcliente) {}
-
-//function pesquisarAvaliacaoId($conexao, $idcliente) {}
-
-// A TABELA DE ENDEREÇO PEÇO AO SENHOR PARA AJUDAR NOIS, POIS TEM DUAS LIGAÇÕES NELA.
+    mysqli_stmt_close($comando);
+    return $funcionou;
+}
