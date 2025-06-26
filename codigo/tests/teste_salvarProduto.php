@@ -2,12 +2,12 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $nome = "Sabonete";
-    $tamanho = 200;
-    $complemento_g = "nosaa";
-    $complemento_p = "paçoca";
-    $cobertura = "chocate ";
-    
+    $nome = "Sabon";
+    $tamanho = 20;
+    $complemento_g = "nos";
+    $complemento_p = "paço";
+    $cobertura = "chocat";
+
 
     salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura )
 

@@ -4,6 +4,6 @@
 
 
     echo "<pre>";
-    print_r(listarEntregas($conexao));
+    print_r(listarEntrega($conexao));
     echo "</pre>";
 ?>

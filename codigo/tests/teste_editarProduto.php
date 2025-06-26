@@ -4,9 +4,9 @@
 
     $nome = "Sabone";
     $tamanho = 500;
-    $complemento_g = "nozz";
-    $complemento_p = "paçoca";
-    $cobertura = "chocolate trufado";
+    $complemento_g = "noz";
+    $complemento_p = "paço";
+    $cobertura = "chocolate ";
     $idproduto = 4;
     
 

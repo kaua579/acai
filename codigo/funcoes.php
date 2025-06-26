@@ -337,7 +337,7 @@ function listarPagamento($conexao)
 }
 
 function editarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $idpagamento){
-    $sql = "UPDATE tb_pagamento SET forma_p=?, data_pagamento=?,  valor_total=?, idpagamento=?,  WHERE idpagamen=?";
+    $sql = "UPDATE tb_pagamento SET forma_p=?, data_pagamento=?,  valor_total=?, idpagamento=?,  WHERE idpagament=?";
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'ssdi', $forma_p, $data_pagamento, $valor_total, $idpagamento);
@@ -421,18 +421,19 @@ function editarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $de
 
 
 
-function deletarAtentende($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
+function deletarAtendente($conexao, $idatendente)
 {
-    $sql = "DELETE FROM tb_atendente WHERE tb_usuario_idusuario = ?";
+    $sql = "DELETE FROM tb_atendente WHERE idatendente = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $tb_usuario_idusuario);
+    mysqli_stmt_bind_param($comando, 'i', $idatendente);
 
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
 
     return $funcionou;
 }
+
 
 function pesquisarAtendenteId($conexao, $idatendente)
 {
@@ -453,19 +454,19 @@ function pesquisarAtendenteId($conexao, $idatendente)
 ///////////////////////////////////////////////////////////////////////////////////
 
 // entrega
-function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $tb_pedido_idpedido, $nota_entrega)
+function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $nota_entrega, $tb_pedido_idpedido)
 {
-    $sql = "INSERT INTO tb_entrega (data_entrega, horario_entrega, localizacao, nota_entrega, tb_pedido_idpedido) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_entrega  (data_entrega, horario_entrega, localizacao, nota_entrega, tb_pedido_idpedido) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssis', $data_entrega, $horario_entrega, $localizacao, $nota_entrega, $tb_pedido_idpedido);
+    mysqli_stmt_bind_param($comando, 'ssssi', $data_entrega, $horario_entrega, $localizacao, $nota_entrega, $tb_pedido_idpedido);
 
-     mysqli_stmt_execute($comando);
+    mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
 }
 
-function listarEntregas($conexao,)
+function listarEntrega($conexao)
 {
     $sql = "SELECT * FROM tb_entrega";
     $comando = mysqli_prepare($conexao, $sql);

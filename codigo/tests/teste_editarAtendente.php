@@ -5,7 +5,7 @@
     $idade = "15";
     $horario_chegada = "12:12";
     $horario_saida = "12:30";
-    $descricao = "o cara estranho";
+    $descricao = "o cara esquisito";
     $tb_usuario_idusuario =  3; 
 
     editarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao, $tb_usuario_idusuario);
