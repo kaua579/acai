@@ -2,7 +2,7 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $idusuario = 2;
+    $idusuario = 6;
 
     echo "<pre>";
     print_r(pesquisarUsuario($conexao, $idusuario));

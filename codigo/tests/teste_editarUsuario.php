@@ -4,7 +4,7 @@
     
     $nome = "lara" ;
     $email = "lara@gmail";
-    $senha = "321";
+    $senha = "12345";
     $tipo = "c";
     $id = 6 ;
         
