@@ -2,9 +2,9 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $nota_atedente = 2;
+    $nota_atendente = 1;
     $idpedido = 1;
  
 
-    avaliarAtendente($conexao, $nota_atedente, $idpedido);
+    avaliarAtendente($conexao, $nota_atendente, $idpedido);
 ?>
