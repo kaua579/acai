@@ -336,11 +336,17 @@ function listarPagamento($conexao)
     return $lista_pagamento;
 }
 
-function editarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $idpagamento){
-    $sql = "UPDATE tb_pagamento SET forma_p=?, data_pagamento=?,  valor_total=?, idpagamento=?,  WHERE idpagament=?";
+    //$sql = "UPDATE tb_cliente SET cpf=?, endereco=?, pontos=?, tb_usuario_idusuario=? WHERE idcliente=?";
+    //$comando = mysqli_prepare($conexao, $sql);
+
+   // mysqli_stmt_bind_param($comando, 'ssiii', $cpf, $endereco, $pontos, $idcliente, $tb_usuario_idusuario);
+
+function editarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido, $idpagamento)
+{
+    $sql = "UPDATE tb_pagamento SET forma_p=?, data_pagamento=?, valor_total=?, tb_pedido_idpedido=? WHERE idpagamento=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssdi', $forma_p, $data_pagamento, $valor_total, $idpagamento);
+    mysqli_stmt_bind_param($comando, 'ssdii', $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido, $idpagamento);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
@@ -526,16 +532,16 @@ function pesquisarEntregaid($conexao, $identrega)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
+// avaliação atendente
 
+function avaliarAtendente($conexao, $nota_atendente, $idpedido)
+{
+ $sql = "UPDATE tb_pedido SET nota_atendente=? WHERE  idpedido=?" ;
+    $comando = mysqli_prepare($conexao, $sql);
 
-//function salvarAvaliacao($conexao, $nome, $cpf, $endereco) {}
+    mysqli_stmt_bind_param($comando, 'di', $nota_atendente, $idpedido);
+    $funcionou = mysqli_stmt_execute($comando);
 
-//function listarAvaliacao($conexao) {}
-
-//function editarAvaliacao($conexao, $nome, $cpf, $endereco, $id) {}
-
-//function deletarAvaliacao($conexao, $idcliente) {}
-
-//function pesquisarAvaliacaoId($conexao, $idcliente) {}
-
-// A TABELA DE ENDEREÇO PEÇO AO SENHOR PARA AJUDAR NOIS, POIS TEM DUAS LIGAÇÕES NELA.
+    mysqli_stmt_close($comando);
+    return $funcionou;
+}
