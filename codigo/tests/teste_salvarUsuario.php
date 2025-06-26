@@ -2,10 +2,10 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $nome = "laraaaaa";
-    $email = "laraa@gmail";
-    $senha = "321";
-    $tipo = "c";
+    $nome = "beto";
+    $email = "beto@gmail.com";
+    $senha = "12234";
+    $tipo = "A";
 
     salvarUsuario($conexao, $nome, $email, $senha, $tipo);
 ?>
