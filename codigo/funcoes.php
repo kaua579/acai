@@ -538,7 +538,7 @@ function avaliarAtendente($conexao, $nota_atendente, $idpedido)
  $sql = "UPDATE tb_pedido SET nota_atendente=? WHERE  idpedido=?" ;
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'di', $nota_atnedente, $idpedido);
+    mysqli_stmt_bind_param($comando, 'di', $nota_atendente, $idpedido);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
