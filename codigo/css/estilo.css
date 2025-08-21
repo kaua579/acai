@@ -1,6 +1,97 @@
 #logo
 {
+    padding: 0spx;
     height: 150px;
     width: 150px;
 }
+.fullscreen-background {
+  background-color: #760a84; /* Cor de fundo (exemplo: azul) */
+  position: fixed; /* Posiciona a div fixada na tela */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 100vh; /* Ocupa toda a altura da janela de visualização */
+  z-index: -1; /* Coloca a div atrás de outros conteúdos */
+}
 
+
+/* Container de login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Logo do gatinho */
+.logo img {
+    padding: 100    px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* Formulário de login */
+.login-form {
+  background-color:  #760a84;;
+  padding: 0px;
+  border-radius: 500px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.login-form h1 {
+  font-family: 'Arial', sans-serif;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.sign-in-text {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os campos de input */
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Estilo para o botão de login */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #315c1d; /* Cor verde do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* Links abaixo do formulário */
+.forgot-signup {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.forgot-signup a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.forgot-signup a:hover {
+  text-decoration: underline;
+}
