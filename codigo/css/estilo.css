@@ -63,6 +63,15 @@ input[type="email"], input[type="password"] {
   font-size: 14px;
 }
 
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
 input[type="email"]:focus, input[type="password"]:focus {
   outline: none;
   border-color: #3498db;
@@ -94,4 +103,17 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .forgot-signup a:hover {
   text-decoration: underline;
+}
+
+.link {
+  width: 20%;
+  padding: 12px;
+  background-color: #315c1d; /* Cor verde do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,38 @@
 </head>
 
 <body>
-    
-       <div class="login-box">
-        <img id="logo" src="logo.png" >
-        <h1>Login</h1>
-        <form action="salvarUsuario.php" method="post">
+    <!-- FAZ O LOGIN -->
+     
+    <!-- Tela de login com fundo roxo -->
+    <div class="fullscreen-background"></div>
 
-            <input type="text" placeholder="nome"><br>
+    <div class="login-container">
+        <!-- Logo do gatinho -->
+        <div class="logo">
+            <img id="logo" src="logo.png">
+        </div>
 
-            <input type="password" placeholder="Senha"><br>
+        <!-- Formulário de login -->
+        <form action="index.php" method="POST" class="login-form">
+            <h1>Login</h1>
+            <p class="sign-in-text">Sign in to continue.</p>
 
-            <button type="submit">Login</button>
+            <!-- Campo de nome (ou email) -->
+            <label for="email">NAME</label>
+            <input type="email" id="email" name="email" placeholder="seu nome" required>
+
+            <!-- Campo de senha -->
+            <label for="senha">PASSWORD</label>
+            <input type="password" id="senha" name="senha" placeholder="******" required>
+
+            <!-- Botão de login -->
+            <button type="submit" class="login-btn">Login</button>
+
+            <!-- Links abaixo do botão -->
+            <div class="forgot-signup">
+                <a href="#">Forgot Password?</a> | <a href="#">Signup!</a>
+            </div>
         </form>
-        <a href="">Esqueceu a Senha?</a><br>
-        <a href="">Cadastrar-se</a>
-    </div>
-    </form>
 </body>
+
 </html>
