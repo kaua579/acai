@@ -7,19 +7,23 @@
 </head>
 <body>
 
-    <ul>
-        <li>
-        <a href="formCliente.php">Cadastrar novo cliente</a>
-        </li>
-        <li>
-            <a href="listarClientes.php">Lista de clientes cadastrados</a>
-        </li>
-        <li>
-            <a href="formProduto.php">Cadastrar novo produto</a>
-        </li>
-        <li>
-            <a href="listarProdutos.php">Lista de produtos cadastrados</a>
-        </li>
-    </ul>
+
+
+        <a href="formCliente.php">Quem Somos?</a>
+        
+        
+        <a href="listarClientes.php">Cardápio</a>
+    
+    
+        <a href="formProduto.php">Produtos</a>
+        
+        <a href="listarProdutos.php">Atendentes</a>
+    
+        <a href="listarProdutos.php">Delivery </a> <br>
+
+
+         <ul>Energia gelada,</ul>
+         sabor que vicia
+
 </body>
 </html>
