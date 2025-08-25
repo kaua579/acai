@@ -36,11 +36,11 @@
       <input type="password" id="senha" name="senha" placeholder="******" required>
 
       <!-- Botão de login -->
-      <button type="submit" class="login-btn">Login</button>
+      <button type="submit" class="login-btn">Cadastrar</button>
 
       <!-- Links abaixo do botão -->
       <div class="forgot-signup">
-        <a href="#">Forgot Password?</a> | <a href="#">Signup!</a>
+        <a href="#">Forgot Password?</a> | <a href="formUsuario.php">Signup!</a>
       </div>
     </form>
 
