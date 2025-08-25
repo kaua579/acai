@@ -9,9 +9,13 @@
 </head>
 
 <body>
+    
 
     <!-- PAGINA PRINCIPAL -->
-    <div class="fullscreen-background"></div>
+    <div 
+     class="fullscreen-background">
+    
+    </div>
 
     <div class="login-container">
         <!-- Logo do gatinho -->
@@ -21,7 +25,7 @@
 
 
         <!-- Formulário de login -->
-        <h1>Alapollos</h1>
+        <h1>ALAPOLLOS</h1>
 
         <div class="link">
             <!-- Botão de login -->
@@ -32,11 +36,7 @@
             <a href="cadastro.php" class="login-btn">Cadastrar</a>
         </div>
 
-
-        <!-- Links abaixo do botão -->
-        <div class="forgot-signup">
-            <!-- <a href="#">Forgot Password?</a> | <a href="#">Signup!</a> -->
-        </div>
+ 
 
 
 
