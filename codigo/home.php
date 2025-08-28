@@ -7,23 +7,20 @@
 </head>
 <body>
 
+    <ul>
+        <li>
+        <a href="">Cadastrar novo cliente</a>
+        </li>
 
-
-        <a href="formCliente.php">Quem Somos?</a>
-        
-        
-        <a href="listarClientes.php">Cardápio</a>
-    
-    
-        <a href="formProduto.php">Produtos</a>
-        
-        <a href="listarProdutos.php">Atendentes</a>
-    
-        <a href="listarProdutos.php">Delivery </a> <br>
-
-
-         <ul>Energia gelada,</ul>
-         sabor que vicia
-
+        <li>
+            <a href="">quem somos</a>
+        </li>
+        <li>
+            <a href="">produtos </a>
+        </li>
+        <li>
+            <a href="deslogar.php">Sair</a>
+        </li>
+    </ul>
 </body>
 </html>
