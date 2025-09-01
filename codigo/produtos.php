@@ -12,37 +12,37 @@
         <form action="comprar.php" method="post" class="produtos">
 
             <div class="produto">
-               <h4>Açaí 200ml</h4>
+                <img src="" alt="Açaí 200ml">
                 <p>200 ML</p>
                 <input type="checkbox" name="produto[]" value="200ml">
             </div>
 
             <div class="produto">
-                <h4>Açaí 300ml</h4>
+                <img src="" alt="Açaí 300ml">
                 <p>300 ML</p>
                 <input type="checkbox" name="produto[]" value="300ml">
             </div>
 
             <div class="produto">
-                <h4>Açaí 500ml</h4>
+                <img src="" alt="Açaí 500ml">
                 <p>500 ML</p>
                 <input type="checkbox" name="produto[]" value="500ml">
             </div>
 
             <div class="produto">
-                <h4>Açaí 700ml</h4>
+                <img src="" alt="Açaí 700ml">
                 <p>700 ML</p>
                 <input type="checkbox" name="produto[]" value="700ml">
             </div>
 
             <div class="produto">
-                <h4>Açaí 1 litro</h4>
+                <img src="" alt="Açaí 1 litro">
                 <p>1 L</p>
                 <input type="checkbox" name="produto[]" value="1l">
             </div>
 
             <button type="submit" class="botao-comprar">
-                Comprar
+                🛒 Comprar
             </button>
 
         </form>
