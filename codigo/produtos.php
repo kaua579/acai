@@ -6,12 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Produtos </h1>
+    <div class="container">
+        <h1>PRODUTOS</h1>
 
-    <h3> 200 ML </h3> 
-    <h3> 300 ML </h3>
-    <h3> 500 ML </h3>     
-    <h3> 700 ML </h3>
-    <h3> 1L </h3>               
+        <form action="comprar.php" method="post" class="produtos">
+
+            <div class="produto">
+               <h4>Açaí 200ml</h4>
+                <p>200 ML</p>
+                <input type="checkbox" name="produto[]" value="200ml">
+            </div>
+
+            <div class="produto">
+                <h4>Açaí 300ml</h4>
+                <p>300 ML</p>
+                <input type="checkbox" name="produto[]" value="300ml">
+            </div>
+
+            <div class="produto">
+                <h4>Açaí 500ml</h4>
+                <p>500 ML</p>
+                <input type="checkbox" name="produto[]" value="500ml">
+            </div>
+
+            <div class="produto">
+                <h4>Açaí 700ml</h4>
+                <p>700 ML</p>
+                <input type="checkbox" name="produto[]" value="700ml">
+            </div>
+
+            <div class="produto">
+                <h4>Açaí 1 litro</h4>
+                <p>1 L</p>
+                <input type="checkbox" name="produto[]" value="1l">
+            </div>
+
+            <button type="submit" class="botao-comprar">
+                Comprar
+            </button>
+
+        </form>
+    </div>            
 </body>
 </html>
