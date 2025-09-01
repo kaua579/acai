@@ -3,3 +3,101 @@ text-align: center;
   margin: 50 auto;
 }
 
+/* Estilo para o botão de login */
+.login-btn {
+  width: 107%;
+  padding: 12px;
+  background-color: #315c1d; /* Cor verde do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* Links abaixo do formulário */
+.forgot-signup {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.forgot-signup a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.forgot-signup a:hover {
+  text-decoration: underline;
+}
+
+.fullscreen{
+  background: fixed;
+  background-image: url("fundoIndex.png");
+  
+}
+.link {
+  width: 20%;
+  padding: 12px;
+  background-color: #315c1d; /* Cor verde do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* css da pagina quem somos*/
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.image-section {
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.text-section {
+    width: 50%;
+    background-color: #800080;
+    color: #FFD700;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h1 {
+    font-size: 40px;
+    color: #FFFF00;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #FFA500;
+    margin-bottom: 20px;
+}

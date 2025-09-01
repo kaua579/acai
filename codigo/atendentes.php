@@ -11,7 +11,8 @@
         // echo "<pre>";
         //     print_r(($atendente));
         // echo "</pre>";
-      
+        
+        echo "<pre>";
         echo "<tr>";
         echo "<td>$idatendente</td>";
         echo "<td>$horario_chegada</td>";
@@ -19,6 +20,7 @@
         echo "<td>$descricao</td>";
         echo "<td>$endereco</td>";
         echo "</tr>";
+        echo "</pre>";
 ?>
    
 <!DOCTYPE html>
