@@ -42,7 +42,7 @@
             </div>
 
             <button type="submit" class="botao-comprar">
-                🛒 Comprar
+                Comprar
             </button>
 
         </form>
