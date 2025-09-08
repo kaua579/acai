@@ -1,7 +1,44 @@
 #tituloc {
-text-align: center;
-  margin: 50 auto;
+  height: 150px;    
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+#tamanhos {
+ background-color: #fcb12b;  /* cor amarela */
+  color: #3a0058;             /* texto roxo escuro */
+  font-weight: 900;           /* negrito bem forte */
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  padding: 10px 50px ;          /* espaço em cima e embaixo */
+  border-radius: 10px;        /* cantos arredondados */
+  font-size: 30;            /* tamanho da fonte */
+  width: 500px;         /* tamanho só do conteúdo */
+  margin: 200px auto 0 auto;           /* centralizar na página */
+  letter-spacing: 2px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Estilo para o botão de login */
 .login-btn {
