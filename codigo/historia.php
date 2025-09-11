@@ -9,12 +9,12 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="image-section">
+<div class="historia">
+    <div class="imagem">
         <img id= "mao"src="fundo.png" alt="Açai com frutas"> 
     </div>
 
-    <div class="text-section">
+    <div class="texto">
         <h1>quem nós somos ?</h1>
         <?php
         echo "<p>A açaíteria Alapollos localizada no Ibirapuera, surgiu quando o Walter Salles, fez uma grande viagem pelo mundo e descobriu que em todos os lugares por onde ele andou tinha uma açaíteria, mas no seu bairro faltava uma. Inspirado por essa situação e decidido a construir uma açaíteria, Salles resolveu iniciar um projeto com sua família para abrir uma açaíteria.</p>";
