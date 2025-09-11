@@ -42,10 +42,8 @@
                 <img id="acai 1l" src="acai1l.png">
                 <p>1 L</p>
             </div>
+            
               <a href="cobertura.php">Comprar</a> <br><br>
-
-                
-
 
         </form>
     </div>            
