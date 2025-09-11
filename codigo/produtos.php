@@ -7,9 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <img id="titulop" src="titulop.png">
+    <img id="titulop" src="titulop.png" alt="Título Principal">
     <div class="container">
-        <h1></h1>
 
         <form action="comprar.php" method="post" class="produtos">
 
@@ -42,7 +41,7 @@
                 <img id="acai 1l" src="acai1l.png">
                 <p>1 L</p>
             </div>
-            
+
               <a href="cobertura.php">Comprar</a> <br><br>
 
         </form>
