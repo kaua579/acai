@@ -162,9 +162,12 @@ body {
 }
 
 .produto p {
-    font-size: 18px;
-    margin: 10px 0 5px;
+    font-size: 20px;
+    margin: 10px 0 15px;
     color: #ffeb3b;
+    width: 100px;
+    height: auto;
+
 }
 
 table {
