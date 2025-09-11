@@ -43,10 +43,10 @@
             echo "</pre>";
         }
         ?>
-    </table>
+    </table> <br>
 
 
-    </table>
+<button onclick="window.location.href='home.php'">Voltar</button>
 
 </body>
 
