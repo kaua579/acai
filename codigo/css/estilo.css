@@ -178,6 +178,9 @@ tr:hover {background-color: #ddd;}
     box-sizing: border-box;
 }
 
+
+
+
 /* Corpo e fundo da página */
 body {
     font-family: Arial, sans-serif;
@@ -205,7 +208,7 @@ body {
 .menu-header h1 {
     font-size: 3rem;
     color: #fff;
-    background-color: #8f499e;
+    background-color: #bb73ba;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -225,7 +228,7 @@ body {
 }
 
 .size-item {
-    background-color: #6e3795;
+    background-color: #490152;
     padding: 15px;
     margin: 10px;
     width: 120px;
@@ -256,7 +259,7 @@ body {
 }
 
 .accomp-item {
-    background-color: #8f499e;
+    background-color: #490152;
     padding: 10px 20px;
     margin: 8px;
     font-size: 1.2rem;
@@ -278,7 +281,7 @@ body {
 }
 
 .topping-item {
-    background-color: #8f499e;
+    background-color: #490152;
     padding: 10px 20px;
     margin: 8px;
     font-size: 1.2rem;
