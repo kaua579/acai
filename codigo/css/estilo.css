@@ -20,27 +20,6 @@
   letter-spacing: 2px;  
 }
 
-#pt1 {
-fon
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Estilo para o botão de login */
 .login-btn {
@@ -91,53 +70,53 @@ fon
 /* css da pagina quem somos*/
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    font-family: Arial, sans-serif;
 }
 
 .historia {
     display: flex;
-    flex-direction: row;
-    height: 100vh;
+    height: 100vh; /* ocupa a tela toda */
 }
 
-.imagem {
-    width: 50%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+/* Lado da imagem */
+.lado-esquerdo {
+    flex: 1;
+    overflow: hidden;
 }
 
-.imagem img {
+.lado-esquerdo img {
     width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    height: 100%;
+    object-fit: cover; /* preenche sem distorcer */
 }
 
-.texto {
-    width: 50%;
-    background-color: #800080;
-    color: #FFD700;
-    padding: 50px 40px;
+/* Lado do texto */
+.lado-direito {
+    flex: 1;
+    background-color: #6a1b9a;
+    color:  #ffeb3b; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 60px;
+    box-sizing: border-box;
+    text-align: justify;
 }
 
-.texto h1 {
-    font-size: 40px;
-    color: #FFFF00;
-    margin-bottom: 20px;
+.lado-direito h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
     font-weight: bold;
 }
 
-.texto p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #FFA500;
+.lado-direito {
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.lado-direito p {
+    font-size: 1.2em;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 /*  pagina Produtos*/
