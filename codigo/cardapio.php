@@ -7,7 +7,7 @@
     <title>Cardápio - Açaí</title>
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
-<body>
+<body class="fundoca">
     <div class="wrapper">
         <div class="menu">
             <header class="menu-header">
