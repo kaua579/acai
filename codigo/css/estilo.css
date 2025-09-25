@@ -324,3 +324,47 @@ tr:hover {background-color: #ddd;}
     border-radius: 5px;
     width: 250px;
 }
+
+/*Agradecimento*/
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: purple; /* Cor de fundo principal */
+color: white;
+text-align: center;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+h1, h2, h3 {
+margin: 10px 0;
+}
+
+.social {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.social img {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 5px; /* diminui o tamanho do ícone */
+    color: white;
+}
+#icones {
+    width: 100px;   /* largura fixa */
+    height: auto;   /* mantém a proporção */
+}
+
+#textoagradecimento {
+    font-size: 100px;
+}
+
+
+
+

@@ -24,6 +24,9 @@
             <a href="atendentes.php">atendentes</a>
         </li>
         <li>
+            <a href="agradecimento.php">agradecimento</a>
+        </li>
+        <li>
             <a href="deslogar.php">Sair</a>
         </li>
     </ul>
