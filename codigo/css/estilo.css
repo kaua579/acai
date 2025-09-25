@@ -164,7 +164,7 @@ body {
     height: auto;
 
 }
-
+/* ------------------------------------------------------------------------------------------------------------------------ */
 #acai1l {
     margin-bottom: 80px;
 }
@@ -184,7 +184,7 @@ body {
 #Açai200ml {
     margin-bottom: 13px;
 }
-
+/* ---------°------------------------------------------------------------------------------------------------------------- */
 
 table {
   font-family: Arial, sans-serif;
@@ -202,10 +202,10 @@ td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
+/* 
 tr:nth-child(even){background-color: #f2f2f2;}
 
-tr:hover {background-color: #ddd;}
+tr:hover {background-color: #ddd;} */
 
 /* Reset básico */
 * {
@@ -325,20 +325,20 @@ tr:hover {background-color: #ddd;}
     width: 250px;
 }
 
-/*Agradecimento*/
-
+/* Agradecimento*/
+/* 
 body {
 margin: 0;
 font-family: Arial, sans-serif;
 background-color: purple; /* Cor de fundo principal */
-color: white;
+/* color: white;
 text-align: center;
 height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-}
+}  */
 
 
 h1, h2, h3 {
