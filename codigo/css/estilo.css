@@ -121,12 +121,26 @@ body {
 }
 /*  pagina Produtos*/
 
+.fundo {
+    background-color: #9b55a3;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.titulo {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    margin-left: 440px;
+}
 .produtos {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
+    justify-content: center;  /* Centraliza as imagens horizontalmente */
+    align-items: center;      /* Alinha as imagens verticalmente */
+    gap: 20px;                /* Espaço entre as imagens */
+    flex-wrap: wrap;          /* Permite que as imagens se ajustem a tela */
+    margin-top: 30px;         /* Espaço superior */
 }
 
 .produto {
@@ -150,6 +164,27 @@ body {
     height: auto;
 
 }
+
+#acai1l {
+    margin-bottom: 80px;
+}
+
+#acai700ml {
+    margin-bottom: 15px;
+}
+
+#acai500ml {
+    margin-bottom: 5px;
+}
+
+#acai300ml {
+    margin-bottom: 0px ;
+}
+
+#Açai200ml {
+    margin-bottom: 13px;
+}
+
 
 table {
   font-family: Arial, sans-serif;
