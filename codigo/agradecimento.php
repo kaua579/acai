@@ -7,12 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Ícones de redes sociais -->
+  
 <div class="social">
 <img id= "icones" src="iconess.png" >
 </div>
 
-<!-- Texto principal -->
 <p id= "textoagradecimento"> Obrigado <br> pela <br> Preferência</p> 
 
     
