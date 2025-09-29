@@ -281,20 +281,20 @@ tr:hover {background-color: #ddd;} */
     font-size: 1.5rem;
 }
 
-/*-------------------------------------------------------- Acompanhamentos----------------------------------------------- */
+/* Acompanhamentos */
 .accompaniments h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #fff;
 }
 
-.accomp-items {
+.acomp-itens {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.accomp-item {
+.acomp-item {
     background-color: #490152;
     padding: 10px 20px;
     margin: 8px;
@@ -303,20 +303,20 @@ tr:hover {background-color: #ddd;} */
     width: 250px;
 }
 
-/*---------------------------------------------------------- Coberturas-------------------------------------------------*/
+/* Coberturas */
 .toppings h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #fff;
 }
 
-.toppings-items {
+.cobert-itens {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.topping-item {
+.cobert-item {
     background-color: #490152;
     padding: 10px 20px;
     margin: 8px;
