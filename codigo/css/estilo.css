@@ -282,19 +282,19 @@ tr:hover {background-color: #ddd;} */
 }
 
 /* Acompanhamentos */
-.accompaniments h2 {
+.acompanhamentos h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #fff;
 }
 
-.accomp-items {
+.acomp-itens {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.accomp-item {
+.acomp-item {
     background-color: #490152;
     padding: 10px 20px;
     margin: 8px;
@@ -304,19 +304,19 @@ tr:hover {background-color: #ddd;} */
 }
 
 /* Coberturas */
-.toppings h2 {
+.cobertura h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #fff;
 }
 
-.toppings-items {
+.cobert-itens {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.topping-item {
+.cobert-item {
     background-color: #490152;
     padding: 10px 20px;
     margin: 8px;
