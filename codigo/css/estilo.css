@@ -202,17 +202,6 @@ td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-/* 
-tr:nth-child(even){background-color: #f2f2f2;}
-
-tr:hover {background-color: #ddd;} */
-
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
 
