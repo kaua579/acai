@@ -1,70 +1,81 @@
 #tituloc {
-  height: 150px;    
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    height: 150px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #tamanhos {
- background-color: #fcb12b;  /* cor amarela */
-  color: #3a0058;             /* texto roxo escuro */
-  font-weight: 900;           /* negrito bem forte */
-  font-family: 'Bebas Neue', sans-serif;
-  text-align: center;
-  padding: 10px 50px ;          /* espaço em cima e embaixo */
-  border-radius: 10px;        /* cantos arredondados */
-  font-size: 30;            /* tamanho da fonte */
-  width: 500px;         /* tamanho só do conteúdo */
-  margin: 200px auto 0 auto;           /* centralizar na página */
-  letter-spacing: 2px;  
+    background-color: #fcb12b;
+    /* cor amarela */
+    color: #3a0058;
+    /* texto roxo escuro */
+    font-weight: 900;
+    /* negrito bem forte */
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    padding: 10px 50px;
+    /* espaço em cima e embaixo */
+    border-radius: 10px;
+    /* cantos arredondados */
+    font-size: 30;
+    /* tamanho da fonte */
+    width: 500px;
+    /* tamanho só do conteúdo */
+    margin: 200px auto 0 auto;
+    /* centralizar na página */
+    letter-spacing: 2px;
 }
 
 
 /* Estilo para o botão de login */
 .login-btn {
-  width: 107%;
-  padding: 12px;
-  background-color: #315c1d; /* Cor verde do botão */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
+    width: 107%;
+    padding: 12px;
+    background-color: #315c1d;
+    /* Cor verde do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 
 /* Links abaixo do formulário */
 .forgot-signup {
-  margin-top: 15px;
-  font-size: 14px;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .forgot-signup a {
-  color: #3498db;
-  text-decoration: none;
+    color: #3498db;
+    text-decoration: none;
 }
 
 .forgot-signup a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-.fullscreen{
-  background: fixed;
-  background-image: url("fundoIndex.png");
-  
+.fullscreen {
+    background: fixed;
+    background-image: url("fundoIndex.png");
+
 }
+
 .link {
-  width: 20%;
-  padding: 12px;
-  background-color: #315c1d; /* Cor verde do botão */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  text-align: center;
+    width: 20%;
+    padding: 12px;
+    background-color: #315c1d;
+    /* Cor verde do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /*-----------------------------------------------------pagina quem somos-----------------------------------------*/
@@ -88,6 +99,7 @@
 
 /* Container do conteúdo */
 .historia {
+<<<<<<< Updated upstream
     text-align: center;
     max-width: 900px;
     padding: 40px;
@@ -99,16 +111,55 @@
 h1 {
     font-size: 3rem;
     color: #ffeb3b;
+=======
+    display: flex;
+    height: 100vh;
+    /* ocupa a tela toda */
+}
+
+/* Lado da imagem */
+.lado-esquerdo {
+    flex: 1;
+    overflow: hidden;
+}
+
+.lado-esquerdo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* preenche sem distorcer */
+}
+
+/* Lado do texto */
+.lado-direito {
+    flex: 1;
+    background-color: #6a1b9a;
+    color: #ffeb3b;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 60px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.lado-direito h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+>>>>>>> Stashed changes
     font-weight: bold;
     margin-bottom: 20px;
 }
 
+<<<<<<< Updated upstream
 /* Texto */
 p {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #ffeb3b;
 }
+=======
+>>>>>>> Stashed changes
 /*-----------------------------------------------------pagina Produtos------------------------------------------------*/
 
 .fundo {
@@ -124,13 +175,19 @@ p {
     height: auto;
     margin-left: 440px;
 }
+
 .produtos {
     display: flex;
-    justify-content: center;  /* Centraliza as imagens horizontalmente */
-    align-items: center;      /* Alinha as imagens verticalmente */
-    gap: 20px;                /* Espaço entre as imagens */
-    flex-wrap: wrap;          /* Permite que as imagens se ajustem a tela */
-    margin-top: 30px;         /* Espaço superior */
+    justify-content: center;
+    /* Centraliza as imagens horizontalmente */
+    align-items: center;
+    /* Alinha as imagens verticalmente */
+    gap: 20px;
+    /* Espaço entre as imagens */
+    flex-wrap: wrap;
+    /* Permite que as imagens se ajustem a tela */
+    margin-top: 30px;
+    /* Espaço superior */
 }
 
 .produto {
@@ -154,136 +211,183 @@ p {
     height: auto;
 
 }
+
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
+<<<<<<< Updated upstream
 /* ---------------------------------------------------------------------------------------------------------------------- */
+=======
+#acai700ml {
+    margin-bottom: 15px;
+}
+
+#acai500ml {
+    margin-bottom: 5px;
+}
+
+#acai300ml {
+    margin-bottom: 0px;
+}
+
+#Açai200ml {
+    margin-bottom: 13px;
+}
+
+/* ---------°------------------------------------------------------------------------------------------------------------- */
+>>>>>>> Stashed changes
 
 table {
-  font-family: Arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #600297;
-  color: white;
-}
-td, th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-
-
-
-/* Corpo e fundo da página */
-.fundoca {
     font-family: Arial, sans-serif;
-    background-color: #9b55a3;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #600297;
+    color: white;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+<<<<<<< Updated upstream
+=======
+
+/* 
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;} */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+>>>>>>> Stashed changes
+
+
+
+/*-----------------------------------------pagina atentendes--------------------------------------------------*/
+.corpo-cardapio {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #9b55a3, #6e3795);
     color: #fff;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    padding: 20px;
 }
 
-/* Wrapper central */
-.wrapper {
+.corpo {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
 }
 
-/* Menu */
 .menu {
-    background-color: #6e3795;
-    border-radius: 10px;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease-in-out;
 }
 
-/* Cabeçalho */
-.menu-header h1 {
+.menu:hover {
+    transform: scale(1.01);
+}
+
+
+header h1 {
     font-size: 3rem;
     color: #fff;
-    background-color: #d87ad6;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/*-------------------------------------------------Tamanhos----------------------------------------------------- */
-.sizes h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #fff;
-} 
-
-.size-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.size-item {
-    background-color: #490152;
-    padding: 15px;
-    margin: 10px;
-    width: 120px;
+    background: linear-gradient(90deg, #d87ad6, #9b55a3);
+    padding: 15px 0;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.size-item h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+/* --- Seções --- */
+section {
+    margin-bottom: 40px;
 }
 
-.size-item p {
-    font-size: 1.5rem;
+section h2 {
+    font-size: 2.2rem;
+    color: #ffe3ff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
 }
 
-/* Acompanhamentos */
-.accompaniments h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.acomp-itens {
+/* --- Tamanhos --- */
+.tamanho2 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.acomp-item {
+.tamanho-item {
     background-color: #490152;
-    padding: 10px 20px;
-    margin: 8px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    width: 250px;
+    padding: 20px;
+    width: 140px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Coberturas */
-.toppings h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.tamanho-item:hover {
+    transform: translateY(-6px);
+    background-color: #5f0a68;
+}
+
+.tamanho-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #ffd8ff;
+}
+
+.tamanho-item p {
+    font-size: 1.3rem;
     color: #fff;
 }
 
+/* --- Acompanhamentos e Coberturas --- */
+.acomp-itens,
 .cobert-itens {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
 }
 
+.acomp-item,
 .cobert-item {
     background-color: #490152;
-    padding: 10px 20px;
-    margin: 8px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    width: 250px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.acomp-item:hover,
+.cobert-item:hover {
+    background-color: #5f0a68;
+    transform: translateY(-4px);
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #f8e9ff;
+    opacity: 0.8;
 }
 
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
@@ -299,7 +403,7 @@ agradecimento {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}  
+}
 
 /*#fundo {
     margin: 0;
@@ -308,11 +412,13 @@ agradecimento {
     width: 100%;
     max-width: 1050px;
     background-size: cover;       /* ajusta para cobrir a tela inteira */
-   /* background-position: center;  /* centraliza a imagem */
-    /*background-repeat: no-repeat; /* não repete a imagem */
+/* background-position: center;  /* centraliza a imagem */
+/*background-repeat: no-repeat; /* não repete a imagem */
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 10px 0;
 }
 
@@ -321,19 +427,25 @@ h1, h2, h3 {
     top: 5px;
     right: 10px;
 }
+
 .social img {
     margin-left: 10px;
     text-decoration: none;
-    font-size: 5px; /* diminui o tamanho do ícone */
+    font-size: 5px;
+    /* diminui o tamanho do ícone */
     color: white;
 }
+
 #icones {
-    width: 100px;   /* largura fixa */
-    height: auto; /* mantém a proporção */
+    width: 100px;
+    /* largura fixa */
+    height: auto;
+    /* mantém a proporção */
 }
 
 #textoagradecimento {
     font-size: 100px;
+<<<<<<< Updated upstream
 }
 
 /* -----------------------------------------acompanhamentos-------------------------------------------- */
@@ -358,3 +470,6 @@ h1, h2, h3 {
 }
 /* -------------------------------------------------------------------------------------------------------------- */
 
+=======
+}
+>>>>>>> Stashed changes
