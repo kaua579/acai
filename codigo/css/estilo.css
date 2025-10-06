@@ -375,6 +375,25 @@ h1, h2, h3 {
     font-size: 100px;
 }
 
+/* -----------------------------------------acompanhamentos-------------------------------------------- */
+#fundo-acompanhamento{
+    background-image: url(imagens/fundoacom.png);
+    background-repeat: no-repeat;      /* impede que a imagem se repita */
+    background-size: cover;            /* faz a imagem cobrir toda a tela */
+    background-attachment: fixed;      /* mantém o fundo fixo ao rolar a página */
+    background-position: center;       /* centraliza a imagem */
+
+    height: 100vh;                     /* faz ocupar 100% da altura da tela */
 
 
+    
+    
+}
+
+.coluna1{
+    
+
+
+}
+/* -------------------------------------------------------------------------------------------------------------- */
 
