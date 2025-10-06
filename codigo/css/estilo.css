@@ -68,61 +68,51 @@
 }
 
 /*-----------------------------------------------------pagina quem somos-----------------------------------------*/
-body {
+
+
+/* Classe para aplicar o fundo da imagem */
+.img {
     margin: 0;
+    padding: 0;
+    height: 100vh; /* Garante que ocupe a tela inteira */
     font-family: Arial, sans-serif;
+    background-image: url('hist.png'); 
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fundo fixo ao rolar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
+/* Container do conteúdo */
 .historia {
-    display: flex;
-    height: 100vh; /* ocupa a tela toda */
+    text-align: center;
+    max-width: 900px;
+    padding: 40px;
+    background-color: rgba(117, 0, 124, 0.85); /* Fundo roxo semi-transparente sobre a imagem */
+    border-radius: 20px;
 }
 
-/* Lado da imagem */
-.lado-esquerdo {
-    flex: 1;
-    overflow: hidden;
-}
-
-.lado-esquerdo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* preenche sem distorcer */
-}
-
-/* Lado do texto */
-.lado-direito {
-    flex: 1;
-    background-color: #6a1b9a;
-    color:  #ffeb3b; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 60px;
-    box-sizing: border-box;
-    text-align: justify;
-}
-
-.lado-direito h1 {
-    font-size: 3em;
-    margin-bottom: 30px;
+/* Título */
+h1 {
+    font-size: 3rem;
+    color: #ffeb3b;
     font-weight: bold;
-}
-
-.lado-direito {
-    font-size: 0.8em;
-    margin-left: 10px;
-}
-
-.lado-direito p {
-    font-size: 1.2em;
-    line-height: 1.8;
     margin-bottom: 20px;
+}
+
+/* Texto */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffeb3b;
 }
 /*-----------------------------------------------------pagina Produtos------------------------------------------------*/
 
 .fundo {
-    background-color: #9b55a3;
+    background-color: #6a1b9a;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -144,7 +134,7 @@ body {
 }
 
 .produto {
-    background-color: #6a1b9a;
+    background-color: ;
     border-radius: 10px;
     padding: 10px;
     width: 150px;
@@ -165,26 +155,8 @@ body {
 
 }
 /* ------------------------------------------------------------------------------------------------------------------------ */
-#acai1l {
-    margin-bottom: 80px;
-}
 
-#acai700ml {
-    margin-bottom: 15px;
-}
-
-#acai500ml {
-    margin-bottom: 5px;
-}
-
-#acai300ml {
-    margin-bottom: 0px ;
-}
-
-#Açai200ml {
-    margin-bottom: 13px;
-}
-/* ---------°------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
 
 table {
   font-family: Arial, sans-serif;
