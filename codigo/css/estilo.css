@@ -1,3 +1,4 @@
+
 #tituloc {
     height: 150px;
     position: absolute;
@@ -473,6 +474,17 @@ h3 {
 <<<<<<< Updated upstream
 }
 
+/*------------------------------------------------------ Fontes ----------------------------------------------------- */
+
+@font-face {
+  font-family: 'TT Berlinerins'; /* Nome que você vai usar no CSS */
+  src: url('../fonts/TT-Berlinerins.ttf') format('truetype'); /* caminho até a fonte */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------
+
 /* -----------------------------------------acompanhamentos-------------------------------------------- */
 #fundo-acompanhamento{
     background-image: url(imagens/fundoacom.png);
@@ -481,26 +493,55 @@ h3 {
     background-attachment: fixed;      /* mantém o fundo fixo ao rolar a página */
     background-position: center;       /* centraliza a imagem */
 
-    height: 100vh;                     /* faz ocupar 100% da altura da tela */
-
-
-    
-    
+    height: 100vh;                     /* faz ocupar 100% da altura da tela */   
 }
 
-.coluna1{
-    
-
-
+.checkbox {
+  display: inline-flex;              /* deixa o texto ao lado do checkbox */
+  align-items: center;               /* centraliza verticalmente */
+  cursor: pointer;                   /* muda o cursor pra "mãozinha" */
+  font-family: 'TT-Berlinerins', sans-serif;    /* define uma fonte simples */
+  color: #ffffff;  /* cor do texto*/
+  font-size: 15px; /* ← aqui muda o tamanho da letra */
+  
 }
+
+/* Esconde o checkbox padrão */
+.checkbox input {
+  display: none;                     /* esconde o checkbox nativo */
+}
+
+/* Cria o quadradinho personalizado */
+.checkmark {
+  width: 22px;                       /* tamanho do quadrado */
+  height: 22px;
+  border: 2px solid #800080;         /* borda roxa */
+  border-radius: 5px;                /* bordas levemente arredondadas */
+  background-color: #f2aaf2;         /* cor de fundo */
+  position: relative;                /* necessário pra posicionar o “check” */
+  margin-right: 10px;                /* espaço entre o quadrado e o texto */
+  transition: all 0.2s ease-in-out;  /* animação suave */
+}
+
+/* Quando o checkbox está marcado */
+.checkbox input:checked + .checkmark {
+  background-color: #f2aaf2;         /* fundo fica roxo escuro */
+  border-color: #f2aaf2;
+}
+
+/* Desenho do "check" (feito com CSS) */
+.checkbox input:checked + .checkmark::after {
+  content: '';                       /* cria um pseudo-elemento */
+  position: absolute;                
+  left: 6px;                         /* posição do “check” */
+  top: 2px;
+  width: 6px;                        /* largura da linha do “check” */
+  height: 12px;                      /* altura da linha do “check” */
+  border: solid #800080;               /* cor do “check” */
+  border-width: 0 3px 3px 0;         /* forma de “✓” */
+  transform: rotate(45deg);          /* gira pra parecer o símbolo de check */
+}
+
+
 /* -------------------------------------------------------------------------------------------------------------- */
 
-=======
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
