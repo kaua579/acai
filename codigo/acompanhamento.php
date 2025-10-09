@@ -43,27 +43,27 @@
               </label>
 
               <label class="checkbox">Granola
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Granola">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Castanha-de-caju
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Castanha-de-caju">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Amendoim
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Amendoim">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Ovomaltine
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Ovomaltine">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Cereja
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Cereja">
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -71,37 +71,37 @@
             <!-- Coluna 2 -->
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <label class="checkbox">Coco Ralado
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Coco Ralado">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Paçoca
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Paçoca">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Nutella
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Nutella">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Chocolate Branco
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Chocolate Branco">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Doce de Leite
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Doce de Leite">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Leite Ninho
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Leite Ninho">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Whey
-                <input type="checkbox" name="acompanhamento[]" value="Kiwi">
+                <input type="checkbox" name="acompanhamento[]" value="Whey">
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -120,23 +120,23 @@
 
             <!-- Coluna 3 -->
             <div id="parte2" style="display: flex; flex-direction: column; gap: 8px;">
-              <label class="checkbox">Coberturas
-                <input type="checkbox" name="cobertura[]">
+              <label class="checkbox">Leite Condensado
+                <input type="checkbox" name="cobertura[]" value="Leite Condensado">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Chocolate Branco
-                <input type="checkbox" name="cobertura[]">
+                <input type="checkbox" name="cobertura[]" value="Chocolate Branco">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Pasta de Amendoim
-                <input type="checkbox" name="cobertura[]">
+                <input type="checkbox" name="cobertura[]" value="Pasta de Amendoim">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Chantilly
-                <input type="checkbox" name="cobertura[]">
+                <input type="checkbox" name="cobertura[]" value="Chantilly">
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -144,22 +144,22 @@
             <!-- Coluna 4 -->
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <label class="checkbox">Doce de Leite
-                <input type="checkbox" name="cobertura[]">
+                <input type="checkbox" name="cobertura[]" value="Doce de Leite">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Calda de Morango
-                <input type="checkbox" name="cobertura[]">
+                <input type="checkbox" name="cobertura[]" value="Calda de Morango">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Calda de Caramelo
-                <input type="checkbox" name="cobertura[]">
+                <input type="checkbox" name="cobertura[]" value="Calda de Caramelo">
                 <span class="checkmark"></span>
               </label>
 
               <label class="checkbox">Calda de Chocolate Meio Amargo
-                <input type="checkbox" name="cobertura[]">
+                <input type="checkbox" name="cobertura[]" value="Calda de Chocolate Meio Amargo">
                 <span class="checkmark"></span>
               </label>
             </div>
