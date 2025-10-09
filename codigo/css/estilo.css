@@ -111,7 +111,7 @@
     width: 80%; 
     max-width: 1200px;
     height: 800px;
-    color: white; 
+    color: rgb(255, 255, 255); 
     min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
 }
 
@@ -119,13 +119,13 @@
     font-size: 3rem;
     text-align: center;
     color: #ffeb3b; 
-    margin-left: 90px;
+    margin-left: 250px;
     margin-top: -200px;  
     position: absolute;
 }
 
 .historia {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
     text-align: center; 
     margin-bottom: 20px; /* Espaço entre os parágrafos */
@@ -133,11 +133,7 @@
     
 }
 
-.texto{
-   
-   
 
-}
 /* garante que a tela se adapte em dispositivos móveis */
 @media (max-width: 768px) {
     .fundoh {
