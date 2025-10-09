@@ -37,42 +37,42 @@
           <!-- Coluna 1 -->
           <div id="parte1" style="display: flex; flex-direction: column; gap: 8px;">
             <label class="checkbox">Banana
-              <input type="checkbox" name="item1">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Morango
-              <input type="checkbox" name="item2">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Kiwi
-              <input type="checkbox" name="item3">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Granola
-              <input type="checkbox" name="item4">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Castanha-de-caju
-              <input type="checkbox" name="item5">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Amendoim
-              <input type="checkbox" name="item6">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Ovomaltine
-              <input type="checkbox" name="item7">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Cereja
-              <input type="checkbox" name="item8">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
           </div>
@@ -80,37 +80,37 @@
           <!-- Coluna 2 -->
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <label class="checkbox">Coco Ralado
-              <input type="checkbox" name="item12">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Paçoca
-              <input type="checkbox" name="item13">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Nutella
-              <input type="checkbox" name="item14">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Chocolate Branco
-              <input type="checkbox" name="item15">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Doce de Leite
-              <input type="checkbox" name="item16">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Leite Ninho
-              <input type="checkbox" name="item17">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
 
             <label class="checkbox">Whey
-              <input type="checkbox" name="item18">
+              <input type="checkbox" name="item[]">
               <span class="checkmark"></span>
             </label>
           </div>
@@ -194,40 +194,3 @@
 
 </html>
 
-
-
-
-
-
-
-
-
-
-  <!-- <div style="display: flex; gap: 40px;">
-  <div style="display: flex; flex-direction: column; gap: 8px;">
-  <label>Banana <input type="checkbox" name="item1"></label>
-  <label>Morango <input type="checkbox" name="item2"></label>
-  <label>Kiwi <input type="checkbox" name="item3"></label>
-  <label>Granola<input type="checkbox" name="item4"></label>
-  <label>Castanha-de-caju <input type="checkbox" name="item5"></label>
-  <label>Amendoim<input type="checkbox" name="item6"></label>
-  <label>Ovomaltine <input type="checkbox" name="item7"></label>
-  <label>Cereja <input type="checkbox" name="item8"></label>
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px;">    
-    <label>Coco Ralado <input type="checkbox" name="item12"></label>
-    <label>Paçoca<input type="checkbox" name="item13"></label>
-    <label>Nutella <input type="checkbox" name="item14"></label>
-    <label>Chocolate Branco<input type="checkbox" name="item15"></label>
-    <label>Doce de Leite <input type="checkbox" name="item16"></label>
-    <label>Leite Ninho<input type="checkbox" name="item17"></label>
-    <label>Whey<input type="checkbox" name="item18"></label>
-
-  </div>
-</div> -->
-
-
-</body>
-
-</html>
