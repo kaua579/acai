@@ -100,7 +100,6 @@
 
 /* Container do conteúdo */
 .historia {
-<<<<<<< Updated upstream
     text-align: center;
     max-width: 900px;
     padding: 40px;
@@ -109,14 +108,13 @@
 }
 
 /* Título */
-h1 {
+/* h1 {
     font-size: 3rem;
     color: #ffeb3b;
-=======
     display: flex;
     height: 100vh;
     /* ocupa a tela toda */
-}
+} */
 
 /* Lado da imagem */
 .lado-esquerdo {
@@ -146,27 +144,19 @@ h1 {
 
 .lado-direito h1 {
     font-size: 3em;
-    margin-bottom: 30px;
->>>>>>> Stashed changes
+    margin-bottom: 30px ;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 /* Texto */
 p {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #ffeb3b;
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 /*-----------------------------------------------------pagina Produtos------------------------------------------------*/
 
 .fundo {
@@ -198,7 +188,7 @@ p {
 }
 
 .produto {
-    background-color: ;
+    background-color: chocolate;
     border-radius: 10px;
     padding: 10px;
     width: 150px;
@@ -218,23 +208,16 @@ p {
     height: auto;
 
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 #acai1l {
     margin-bottom: 80px;
 }
->>>>>>> Stashed changes
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
-<<<<<<< Updated upstream
+
 /* ---------------------------------------------------------------------------------------------------------------------- */
-=======
 #acai700ml {
     margin-bottom: 15px;
 }
@@ -252,7 +235,7 @@ p {
 }
 
 /* ---------°------------------------------------------------------------------------------------------------------------- */
->>>>>>> Stashed changes
+
 
 table {
     font-family: Arial, sans-serif;
@@ -273,14 +256,7 @@ th {
     border: 1px solid #ddd;
     padding: 8px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
 /* 
 tr:nth-child(even){background-color: #f2f2f2;}
@@ -293,7 +269,6 @@ tr:hover {background-color: #ddd;} */
     padding: 0;
     box-sizing: border-box;
 }
->>>>>>> Stashed changes
 
 
 
@@ -416,7 +391,7 @@ footer {
 
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
 
-agradecimento {
+.agradecimento {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #490152;
@@ -440,11 +415,11 @@ agradecimento {
 /*background-repeat: no-repeat; /* não repete a imagem */
 
 
-h1,
+/* h1,
 h2,
 h3 {
     margin: 10px 0;
-}
+} */
 
 .social {
     position: absolute;
@@ -469,9 +444,7 @@ h3 {
 
 #textoagradecimento {
     font-size: 100px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 }
 
 /*------------------------------------------------------ Fontes ----------------------------------------------------- */
