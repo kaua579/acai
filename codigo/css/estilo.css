@@ -397,7 +397,7 @@ footer {
 
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
 
-agradecimento {
+.agradecimento {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #490152;
@@ -421,11 +421,11 @@ agradecimento {
 /*background-repeat: no-repeat; /* não repete a imagem */
 
 
-h1,
+/* h1,
 h2,
 h3 {
     margin: 10px 0;
-}
+} */
 
 .social {
     position: absolute;
