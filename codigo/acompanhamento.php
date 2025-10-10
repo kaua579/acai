@@ -1,3 +1,26 @@
+<?php
+// Inicia a sessão para poder acessar as variáveis salvas anteriormente
+// (essas variáveis foram criadas na página "salvar_produto.php")
+session_start();
+
+// Verifica se as variáveis de sessão "produto" e "preco" existem
+// Isso garante que o usuário realmente escolheu um produto na página anterior
+if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
+
+    // Se existirem, pega os valores salvos e coloca em variáveis locais
+    // Aqui, por exemplo, $produto pode valer "200ml" e $preco "9.90"
+    $produto = $_SESSION['produto'];
+    $preco = $_SESSION['preco'];
+
+} else {
+    // Caso o usuário tenha vindo direto pra essa página (sem escolher produto),
+    // definimos valores padrões para evitar erros e mostrar uma mensagem adequada
+    $produto = "Produto não selecionado";
+    $preco = "";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

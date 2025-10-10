@@ -151,19 +151,8 @@
 /*-----------------------------------------------------pagina Produtos------------------------------------------------*/
 
 /* aplica as regras a todos os elementos da página */
-* {
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box; 
-}
 
-/* Corpo da página */
-.pag {
-    font-family: Arial, sans-serif; 
-    background-color: #6a1b9a; 
-    color: #fff;
-    text-align: center; 
-}
+
 
 .fundo {
     background-color: #6a1b9a; 
@@ -182,23 +171,23 @@
 
 /*  agrupa os produtos */
 .produtos {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 20px; 
-    flex-wrap: wrap; 
-    margin-top: 30px; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 60px;
 }
 
 /* cada produto */
 .produto {
-    background-color: #fff; 
-    border-radius: 10px; 
-    padding: 15px;
-    width: 200px; 
-    text-align: center;  
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra  ao redor do produto  */
-    transition: transform 0.3s ease-in-out; /*  aumentar o tamanho do produto (efeito hover) */
+    background-color: #ffffff; /* mantém o fundo branco */
+    border-radius: 20px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* sombra suave */
+    transition: transform 0.3s ease-in-out;
 }
 
 /* quando o usuário passa o mouse sobre o produto */
@@ -207,10 +196,12 @@
 }
 
 .produto img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 10px; 
+  width: 180px;         /* tamanho fixo pra todas as imagens */
+  height: 270px;        /* altura fixa pra alinhar os cards */
+  object-fit: cover;    /* corta um pedacinho se precisar, pra preencher certinho */
+  border-radius: 10px;  /* bordas arredondadas */
 }
+
 
 /*  texto */
 .produto p {
