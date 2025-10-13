@@ -23,5 +23,7 @@ if (!empty($_POST['idproduto'])) {
     }
 }
 
+
+
 header("Location: carrinho.php");
 exit;
