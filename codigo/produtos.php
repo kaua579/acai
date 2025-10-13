@@ -19,7 +19,7 @@
                 <form action="salvar_produto.php" method="post">
                     <input type="hidden" name="produto" value="200ml">
                     <input type="hidden" name="preco" value="9.90">
-                    <button type="submit" class="btn-comprar">Comprar</button>
+                    <input type="checkbox" name="produtos[]" value="200ml">
                 </form>
              </div>
 
@@ -29,7 +29,7 @@
                 <form action="salvar_produto.php" method="post">
                     <input type="hidden" name="produto" value="300ml">
                     <input type="hidden" name="preco" value="14.90">
-                    <button type="submit" class="btn-comprar">Comprar</button>
+                    <input type="checkbox" name="produtos[]" value="300ml">
                 </form>
             </div>
 
@@ -39,7 +39,7 @@
                 <form action="salvar_produto.php" method="post">
                     <input type="hidden" name="produto" value="500ml">
                     <input type="hidden" name="preco" value="17.90">
-                    <button type="submit" class="btn-comprar">Comprar</button>
+                    <input type="checkbox" name="produtos[]" value="500ml">
                 </form>
             </div>
 
@@ -49,7 +49,7 @@
                 <form action="salvar_produto.php" method="post">
                     <input type="hidden" name="produto" value="700ml">
                     <input type="hidden" name="preco" value="25.90">
-                    <button type="submit" class="btn-comprar">Comprar</button>
+                    <input type="checkbox" name="produtos[]" value="700ml">
                 </form>
             </div>
              <div class="produto">
@@ -58,7 +58,8 @@
                 <form action="salvar_produto.php" method="post">
                     <input type="hidden" name="produto" value="1L">
                     <input type="hidden" name="preco" value="32.90">
-                    <button type="submit" class="btn-comprar">Comprar</button>
+                    <input type="checkbox" name="produtos[]" value="1L">
+
                 </form>
             </div>
             
