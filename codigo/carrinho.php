@@ -14,8 +14,11 @@ require_once "conexao.php";
 
 <body>
     <?php
+
+
     $acompanhamento = $_POST['acompanhamento'];
-    $complemeto = $_POST['complemento'];
+    $cobertura = $_POST['cobertura'];
+    $produto = $_POST['produto'];
     
     echo "<pre>imprimindo todos";
     print_r($acompanhamento);
@@ -49,7 +52,7 @@ require_once "conexao.php";
     //////////////////////////////////////////////////////////
     
     echo "<pre>imprimindo todos";
-    print_r($complemeto);
+    print_r($cobertura);
     echo "</pre>";
     
     echo "<br><br><br><br>";
@@ -57,23 +60,32 @@ require_once "conexao.php";
     echo "Impressão de um por um";
     echo "<br>";
     
-    foreach ($complemeto as $texto2) {
+    foreach ($cobertura as $texto2) {
         echo "$texto2<br>";
     }
     
     echo "<br><br><br><br>";
     echo "Impressão da quantidade de itens: <br>";
-    $tamanho_comple = sizeof($complemeto);
-    echo $tamanho_comple;
+    $tamanho_cobertura= sizeof($cobertura);
+    echo $tamanho_cobertura;
     
-    if ($tamanho_comple > 3) {
-        $tamanho_comple = $tamanho_comple - 3;
+    if ($tamanho_cobertura > 3) {
+        $tamanho_cobertura = $tamanho_cobertura - 3;
     }
     
     echo "<br><br><br><br>";
     $preco_por_adicional2 = 2;
-    $adicional = $tamanho_comple * $preco_por_adicional_comple;
-    echo "Vai pagar por adicional: $adicional_comple";
+    $adicional2 = $tamanho_cobertura * $preco_por_adicional2;
+    echo "Vai pagar por adicional: $adicional2";
+
+//////////////////////////////produto////////////////////////////
+    echo "<pre>imprimindo todos";
+    print_r($produto);
+    echo "</pre>";
+    
+    echo "<br><br><br><br>";
+
+
     ?>
 
 
