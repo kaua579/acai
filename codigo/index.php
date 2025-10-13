@@ -5,18 +5,13 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <h1>Acesso ao sistema</h1>
-    
 
     <form action="verificarLogin.php" method="post">
-        E-mail: <br>
-        <input type="text" name="email"> <br><br>
-        Senha: <br>
-        <input type="text" name="senha"> <br><br>
-
-        <a href="formUsuario.php">Primeiro acesso</a> <br><br>
+        <a href="login.php">Login</a> <br><br>
+        <a href="formUsuario.php">Cadastrar</a> <br><br>
         <!-- <a href="formUsuario.php">Primeiro acesso</a> <br><br> -->
 
-        <input type="submit" value="Acessar">
     </form>
