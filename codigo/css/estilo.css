@@ -158,7 +158,17 @@
     background-color: #6a1b9a; 
     padding: 20px; 
     min-height: 100vh;
+    position: relative; /* Necessário para posicionar as curvas dentro da div */
+    overflow: hidden; /* Esconde partes que passarem da tela */
 }
+
+/*#fundo-produtos {
+    position: relative;
+    z-index: 2;                  /* conteúdo acima das formas 
+    background-image: url(imagens/acaiimg.png);
+    background-repeat: no-repeat;      /* impede que a imagem se repita 
+
+}*/
 
 
 .titulo-img {
@@ -179,17 +189,12 @@
   margin-top: 60px;
 }
 
-/* cada produto */
-/* .produto {
-    background-color: #FFF6CC;  /* mantém o fundo branco */
-    /* border-radius: 20px;
-    padding: 20px;
-    width: 240px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* sombra suave */
-    /* transition: transform 0.3s ease-in-out; 
-}*/
- 
+.produto {
+  position: relative;      /* Define o card como referência para posicionar elementos dentro dele */
+  display: inline-block;   /* Faz os produtos ficarem lado a lado na tela */
+  margin: 20px;            /* Espaço entre um card e outro */
+  text-align: center;      /* Centraliza o texto e a imagem dentro do card */
+}
 
 /* quando o usuário passa o mouse sobre o produto */
 .produto:hover {
@@ -207,22 +212,94 @@
 
 /*  texto */
 .produto p {
-    font-size: 18px; 
+    font-size: 20px; 
     font-weight: bold; /*  negrito */
-    margin-top: 15px; 
+    margin-top: -18px; 
     color: #ffeb3b; 
 }
+
+/*Define o estilo do container do checkbox */
+.caixa-check {
+  position: relative;   /* permite posicionar o checkmark dentro */
+  display: inline-block;
+  width: 25px;          /* tamanho da caixinha */
+  height: 25px;
+  cursor: pointer;      /* mostra o cursor de "mãozinha" ao passar */
+}
+
+.caixa-check {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+/*Esconde o checkbox padrão do navegador */
+.caixa-check input {
+  opacity: 0;   /* invisível */
+  width: 0;
+  height: 0;
+}
+
+/*Cria a caixinha roxa personalizada */
+.caixa-check .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #e2baff;  /* cor inicial (roxinho claro) */
+  border-radius: 6px;
+  transition: all 0.2s ease;  /* transição suave */
+}
+
+/*Quando o checkbox é marcado, muda a cor */
+.caixa-check input:checked + .checkmark {
+  background-color: #a455ff; /* roxo escuro */
+}
+
+/*Cria o "check" (✔) invisível inicialmente */
+.caixa-check .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/*Exibe o "check" quando o input é marcado */
+.caixa-check input:checked + .checkmark::after {
+  display: block;
+  left: 8px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkmark {
+  position: absolute;      /* Fica sobre o local do input invisível */
+  top: 0;                  /* Alinha ao topo da área da label */
+  left: 0;                 /* Alinha à esquerda da área da label */
+  width: 25px;             /* Tamanho do quadradinho visível */
+  height: 25px;
+  background-color: #d19df5;  /* Cor de fundo (lilás claro) */
+  border-radius: 6px;         /* Arredonda os cantos */
+  transition: 0.2s;           /* Suaviza o efeito de mudança quando marcado */
+}
+
+
+
 
 /*  botão de compra */
 .btn-comprar {
     display: inline-block; /* faz o botão ser exibido como um bloco */
-    margin-top: 10px; 
-    background-color: #4CAF50; 
+    margin-top: 10px; /* espaço acima do botão */
+    background-color: #315c1d ;
     color: white; 
-    padding: 10px 20px; 
+    padding: 10px 20px; /* espaço interno do botão */
     text-decoration: none; /* tirar o sublinhado do link*/
     font-weight: bold;
-    border-radius: 5px; 
+    border-radius: 5px; /* bordas arredondadas */
     transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
 }
 
@@ -231,6 +308,15 @@
 .btn-comprar:hover {
     background-color: #45a049; /* Altera a cor de fundo do botão para um verde mais escuro */
 }
+
+.form-geral {
+  display: flex;             /* organiza os itens em linha ou coluna */
+  flex-direction: column;    /* deixa os produtos e o botão em coluna */
+  align-items: center;       /* centraliza tudo horizontalmente */
+  gap: 20px;                 /* espaço entre os elementos */
+  margin-top: 30px;          /* espaço do topo */
+}
+
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
 
@@ -461,7 +547,6 @@ h3 {
     background-size: cover;            /* faz a imagem cobrir toda a tela */
     background-attachment: fixed;      /* mantém o fundo fixo ao rolar a página */
     background-position: center;       /* centraliza a imagem */
-
     height: 100vh;                     /* faz ocupar 100% da altura da tela */   
 }
 
