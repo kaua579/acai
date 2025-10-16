@@ -30,6 +30,7 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
   <link rel="stylesheet" href="./css/estilo.css">
   <title>Acompanhamentos</title>
 </head>
+<img src="./css/imagens/tigela1.png" id="tigela">
 
 <body id="fundo-acompanhamento">
 
@@ -207,9 +208,8 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
     <!-- BOTÃO -->
     <div style="margin-top: 40px;">
-      <input type="submit" value="Ver carrinho">
+      <input type="submit" value="Continuar comprando">
     </div>
-
   </form>
 </body>
 
