@@ -18,12 +18,25 @@
                    <div class="produtos">
 
                         <!-- Produto 200ml -->
-                    <div class="produto">
+                        <div class="produto">
                          <img src="acai200ml.png" alt="200 ml">
                         <p>200 ML - R$9,90</p>
                         <label class="caixa-check">
                              <input type="checkbox" name="check_200ml" value="1" onchange="toggleHidden(this, 'produto_200ml', 'preco_200ml')">
-                             <span class="checkmar.kbox" name="check_300ml" value="1" onchange="toggleHidden(this, 'produto_300ml', 'preco_300ml')">
+
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="hidden" name="produto" id="produto_200ml" value="200ml" disabled>
+                            <input type="hidden" name="preco" id="preco_200ml" value="9.90" disabled>
+                        </div>
+
+                        <!-- Produto 300ml -->
+
+                        <div class="produto">
+                         <img src="acai300ml.png" alt="300 ml">
+                        <p>300 ML - R$14,90</p>
+                        <label class="caixa-check">
+                             <input type="checkbox" name="check_300ml" value="1" onchange="toggleHidden(this, 'produto_300ml', 'preco_300ml')">
                                 <span class="checkmark"></span>
                             </label>
                             <input type="hidden" name="produto" id="produto_300ml" value="300ml" disabled>
