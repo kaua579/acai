@@ -9,10 +9,12 @@
 <body>
   
 <div class="social">
+
 <img id= "icones" src="iconess.png" >
 </div>
 <div class="texto">
-    <p id= "textoagradecimento"> Obrigado <br> pela <br> Preferência</p> 
+    <img id= "agra" src="agra.png" >
+<p id= "textoagradecimento"> Obrigado <br> pela <br> Preferência</p> 
 
     
 </body>

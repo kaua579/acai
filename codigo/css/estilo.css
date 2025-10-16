@@ -484,10 +484,12 @@ footer {
 .texto{
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #490152;
+    background-image: "agra.png";
+    padding: 20px; 
+    min-height: 100vh;
     color: white;
     text-align: center;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
