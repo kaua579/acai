@@ -439,7 +439,7 @@ section h2 {
     color: #fff;
 }
 
-/* --- Acompanhamentos e Coberturas --- */
+/* ----------------------------------- Acompanhamentos e Coberturas -------------------------------------------- */
 .acomp-itens,
 .cobert-itens {
     display: flex;
@@ -471,6 +471,14 @@ footer {
     opacity: 0.8;
 }
 
+
+.texto_amarelo {
+    color: #ffeb3b; /* Cor amarela */
+    font-size: 14px; /* Tamanho da fonte */
+    margin-top: 20px; /* Espaçamento superior */
+    font-weight: bold;
+    
+}
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
 
 .texto{
