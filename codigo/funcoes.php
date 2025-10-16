@@ -9,11 +9,12 @@
  * @param string $email O e-mail informado pelo usuário.
  * @param string $senha A senha informada pelo usuário.
  * @param string $tipo O tipo informado pelo usuário.
- * @return int ID do usuário.
- * @throws 0 caso não encontre nenhum usuário.
+ * @return int ID do usuário inserido.
+ * @throws Exception Se houver falha na inserção no banco de dados.
  * 
  **/
-function salvarUsuario($conexao, $nome, $email, $senha, $tipo){
+function salvarUsuario($conexao, $nome, $email, $senha, $tipo)
+{
     $sql = "INSERT INTO tb_usuario (nome, email, senha, tipo) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -36,7 +37,7 @@ function salvarUsuario($conexao, $nome, $email, $senha, $tipo){
  *     - 'tipo' : Tipo de usuário (ex: "adm", "cliente").
  *     - 'nome' : Nome do usuário.
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ **/
 function listarUsuario($conexao)
 {
     $sql = "SELECT * FROM tb_usuario";
@@ -66,10 +67,9 @@ function listarUsuario($conexao)
  * @param int $id O ID do usuário que será atualizado.
  * 
  * @return bool  se a atualização foi bem-sucedida, ou `false` em caso de falha.
- */
+ **/
 function editarUsuario($conexao, $nome, $email, $senha, $tipo, $id)
 {
-
     $sql = "UPDATE tb_usuario SET nome=?, email=?, senha=?, tipo=? WHERE idusuario=?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -88,13 +88,11 @@ function editarUsuario($conexao, $nome, $email, $senha, $tipo, $id)
  * 
  * @param mysqli $conexao Uma conexão com o banco.
  * @param int $idusuario O ID do usuário a ser removido.
- * 
- * @return bool  caso o usuário seja removido com sucesso.
- * @throws Exception caso ocorra uma falha na exclusão.
- */
+ * @return bool  $idusuario
+ * @throws 0 caso mão encontrar o id informado
+ **/
 function deletarUsuario($conexao, $idusuario)
 {
-
     $sql = "DELETE FROM tb_usuario WHERE idusuario = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -116,7 +114,7 @@ function deletarUsuario($conexao, $idusuario)
  * 
  * @return array Um array associativo com os dados do usuário.
  * @throws null caso não encontre nenhum usuário.
- */
+ **/
 function pesquisarUsuario($conexao, $idusuario)
 {
     $sql = "SELECT * FROM tb_usuario WHERE idusuario = ?";
@@ -149,7 +147,7 @@ function pesquisarUsuario($conexao, $idusuario)
  * @param int $tb_usuario_idusuario O ID do usuário associado ao cliente.
  * 
  * @throws null  Não retorna nenhum valor.
- */
+ **/
 function salvarCliente($conexao, $cpf, $endereco, $pontos, $tb_usuario_idusuario)
 {
     $sql = "INSERT INTO tb_cliente (cpf, endereco, pontos, tb_usuario_idusuario) VALUES (?, ?, ?, ?)";
@@ -174,8 +172,8 @@ function salvarCliente($conexao, $cpf, $endereco, $pontos, $tb_usuario_idusuario
  *     - '$tb_usuario_idusuario' : O ID do usuário associado ao cliente.
  * @return array Um array contendo todos os clientes encontrados. Cada cliente é um array associativo com os dados da tabela `tb_cliente`.
  * @throws null caso não haja clientes cadastrados.
- */
-function listarClientes($conexao,)
+ **/
+function listarClientes($conexao)
 {
     $sql = "SELECT * FROM tb_cliente";
     $comando = mysqli_prepare($conexao, $sql);
@@ -205,8 +203,8 @@ function listarClientes($conexao,)
  * 
  * @return bool  caso a atualização seja realizada com sucesso.
  * @throws false caso ocorra uma falha na atualização.
- */
-function editarCliente($conexao, $cpf, $endereco,$pontos, $idcliente, $tb_usuario_idusuario) // feito
+ **/
+function editarCliente($conexao, $cpf, $endereco,$pontos, $idcliente, $tb_usuario_idusuario) 
 {
     $sql = "UPDATE tb_cliente SET cpf=?, endereco=?, pontos=?, tb_usuario_idusuario=? WHERE idcliente=?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -227,7 +225,7 @@ function editarCliente($conexao, $cpf, $endereco,$pontos, $idcliente, $tb_usuari
  * 
  * @return bool  caso o cliente seja removido com sucesso.
  * @throws false caso ocorra uma falha na exclusão.
- */
+ **/
 function deletarCliente($conexao, $idcliente)
 {
     $sql = "DELETE FROM tb_cliente WHERE idcliente = ?";
@@ -249,7 +247,7 @@ function deletarCliente($conexao, $idcliente)
  * 
  * @return array Um array associativo com os dados do cliente.
  * @throws null caso não encontre o cliente com o ID fornecido.
- */
+ **/
 function pesquisarClienteId($conexao, $idcliente)
 {
     $sql = "SELECT * FROM tb_cliente WHERE idcliente = ?";
@@ -281,7 +279,7 @@ function pesquisarClienteId($conexao, $idcliente)
  * @param string $cobertura A cobertura do produto.
  * 
  * @return void Não retorna nenhum valor.
- */
+ **/
 function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura)
 {
     $sql = "INSERT INTO tb_produto (nome, tamanho, complemento_g, complemento_p, cobertura) VALUES (?, ?, ?, ?, ?)";
@@ -307,7 +305,7 @@ function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p
  *      - 'complemento_p' : O complemento pago do produto.
  *      - 'cobertura' : A cobertura do produto.
  * @throws null caso não haja produtos cadastrados.
- */
+ **/
 function listarProduto($conexao)
 {
     $sql = "SELECT * FROM tb_produto";
@@ -340,7 +338,7 @@ function listarProduto($conexao)
  * 
  * @return bool  caso a atualização seja realizada com sucesso.
  * @throws false caso ocorra uma falha na atualização.
- */
+ **/
 function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p, $cobertura, $idproduto)
 {
     $sql = "UPDATE tb_produto SET nome=?, tamanho=?, complemento_g=?, complemento_p=?, cobertura=? WHERE idproduto=?";
@@ -361,10 +359,9 @@ function editarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p
  * 
  * @param mysqli $conexao Uma conexão com o banco.
  * @param int $idproduto O ID do produto a ser removido.
- * 
  * @return bool  caso o produto seja removido com sucesso.
  * @throws false caso ocorra uma falha na exclusão.
- */
+ **/
 function deletarProduto($conexao, $idproduto)
 {
     $sql = "DELETE FROM tb_produto WHERE idproduto = ?";
@@ -388,7 +385,7 @@ function deletarProduto($conexao, $idproduto)
  * 
  * @return array Um array associativo com os dados do produto.
  * @throws null caso não encontre o produto com o ID fornecido.
- */
+ **/
 function pesquisarProdutoId($conexao, $idproduto)
 {
     $sql = "SELECT * FROM tb_produto WHERE idproduto = ?";
@@ -428,8 +425,8 @@ function pesquisarProdutoId($conexao, $idproduto)
  * @param int $tb_cliente_idcliente O ID do cliente que fez o pedido.
  * 
  * @return void Não retorna nenhum valor.
- */
-function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atendente, $tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente) // feito
+ **/
+function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atendente, $tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente) 
 {
     $sql = "INSERT INTO tb_pedido (observacao, horario_inicio, horario_final, status, valor_p, taxa_entrega, data, nota_atendente, tb_endereco_idendereco, tb_atendente_idatendente, tb_cliente_idcliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -462,8 +459,8 @@ function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $s
  *     - 'tb_cliente_idcliente' : ID do cliente que fez o pedido.
  * 
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
-function listarPedido($conexao,) 
+ **/
+function listarPedido($conexao) 
 {
     $sql = "SELECT * FROM tb_pedido";
     $comando = mysqli_prepare($conexao, $sql);
@@ -500,8 +497,8 @@ function listarPedido($conexao,)
  * 
  * @return bool  caso a atualização seja realizada com sucesso.
  * @throws false caso ocorra uma falha na atualização.
- */
-function editarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atedente,$tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente, $idpedido ) // feito
+ **/
+function editarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atedente,$tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente, $idpedido )
 {
     $sql = "UPDATE tb_pedido SET observacao=?, horario_inicio=?, horario_final=?, status=?, valor_p=?, taxa_entrega=?, data=?, nota_atendente=?, tb_endereco_idendereco=?, tb_atendente_idatendente=?, tb_cliente_idcliente=?  WHERE idpedido=?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -522,8 +519,8 @@ function editarPedido($conexao, $observacao, $horario_inicio, $horario_final, $s
  * 
  * @return bool  caso o pedido seja removido com sucesso.
  * @throws false caso ocorra uma falha na exclusão.
- */
-function deletarPedido($conexao, $idpedido) // feito
+ **/
+function deletarPedido($conexao, $idpedido)
 {
     $sql = "DELETE FROM tb_pedido WHERE idpedido = ?";
     
@@ -544,9 +541,9 @@ function deletarPedido($conexao, $idpedido) // feito
  * @param mysqli $conexao Uma conexão com o banco.
  * @param int $idpedido O ID do pedido a ser pesquisado.
  * 
- * @return array|null Um array associativo com os dados do pedido, ou `null` caso não encontre o pedido.
- * @throws null caso não encontre o pedido com o ID fornecido.
- */
+ * @return array $pedido Um array associativo com os dados do pedido, ou `null` caso não encontre o pedido.
+ * @throws 0 caso não encontre o pedido com o ID fornecido.
+ **/
 function pesquisarPedidoId($conexao, $idpedido) 
 {
     $sql = "SELECT * FROM tb_pedido WHERE idpedido = ?";
@@ -578,7 +575,7 @@ function pesquisarPedidoId($conexao, $idpedido)
  * 
  * @return bool caso o pagamento seja registrado com sucesso.
  * @throws false caso ocorra uma falha na inserção.
- */
+ **/
 function salvarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido)
 {
     $sql = "INSERT INTO tb_pagamento (forma_p, data_pagamento, valor_total, tb_pedido_idpedido) VALUES (?, ?, ?, ?)";
@@ -604,11 +601,10 @@ function salvarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_
  *     - 'valor_total' : Valor total pago.
  *     - 'tb_pedido_idpedido' : ID do pedido relacionado ao pagamento.
  * 
- * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ * @throws 0 Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function listarPagamento($conexao)
 {
-
     $sql = "SELECT * FROM tb_pagamento";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -624,10 +620,6 @@ function listarPagamento($conexao)
     return $lista_pagamento;
 }
 
-    //$sql = "UPDATE tb_cliente SET cpf=?, endereco=?, pontos=?, tb_usuario_idusuario=? WHERE idcliente=?";
-    //$comando = mysqli_prepare($conexao, $sql);
-
-   // mysqli_stmt_bind_param($comando, 'ssiii', $cpf, $endereco, $pontos, $idcliente, $tb_usuario_idusuario);
 /**
  * Editar um pagamento no Banco de Dados
  * 
@@ -642,7 +634,7 @@ function listarPagamento($conexao)
  * 
  * @return bool  caso a atualização seja realizada com sucesso.
  * @throws false caso ocorra uma falha na atualização.
- */
+ **/
 function editarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_pedido_idpedido, $idpagamento)
 {
     $sql = "UPDATE tb_pagamento SET forma_p=?, data_pagamento=?, valor_total=?, tb_pedido_idpedido=? WHERE idpagamento=?";
@@ -662,10 +654,11 @@ function editarPagamento($conexao, $forma_p, $data_pagamento, $valor_total, $tb_
  * @param mysqli $conexao Uma conexão com o banco.
  * @param int $idpagamento O ID do pagamento a ser removido.
  * 
- * @return bool  caso o pagamento seja removido com sucesso.
- * @throws false caso ocorra uma falha na exclusão.
- */
-function deletarPagamento($conexao, $idpagamento){
+ * @return arrey  caso o pagamento seja removido com sucesso.
+ * @throws 0 caso ocorra uma falha na exclusão.
+ **/
+function deletarPagamento($conexao, $idpagamento)
+{
     $sql = "DELETE FROM tb_pagamento WHERE idpagamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -685,9 +678,10 @@ function deletarPagamento($conexao, $idpagamento){
  * @param int $idpagamento O ID do pagamento a ser pesquisado.
  * 
  * @return array Um array associativo com os dados do pagamento.
- * @throws null caso não encontre o pagamento com o ID fornecido.
- */
-function pesquisarPagamentoId($conexao, $idpagamento){
+ * @throws 0 caso não encontre o pagamento com o ID fornecido.
+ **/
+function pesquisarPagamentoId($conexao, $idpagamento)
+{
     $sql = "SELECT * FROM tb_pagamento WHERE idpagamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -717,7 +711,7 @@ function pesquisarPagamentoId($conexao, $idpagamento){
  * 
  * @return bool  caso o atendente seja registrado com sucesso.
  * @throws false caso ocorra uma falha na inserção.
- */
+ **/
 function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
 {
     $sql = "INSERT INTO tb_atendente (idade, horario_chegada, horario_saida, descricao, tb_usuario_idusuario) VALUES (?, ?, ?, ?, ?)";
@@ -737,16 +731,14 @@ function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $de
  * Retorna uma lista de todos os atendentes registrados na tabela `tb_atendente`.
  * 
  * @param mysqli $conexao Uma conexão com o banco.
- * @return array Lista de atendentes, onde cada atendente é representado por um array com as chaves:
+ * @return array $atendente, onde cada atendente é representado por um array com as chaves:
  *     - 'idatendente' : ID do atendente.
  *     - 'idade' : Idade do atendente.
  *     - 'horario_chegada' : Horário de chegada do atendente.
  *     - 'horario_saida' : Horário de saída do atendente.
  *     - 'descricao' : Descrição do atendente (ex: cargo, observações, etc).
- *     - 'tb_usuario_idusuario' : ID do usuário associado ao atendente.
- * 
- * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ * @throws 0 Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function listarAtendente($conexao)
 {
     $sql = "SELECT * FROM tb_atendente";
@@ -755,13 +747,13 @@ function listarAtendente($conexao)
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
 
-    $lista_atendentes = [];
+    $lista_atendente = [];
     while ($atendente = mysqli_fetch_assoc($resultados)) {
-        $lista_atendentes[] = $atendente;
+        $lista_atendente[] = $atendente;
     }
     mysqli_stmt_close($comando);
 
-    return $lista_atendentes;
+    return $lista_atendente;
 }
 /**
  * Editar um atendente no Banco de Dados
@@ -776,8 +768,8 @@ function listarAtendente($conexao)
  * @param int $tb_usuario_idusuario O ID do usuário associado ao atendente a ser atualizado.
  * 
  * @return bool  caso a atualização seja realizada com sucesso.
- * @throws false caso ocorra uma falha na atualização.
- */
+ * @throws 0 caso ocorra uma falha na atualização.
+ **/
 function editarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
 {
     $sql = "UPDATE tb_atendente SET idade=?, horario_chegada=?,  horario_saida=?, descricao=?  WHERE tb_usuario_idusuario=?";
@@ -799,9 +791,9 @@ function editarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $de
  * @param mysqli $conexao Uma conexão com o banco.
  * @param int $idatendente O ID do atendente a ser removido.
  * 
- * @return bool `true` caso o atendente seja removido com sucesso.
- * @throws false caso ocorra uma falha na exclusão.
- */
+ * @return array $atendente
+ * @throws 0 Caso não encontrar o ID informado.
+ **/
 function deletarAtendente($conexao, $idatendente)
 {
     $sql = "DELETE FROM tb_atendente WHERE idatendente = ?";
@@ -823,7 +815,7 @@ function deletarAtendente($conexao, $idatendente)
  * @param mysqli $conexao Uma conexão com o banco.
  * @param int $idatendente O ID do atendente a ser pesquisado.
  * 
- * @return array Associative array com os dados do atendente, onde as chaves são:
+ * @return array $atendente dados do atendente, onde as chaves são:
  *     - 'idatendente' : ID do atendente.
  *     - 'idade' : Idade do atendente.
  *     - 'horario_chegada' : Horário de chegada do atendente.
@@ -832,7 +824,7 @@ function deletarAtendente($conexao, $idatendente)
  *     - 'tb_usuario_idusuario' : ID do usuário associado ao atendente.
  * 
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ **/
 function pesquisarAtendenteId($conexao, $idatendente)
 {
     $sql = "SELECT * FROM tb_atendente WHERE idatendente = ?";
@@ -865,7 +857,7 @@ function pesquisarAtendenteId($conexao, $idatendente)
  * 
  * @return bool caso a entrega seja registrada com sucesso.
  * @throws false caso ocorra uma falha no processo de inserção.
- */
+ **/
 function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $nota_entrega, $tb_pedido_idpedido)
 {
     $sql = "INSERT INTO tb_entrega  (data_entrega, horario_entrega, localizacao, nota_entrega, tb_pedido_idpedido) VALUES (?, ?, ?, ?, ?)";
@@ -892,7 +884,7 @@ function salvarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, 
  *     - 'tb_pedido_idpedido' : ID do pedido associado à entrega.
  * 
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ **/
 function listarEntrega($conexao)
 {
     $sql = "SELECT * FROM tb_entrega";
@@ -925,7 +917,7 @@ function listarEntrega($conexao)
  *
  * @return bool  se a execução for bem-sucedida, ou em caso de falha.
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ **/
 function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, $nota_entrega, $tb_pedido_idpedido, $identrega)
 {
     $sql = "UPDATE tb_entrega SET data_entrega=?, horario_entrega=?,  localizacao=?,  nota_entrega=?, tb_pedido_idpedido=?  WHERE identrega=?";
@@ -947,7 +939,7 @@ function editarEntrega($conexao, $data_entrega, $horario_entrega, $localizacao, 
  * 
  * @return bool Retorna se a execução for bem-sucedida, ou  em caso de falha.
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ **/
 function deletarEntrega($conexao, $identrega)
 {
     $sql = "DELETE FROM tb_entrega WHERE identrega = ?";
@@ -977,7 +969,7 @@ function deletarEntrega($conexao, $identrega)
  *     - 'tb_pedido_idpedido' : ID do pedido associado.
  * 
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ **/
 function pesquisarEntregaid($conexao, $identrega)
 {
     $sql = "SELECT * FROM tb_entrega WHERE identrega = ?";
@@ -1005,7 +997,7 @@ function pesquisarEntregaid($conexao, $identrega)
  * @param int $idpedido O ID do pedido associado ao atendente a ser avaliado.
  * @return bool Retorna `true` caso a atualização seja bem-sucedida, `false` caso contrário.
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
- */
+ **/
 function avaliarAtendente($conexao, $nota_atendente, $idpedido)
 {
  $sql = "UPDATE tb_pedido SET nota_atendente=? WHERE  idpedido=?" ;

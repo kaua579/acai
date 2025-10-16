@@ -473,7 +473,7 @@ footer {
 
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
 
-.agradecimento {
+.texto{
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #490152;
@@ -485,23 +485,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
-/*#fundo {
-    margin: 0;
-    padding: 0;
-    height: auto;
-    width: 100%;
-    max-width: 1050px;
-    background-size: cover;       /* ajusta para cobrir a tela inteira */
-/* background-position: center;  /* centraliza a imagem */
-/*background-repeat: no-repeat; /* não repete a imagem */
-
-
-/* h1,
-h2,
-h3 {
-    margin: 10px 0;
-} */
 
 .social {
     position: absolute;

@@ -11,8 +11,8 @@
 <div class="social">
 <img id= "icones" src="iconess.png" >
 </div>
-
-<p id= "textoagradecimento"> Obrigado <br> pela <br> Preferência</p> 
+<div class="texto">
+    <p id= "textoagradecimento"> Obrigado <br> pela <br> Preferência</p> 
 
     
 </body>
