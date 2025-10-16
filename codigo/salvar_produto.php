@@ -7,6 +7,8 @@ if (isset($_POST['produto']) && isset($_POST['preco'])) {
     // Se o produto e o preço existirem no POST, salva esses valores dentro da sessão.
     // Assim, eles ficam guardados temporariamente no servidor, sem aparecer na URL.
 
+    $_SESSION['produto'] = $_POST['produto'];
+    $_SESSION['preco'] = $_POST['preco'];
     header("Location: acompanhamento.php");
     exit();
 

@@ -199,10 +199,10 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
     <!-- FIM CONTAINER PRINCIPAL -->
 
     <!-- OBSERVAÇÕES -->
-    <div style="text-align: left; margin-top: 542px;">
-      <p style="margin: 15px 0;">*Complementos de graça (no máximo 3);</p>
-      <p style="margin: 15px 0;">*Complementos de R$3,00 cada;</p>
-      <p style="margin: 15px 0;">*Coberturas (R$1,50);</p>
+    <div style="text-align: left; margin-top: 542px;" class = "texto_amarelo">
+      <p style="margin: 15px 0;" class = "texto_amarelo">*Complementos de graça (no máximo 3);</p>
+      <p style="margin: 15px 0;" class = "texto_amarelo">*Complementos de R$3,00 cada;</p>
+      <p style="margin: 15px 0;" class = "texto_amarelo">*Coberturas (R$1,50);</p>
     </div>
 
     <!-- BOTÃO -->
