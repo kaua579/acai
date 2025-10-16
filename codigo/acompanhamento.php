@@ -35,7 +35,7 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
   <!-- FORMULARIO -->
   <form action="carrinho.php" method="post">
-
+  
     <!-- CONTAINER PRINCIPAL (LADO A LADO) -->
     <div style="display: flex; justify-content: space-between; gap: 60px;" class="alinhar-checkbox">
 
@@ -200,9 +200,9 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
     <!-- OBSERVAÇÕES -->
     <div style="text-align: left; margin-top: 542px;" class = "texto_amarelo">
-      <p style="margin: 15px 0;" class = "texto_amarelo">*Complementos de graça (no máximo 3);</p>
-      <p style="margin: 15px 0;" class = "texto_amarelo">*Complementos de R$3,00 cada;</p>
-      <p style="margin: 15px 0;" class = "texto_amarelo">*Coberturas (R$1,50);</p>
+      <p class = "texto_amarelo">*Complementos de graça (no máximo 3);</p>
+      <p class = "texto_amarelo">*Complementos de R$3,00 cada;</p>
+      <p class = "texto_amarelo">*Coberturas (R$1,50);</p>
     </div>
 
     <!-- BOTÃO -->

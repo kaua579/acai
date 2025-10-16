@@ -21,7 +21,6 @@ require_once "conexao.php";
 
     $acompanhamento = $_POST['acompanhamento'];
     $cobertura = $_POST['cobertura'];
-    // $produto = $_POST['produto'];
 
     echo "<pre>imprimindo todos";
     print_r($acompanhamento);
@@ -89,16 +88,17 @@ require_once "conexao.php";
 
     echo "<br><br>";
     echo "Impressão do valor do açai: <br> ";
-    echo  $preco; 
+    echo  $preco;
 
     echo "<br><br><br><br>";
     echo "Total que vai pagar: <br> ";
     $total = $preco + $adicional + $adicional2;
-    echo $total
-
-
+    echo $total;
+    echo "<br><br>";
     ?>
 
+
+    <a href="produtos.php">Voltar</a>
 
 </body>
 
