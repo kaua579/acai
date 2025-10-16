@@ -10,6 +10,7 @@
  * @param string $senha A senha informada pelo usuário.
  * @param string $tipo O tipo informado pelo usuário.
  * @return int ID do usuário inserido.
+ * 
  * @throws Exception Se houver falha na inserção no banco de dados.
  * 
  **/
@@ -737,7 +738,10 @@ function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $de
  *     - 'horario_chegada' : Horário de chegada do atendente.
  *     - 'horario_saida' : Horário de saída do atendente.
  *     - 'descricao' : Descrição do atendente (ex: cargo, observações, etc).
- * @throws 0 Caso ocorra algum erro na execução da consulta SQL.
+ * 
+ * @return array Retorna um array contendo os dados de todos os atendentes cadastrados. Caso não haja atendentes, retorna um array vazio.
+ * 
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
  **/
 function listarAtendente($conexao)
 {

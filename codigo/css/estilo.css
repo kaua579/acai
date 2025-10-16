@@ -119,8 +119,8 @@
     font-size: 3rem;
     text-align: center;
     color: #ffeb3b; 
-    margin-left: 250px;
-    margin-top: -200px;  
+    margin-left: 350px;
+    margin-top: -600px;  
     position: absolute;
 }
 
@@ -483,20 +483,32 @@ footer {
 }
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
 
-.texto{
+html, body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: "agra.png";
-    padding: 20px; 
-    min-height: 100vh;
+    padding: 0;
+    height: 100%;
+}
+
+.texto{
+    background-attachment: fixed; /* mantém o fundo fixo ao rolar a página */
+    background-size: cover; /* cobre toda a tela */
     color: white;
-    text-align: center;
-    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    overflow: hidden; /* evita barras de rolagem */
+    
 }
+
+.p {
+    font-size: 60px;
+    margin: 0;
+}
+
+.p {
+    font-size: 40px;
+    margin: 5px 0;
+    }
 
 .social {
     position: absolute;
@@ -520,8 +532,20 @@ footer {
 }
 
 #textoagradecimento {
-    font-size: 100px;
-
+    height: 200vh;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    font-size: 7.5rem;
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+    text-align: center; 
+    margin-bottom: 20px; /* Espaço entre os parágrafos */
+    margin-left: 700px;
 }
 
 /*------------------------------------------------------ Fontes ----------------------------------------------------- */
