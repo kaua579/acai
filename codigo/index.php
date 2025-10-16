@@ -10,8 +10,6 @@
     <h1>Acesso ao sistema</h1>
 
     <form action="verificarLogin.php" method="post">
-        <a href="login.php">Login</a> <br><br>
         <a href="formUsuario.php">Cadastrar</a> <br><br>
-        <!-- <a href="formUsuario.php">Primeiro acesso</a> <br><br> -->
-
+        <a href="login.php">Login</a> <br><br>
     </form>
