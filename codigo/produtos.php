@@ -23,7 +23,6 @@
                         <p>200 ML - R$9,90</p>
                         <label class="caixa-check">
                              <input type="checkbox" name="check_200ml" value="1" onchange="toggleHidden(this, 'produto_200ml', 'preco_200ml')">
-                             <span class="checkmar.kbox" name="check_300ml" value="1" onchange="toggleHidden(this, 'produto_300ml', 'preco_300ml')">
                                 <span class="checkmark"></span>
                             </label>
                             <input type="hidden" name="produto" id="produto_300ml" value="300ml" disabled>
