@@ -341,10 +341,6 @@ th {
     padding: 8px;
 }
 
-/* 
-tr:nth-child(even){background-color: #f2f2f2;}
-
-tr:hover {background-color: #ddd;} */
 
 /* Reset básico */
 * {
@@ -551,79 +547,170 @@ html, body {
 /*------------------------------------------------------ Fontes ----------------------------------------------------- */
 
 @font-face {
-  font-family: 'TT Berlinerins'; /* Nome que você vai usar no CSS */
-  src: url('../fonts/TT-Berlinerins.ttf') format('truetype'); /* caminho até a fonte */
+  font-family: 'TT Berlinerins';
+  src: url('../../fonts/TT-Berlinerins.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+
 /*-----------------------------------------------------------------------------------------------------------------------
 
 /* -----------------------------------------acompanhamentos-------------------------------------------- */
-#fundo-acompanhamento{
-    background-image: url(imagens/fundoacom.png);
-    background-repeat: no-repeat;      /* impede que a imagem se repita */
-    background-size: cover;            /* faz a imagem cobrir toda a tela */
-    background-attachment: fixed;      /* mantém o fundo fixo ao rolar a página */
-    background-position: center;       /* centraliza a imagem */
-    height: 100vh;                     /* faz ocupar 100% da altura da tela */   
+#fundo-acompanhamento {
+  background-image: url(imagens/fundoacom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
 }
 
+/* === ESTILO DOS CHECKBOX === */
 .checkbox {
-  display: inline-flex;              /* deixa o texto ao lado do checkbox */
-  align-items: center;               /* centraliza verticalmente */
-  cursor: pointer;                   /* muda o cursor pra "mãozinha" */
-  font-family: 'TT-Berlinerins', sans-serif;    /* define uma fonte simples */
-  color: #ffffff;  /* cor do texto*/
-  font-size: 15px; /* ← aqui muda o tamanho da letra */
-  
+  display: flex; /* Alinha texto e checkbox lado a lado */
+  align-items: center; /* Centraliza verticalmente */
+  cursor: pointer;
+  font-family: 'TT-Berlinerins', sans-serif;
+  color: #ffffff;
+  font-size: 20px; /* ← aumente aqui o tamanho da letra */
+  line-height: 1.2; /* melhora o espaçamento vertical */
 }
 
 /* Esconde o checkbox padrão */
 .checkbox input {
-  display: none;                     /* esconde o checkbox nativo */
+  display: none;
 }
 
-/* Cria o quadradinho personalizado */
+/* Quadradinho personalizado */
 .checkmark {
-  width: 22px;                       /* tamanho do quadrado */
-  height: 22px;
-  border: 2px solid #800080;         /* borda roxa */
-  border-radius: 5px;                /* bordas levemente arredondadas */
-  background-color: #f2aaf2;         /* cor de fundo */
-  position: relative;                /* necessário pra posicionar o “check” */
-  margin-right: 10px;                /* espaço entre o quadrado e o texto */
-  transition: all 0.2s ease-in-out;  /* animação suave */
+  width: 26px; /* ← tamanho maior do quadrado */
+  height: 26px;
+  border: 2px solid #800080;
+  border-radius: 5px;
+  background-color: #f2aaf2;
+  position: relative;
+  margin-right: 12px; /* espaço entre quadrado e texto */
+  transition: all 0.2s ease-in-out;
 }
 
-/* Quando o checkbox está marcado */
+/* Estado marcado */
 .checkbox input:checked + .checkmark {
-  background-color: #f2aaf2;         /* fundo fica roxo escuro */
+  background-color: #f2aaf2;
   border-color: #f2aaf2;
 }
 
-/* Desenho do "check" (feito com CSS) */
+/* Desenho do "check" */
 .checkbox input:checked + .checkmark::after {
-  content: '';                       /* cria um pseudo-elemento */
-  position: absolute;                
-  left: 6px;                         /* posição do “check” */
-  top: 2px;
-  width: 6px;                        /* largura da linha do “check” */
-  height: 12px;                      /* altura da linha do “check” */
-  border: solid #800080;               /* cor do “check” */
-  border-width: 0 3px 3px 0;         /* forma de “✓” */
-  transform: rotate(45deg);          /* gira pra parecer o símbolo de check */
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 7px;
+  height: 14px;
+  border: solid #800080;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
+/* Ajuste opcional: alinha tudo na mesma linha visual */
+.checkbox span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* === IMAGEM DA TIGELA === */
 #tigela {
-    position: fixed;     /* fica fixo na tela, mesmo ao rolar */
-    bottom: -25px;        /* distância da parte de baixo */
-    right: 610px;         /* distância da lateral direita */
-    width: 500px;        /* tamanho ajustável */
-    z-index: 10;         /* fica acima do fundo */
+  position: absolute;
+  bottom: -25px;
+  right: 610px;
+  width: 500px;
+  z-index: 10;
 }
 
+.alinhar-checkbox {
+    display: flex; 
+    justify-content:space-between; 
+    gap: 60px;
+}
+ 
 
+
+/* Grupo de acompanhamentos */
+.grupo-acompanhamentos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Grupo de coberturas */
+.grupo-coberturas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Títulos */
+.titulo-grupo {
+  margin-bottom: 20px;
+}
+
+/* Colunas de acompanhamentos */
+.colunas-acompanhamento {
+  display: flex;
+  gap: 40px;
+}
+
+/* Colunas de coberturas */
+.colunas-cobertura {
+  display: flex;
+  gap: 40px;
+}
+
+/* Cada coluna individual */
+.coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Observações */
+.observacoes {
+  text-align: left;
+  margin-top: 542px;
+}
+
+.obervacoesletra {
+  font-size: 20px;               /* tamanho da letra */
+  font-family: 'TT-Berlinerins', sans-serif;
+}
+
+/* Botão continuar */
+.botao-continuar {
+  position: relative;
+  margin-top: -px;
+  margin-left: 1500px;   /* espaço à esquerda */
+  
+  
+  
+}
+
+.continuar-comprando {
+  background-color: #2f561c;     /* cor de fundo verde escuro */
+  color: #ffffff;                /* cor do texto */
+  border: none;                  /* remove borda padrão */
+  border-radius: 8px;            /* bordas arredondadas */
+  padding: 12px 40px;            /* espaçamento interno */
+  font-size: 19px;               /* tamanho do texto */
+  font-family: 'Arial', sans-serif; /* fonte simples */
+  text-transform: lowercase;     /* texto em minúsculas */
+  cursor: pointer;               /* muda o cursor */
+  transition: background-color 0.3s ease; /* animação suave */
+}
+
+.continuar-comprando:hover {
+  background-color: #3b6d25;     /* tom mais claro no hover */
+}
 
 /* -------------------------------------home---------------------------------------------------------------- */
 a {

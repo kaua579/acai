@@ -12,10 +12,10 @@ require_once "conexao.php";
 </head>
 
 <body>
-    <!-- link para destrui o carrinho e simular um novo início -->
+
     <a href="destruir_carrinho.php">destruir carrinho</a>
 
-    <!-- ver produtos que podem ser adicionados -->
+
     <form action="adicionar.php" method="POST">
         <h2>Listagem de Produtos</h2>
 
