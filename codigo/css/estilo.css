@@ -437,46 +437,14 @@ section h2 {
 }
 
 /* ----------------------------------- Acompanhamentos e Coberturas -------------------------------------------- */
-.acomp-itens,
-.cobert-itens {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
 
-.acomp-item,
-.cobert-item {
-    background-color: #490152;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.acomp-item:hover,
-.cobert-item:hover {
-    background-color: #5f0a68;
-    transform: translateY(-4px);
-}
-
-footer {
-    margin-top: 30px;
-    font-size: 1rem;
-    color: #f8e9ff;
-    opacity: 0.8;
-}
-
-
-.texto_amarelo {
+/* .texto_amarelo {
     color: #ffeb3b; /* Cor amarela */
-    font-size: 14px; /* Tamanho da fonte */
-    margin-top: 20px; /* Espaçamento superior */
-    font-weight: bold;
+    /* font-size: 14px; /* Tamanho da fonte */
+    /* margin-top: 20px; /* Espaçamento superior */
+    /* font-weight: bold;
     margin: 15px 0;
-    
-}
+} */
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
 
 html, body {
@@ -626,6 +594,8 @@ html, body {
   right: 610px;
   width: 500px;
   z-index: 10;
+  
+  
 }
 
 .alinhar-checkbox {
@@ -658,20 +628,20 @@ html, body {
 /* Colunas de acompanhamentos */
 .colunas-acompanhamento {
   display: flex;
-  gap: 40px;
+  gap: 60px;
 }
 
 /* Colunas de coberturas */
 .colunas-cobertura {
   display: flex;
-  gap: 40px;
+  gap: 80px;
 }
 
 /* Cada coluna individual */
 .coluna {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
 }
 
 /* Observações */
@@ -683,12 +653,13 @@ html, body {
 .obervacoesletra {
   font-size: 20px;               /* tamanho da letra */
   font-family: 'TT-Berlinerins', sans-serif;
+  
 }
 
 /* Botão continuar */
 .botao-continuar {
   position: relative;
-  margin-top: -px;
+  margin-top: -100px;
   margin-left: 1500px;   /* espaço à esquerda */
   
   
@@ -710,6 +681,43 @@ html, body {
 
 .continuar-comprando:hover {
   background-color: #3b6d25;     /* tom mais claro no hover */
+}
+
+.titulo-acompanhamentos {
+  background-color: #f9b233; /* fundo amarelo */
+  color: #4b0d3a;            /* texto roxo escuro */
+  font-family: 'TT-Berlinerins', sans-serif; /* sua fonte personalizada */
+  font-size: 40px;            /* tamanho da letra */
+  text-align: center;         /* centraliza o texto */
+  padding: 10px 30px;         /* espaço interno */
+  border-radius: 15px;        /* bordas arredondadas */
+  display: inline-block;      /* faz o fundo se ajustar ao texto */
+  position: relative;
+  left: 50px;
+  margin-top: 25px;
+}
+
+.titulo-coberturas {
+  background-color: #f9b233; /* fundo amarelo */
+  color: #4b0d3a;            /* texto roxo escuro */
+  font-family: 'TT-Berlinerins', sans-serif; /* sua fonte personalizada */
+  font-size: 40px;            /* tamanho da letra */
+  text-align: center;         /* centraliza o texto */
+  padding: 10px 30px;         /* espaço interno */
+  border-radius: 15px;        /* bordas arredondadas */
+  display: inline-block;      /* faz o fundo se ajustar ao texto */
+  position: relative;
+  left: 100px;
+  margin-top: 25px;
+}
+
+
+.observacoes {
+  position: relative;
+  color: #ffeb3b; /* Cor amarela */
+  margin-top: 510px; /* Espaçamento superior */
+
+    
 }
 
 /* -------------------------------------home---------------------------------------------------------------- */

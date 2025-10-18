@@ -41,7 +41,7 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
       <!-- GRUPO 1: ACOMPANHAMENTOS -->
       <div class="grupo-acompanhamentos">
         <div class="titulo-grupo">
-          <h1>Acompanhamentos</h1>
+          <h1 class="titulo-acompanhamentos">Acompanhamentos</h1>
         </div>
 
         <div class="colunas-acompanhamento">
@@ -117,12 +117,12 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
             </label>
           </div>
         </div>
-      </div>
+      </div>  
 
       <!-- GRUPO 2: COBERTURAS -->
       <div class="grupo-coberturas">
         <div class="titulo-grupo">
-          <h1>Coberturas</h1>
+          <h1 class="titulo-coberturas">Coberturas</h1>
         </div>
 
         <div class="colunas-cobertura">
@@ -170,15 +170,15 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
     </div>
 
     <!-- OBSERVAÇÕES -->
-    <div class="observacoes texto_amarelo">
-    <p class="obervacoesletra">*Complementos de graça (no máximo 3);</p>
-    <p class="obervacoesletra">*Complementos de R$3,00 cada;</p>
-    <p class="obervacoesletra">*Coberturas (R$1,50);</p>
+    <div class="observacoes">
+      <p class="obervacoesletra">*Complementos de graça (no máximo 3);</p>
+      <p class="obervacoesletra">*Complementos de R$3,00 cada;</p>
+      <p class="obervacoesletra">*Coberturas (R$1,50);</p>
     </div>
 
     <div class="botao-continuar">
       <button type="submit" class="continuar-comprando">Continuar comprando</button>
-    </div>
+     </div>
   </form>
 </body>
 </html>
