@@ -1,4 +1,58 @@
+/* ------------------------------------------Index---------------------------------------------------------------- */
+#fundo-index {
+  background-image: url(imagens/fundoIndex.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
 
+.botao-cadastrar{
+  position: relative;
+  top: 540px; /* desce 40px */
+  background-color: #315c1d ;
+  color: white; 
+  font-size: 25px;            /* tamanho da letra */
+  padding: 25px 120px; /* espaço interno do botão */
+  text-decoration: none; /* tirar o sublinhado do link*/
+  font-weight: bold;
+  border-radius: 13px; /* bordas arredondadas */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  margin-left: 760px;   /* espaço à esquerda */
+}
+
+.botao-login{
+  position: relative;
+  top: 580px; /* espaço acima do botão */
+  display: inline-block; /* faz o botão ser exibido como um bloco */
+  background-color: #315c1d ;
+  color: white; 
+  font-size: 25px;            /* tamanho da letra */
+  padding: 25px 143px; /* espaço interno do botão */
+  text-decoration: none; /* tirar o sublinhado do link*/
+  font-weight: bold;
+  border-radius: 13px; /* bordas arredondadas */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  margin-left: 760px;   /* espaço à esquerda */
+
+}
+
+.log-gatinho {
+  background-image: url(imagens/logocat.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 650px;
+  height: 320px; 
+  position: absolute;
+  top: 180px;
+  margin-left: 620px;   /* espaço à esquerda */
+  
+  
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
 #tituloc {
     height: 150px;
     position: absolute;
@@ -59,11 +113,7 @@
     text-decoration: underline;
 }
 
-.fullscreen {
-    background: fixed;
-    background-image: url("fundoIndex.png");
 
-}
 
 .link {
     width: 20%;
@@ -158,14 +208,6 @@
     position: relative; /* Necessário para posicionar as curvas dentro da div */
     overflow: hidden; /* Esconde partes que passarem da tela */
 }
-
-/*#fundo-produtos {
-    position: relative;
-    z-index: 2;                  /* conteúdo acima das formas 
-    background-image: url(imagens/acaiimg.png);
-    background-repeat: no-repeat;      /* impede que a imagem se repita 
-
-}*/
 
 
 .titulo-img {
@@ -289,15 +331,15 @@
 
 /*  botão de compra */
 .btn-comprar {
-    display: inline-block; /* faz o botão ser exibido como um bloco */
-    margin-top: 10px; /* espaço acima do botão */
-    background-color: #315c1d ;
-    color: white; 
-    padding: 10px 20px; /* espaço interno do botão */
-    text-decoration: none; /* tirar o sublinhado do link*/
-    font-weight: bold;
-    border-radius: 5px; /* bordas arredondadas */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  display: inline-block; /* faz o botão ser exibido como um bloco */
+  margin-top: 10px; /* espaço acima do botão */
+  background-color: #315c1d ;
+  color: white; 
+  padding: 10px 20px; /* espaço interno do botão */
+  text-decoration: none; /* tirar o sublinhado do link*/
+  font-weight: bold;
+  border-radius: 5px; /* bordas arredondadas */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
 }
 
 
@@ -727,8 +769,4 @@ section h2 {
 }
 
 /* -------------------------------------home---------------------------------------------------------------- */
-a {
-    text-decoration: none;
-    
-}
 

@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 
-<body>
-    <h1>Acesso ao sistema</h1>
-
+<body id="fundo-index">
+    <div class="log-gatinho"></div>
     <form action="verificarLogin.php" method="post">
-        <a href="formUsuario.php">Cadastrar</a> <br><br>
-        <a href="login.php">Login</a> <br><br>
+        <a href="formUsuario.php" class="botao-cadastrar">Cadastrar</a> <br><br>
+        <a href="login.php" class="botao-login">Login</a> <br><br>
     </form>
+</body>
