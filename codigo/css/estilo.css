@@ -545,6 +545,7 @@ section h2 {
 
 .btn-voltar{
   background-color: #a8107c;     /* cor de fundo verde escuro */
+  text-decoration: none; /* tirar o sublinhado do link*/
   color: #c4c2c4;                /* cor do texto */
   border: none;                  /* remove borda padrão */
   border-radius: 12px;            /* bordas arredondadas */
