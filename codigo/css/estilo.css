@@ -152,7 +152,7 @@
 
 
 .fundo {
-    background-color: #6a1b9a; 
+    background-color: #6e0b7b  ; /*#6a1b9a;  */
     padding: 20px; 
     min-height: 100vh;
     position: relative; /* Necessário para posicionar as curvas dentro da div */
@@ -642,6 +642,8 @@ html, body {
   position: relative;
   margin-top: -100px;
   margin-left: 1500px;   /* espaço à esquerda */
+
+
 }
 
 .continuar-comprando {
@@ -650,7 +652,7 @@ html, body {
   border: none;                  /* remove borda padrão */
   border-radius: 8px;            /* bordas arredondadas */
   padding: 12px 40px;            /* espaçamento interno */
-  font-size: 19px;               /* tamanho do texto */
+  font-size: 20px;               /* tamanho do texto */
   font-family: 'Arial', sans-serif; /* fonte simples */
   text-transform: lowercase;     /* texto em minúsculas */
   cursor: pointer;               /* muda o cursor */
