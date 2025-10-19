@@ -150,9 +150,6 @@
 
 /*-----------------------------------------------------pagina Produtos------------------------------------------------*/
 
-/* aplica as regras a todos os elementos da página */
-
-
 
 .fundo {
     background-color: #6a1b9a; 
@@ -436,15 +433,8 @@ section h2 {
     color: #fff;
 }
 
-/* ----------------------------------- Acompanhamentos e Coberturas -------------------------------------------- */
 
-/* .texto_amarelo {
-    color: #ffeb3b; /* Cor amarela */
-    /* font-size: 14px; /* Tamanho da fonte */
-    /* margin-top: 20px; /* Espaçamento superior */
-    /* font-weight: bold;
-    margin: 15px 0;
-} */
+
 /*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
 
 html, body {
@@ -541,7 +531,7 @@ html, body {
   cursor: pointer;
   font-family: 'TT-Berlinerins', sans-serif;
   color: #ffffff;
-  font-size: 20px; /* ← aumente aqui o tamanho da letra */
+  font-size: 25px; /* ← aumente aqui o tamanho da letra */
   line-height: 1.2; /* melhora o espaçamento vertical */
 }
 
@@ -587,7 +577,12 @@ html, body {
   vertical-align: middle;
 }
 
-/* === IMAGEM DA TIGELA === */
+.alinhar-checkbox {
+    display: flex; 
+    justify-content:space-between; 
+    gap: 60px;
+}
+/* ----------------------------------------------------------- */
 #tigela {
   position: absolute;
   bottom: -25px;
@@ -598,14 +593,8 @@ html, body {
   
 }
 
-.alinhar-checkbox {
-    display: flex; 
-    justify-content:space-between; 
-    gap: 60px;
-}
  
-
-
+/* ------------------------------------------------------------------------------- */
 /* Grupo de acompanhamentos */
 .grupo-acompanhamentos {
   display: flex;
@@ -622,48 +611,37 @@ html, body {
 
 /* Títulos */
 .titulo-grupo {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-
+/* ---------------------------------------------------------------------------------- */
 /* Colunas de acompanhamentos */
 .colunas-acompanhamento {
   display: flex;
   gap: 60px;
+  margin-left: 80px;
 }
 
 /* Colunas de coberturas */
 .colunas-cobertura {
   display: flex;
   gap: 80px;
+  margin-right: 30px;
 }
 
 /* Cada coluna individual */
 .coluna {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-/* Observações */
-.observacoes {
-  text-align: left;
-  margin-top: 542px;
-}
-
-.obervacoesletra {
-  font-size: 20px;               /* tamanho da letra */
-  font-family: 'TT-Berlinerins', sans-serif;
+  gap: 30px;
   
 }
 
+/* -------------------------------------------------------------------------------------- */
 /* Botão continuar */
 .botao-continuar {
   position: relative;
   margin-top: -100px;
   margin-left: 1500px;   /* espaço à esquerda */
-  
-  
-  
 }
 
 .continuar-comprando {
@@ -683,6 +661,7 @@ html, body {
   background-color: #3b6d25;     /* tom mais claro no hover */
 }
 
+/* ------------------------------------------------------------------------------------ */
 .titulo-acompanhamentos {
   background-color: #f9b233; /* fundo amarelo */
   color: #4b0d3a;            /* texto roxo escuro */
@@ -693,7 +672,7 @@ html, body {
   border-radius: 15px;        /* bordas arredondadas */
   display: inline-block;      /* faz o fundo se ajustar ao texto */
   position: relative;
-  left: 50px;
+  left: 80px;
   margin-top: 25px;
 }
 
@@ -707,17 +686,26 @@ html, body {
   border-radius: 15px;        /* bordas arredondadas */
   display: inline-block;      /* faz o fundo se ajustar ao texto */
   position: relative;
-  left: 100px;
+  left: 155px;
   margin-top: 25px;
 }
 
-
+/* ------------------------------------------------------------------------------------------------------- */
 .observacoes {
   position: relative;
   color: #ffeb3b; /* Cor amarela */
-  margin-top: 510px; /* Espaçamento superior */
+  margin-top: 310px; /* Espaçamento superior */
+  text-align: left;
+  
+  
+}
 
-    
+.observacoes ul {
+  list-style-type: disc; /* bolinhas padrão */
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-size: 18px;            /* tamanho da letra */
 }
 
 /* -------------------------------------home---------------------------------------------------------------- */

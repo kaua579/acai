@@ -171,9 +171,11 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
     <!-- OBSERVAÇÕES -->
     <div class="observacoes">
-      <p class="obervacoesletra">*Complementos de graça (no máximo 3);</p>
-      <p class="obervacoesletra">*Complementos de R$3,00 cada;</p>
-      <p class="obervacoesletra">*Coberturas (R$1,50);</p>
+      <ul>
+        <li>Complementos de graça (no máximo 3);</li>
+        <li>Complementos de R$3,00 cada;</li>
+        <li>Coberturas (R$1,50);</li>
+      </ul>
     </div>
 
     <div class="botao-continuar">
