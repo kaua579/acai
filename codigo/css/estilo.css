@@ -51,7 +51,57 @@
   
   
 }
+/*--------------------------------------------------------home---------------------------------------------*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #7a1ea1; /* roxo */
+    color: #f2b400; /* amarelo */
+    text-align: center;
+}
+/* Menu simples */
+.menu {
+    background-color: #6d0d91;
+    padding: 10px;
+}
 
+.menu a {
+    color: #f2b400;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Área principal */
+.tela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Texto */
+.textoo h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.telefone {
+    background-color: #f2b400;
+    color: #6d0d91;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Imagens */
+.imagens img {
+    width: 180px;
+    margin: 10px;
+    border-radius: 10px;
+}
 /* ---------------------------------------------------------------------------------------------------------- */
 #tituloc {
     height: 150px;
@@ -165,16 +215,17 @@
     min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
 }
 
-.titulo {
-    font-size: 3rem;
+#tituloh {
+    font-size: 4rem;
     text-align: center;
-    color: #ffeb3b; 
-    margin-left: 350px;
+    color: #ffeb3b;
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    margin-left: 800px;
     margin-top: -600px;  
     position: absolute;
 }
 
-.historia {
+#historia {
     font-size: 1.5rem;
     line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
     text-align: center; 

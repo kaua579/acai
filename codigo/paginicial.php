@@ -1,13 +1,9 @@
-<?php
-    require_once "verificarLogado.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/estilo.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
 
@@ -18,15 +14,15 @@
         <a href="atendentes.php">Atendentes</a>
     </div>
 
-    <div class="tela">
-        <div class="textoo">
+    <div class="conteudo">
+        <div class="texto">
             <h1>Energia gelada,<br> sabor que vicia</h1>
-            <p class="telefone">📞 (62) 3456-7890</p>
+            <p class="telefone">📞 (12) 3456-7890</p>
         </div>
 
         <div class="imagens">
-            <img src="" alt="">
-           
+            <img src="acai1.png" alt="Açaí 1">
+            <img src="acai2.png" alt="Açaí 2">
         </div>
     </div>
 

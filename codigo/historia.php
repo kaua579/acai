@@ -10,9 +10,10 @@
 <div class="pagina">
     <div class="conteudo">
         <img src="fundohistoria.png" class="fundoh"> 
-            <div class="texto">
-                <img src="titulohis.png" class="titulo"> 
-                <p class="historia">
+                <p id="tituloh">
+                    QUEM NÒS SOMOS?
+                </p>
+                <p id="historia">
                     A Açaíteria Alapollos localizada no Ibirapuera, surgiu quando o Walter Salles, 
                     fez uma grande viagem pelo mundo e descobriu que em todos os lugares por onde 
                     ele andou tinha uma açaiteria, mas no seu bairro faltava uma. Inspirado por essa 
@@ -22,8 +23,7 @@
                     e com sabores de dar água na boca. Decidido a sempre trazer conforto aos nossos clientes, 
                     agora você pode fazer seu pedido na sua própria casa!
                 </p>
-            </div>
-        </div>
+    </div>
 </div>
 
 </body>
