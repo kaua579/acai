@@ -63,9 +63,34 @@
   justify-content: center;   /* Centraliza o conteúdo horizontalmente */
   align-items: center;       /* Centraliza o conteúdo verticalmente */
   margin: 0;                 /* Remove margens padrão do navegador */
-  font-family: "Poppins", sans-serif; /* Define uma fonte moderna e legível */
 }
 
+
+
+.campo {
+  background-color: rgba(255, 255, 255, 0.3); /* Branco translúcido = lilás suave */
+  border-radius: 15px;                        /* Bordas arredondadas */
+  width: 320px;                               /* Largura da caixinha */
+  height: 55px;                               /* Altura da caixinha */
+  display: flex;                              /* Flexbox pra alinhar o input dentro */
+  align-items: center;                        /* Centraliza o input verticalmente */
+  padding: 0 15px;                            /* Espaçamento interno lateral */
+  margin-bottom: 20px;     /* <-- adiciona espaço entre os campos */
+
+}
+
+.campo input {
+  background: none;      /* Remove o fundo branco padrão do input */
+  border: none;          /* Remove a borda padrão */
+  outline: none;         /* Remove o contorno azul quando clica */
+  width: 100%;           /* Faz o input ocupar toda a largura da caixa */
+  font-size: 16px;       /* Tamanho da fonte dentro do campo */
+  color: #2e0833;        /* Cor do texto digitado */
+}
+
+.campo:focus {
+  color: black; /* mantém a cor */
+}
 
 
 
