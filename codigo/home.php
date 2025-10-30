@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="menu">
+    <div class="menuu">
         <a href="historia.php">Quem somos?</a>
         <a href="cardapio.php">Cardápio</a>
         <a href="produtos.php">Produtos</a>
@@ -21,7 +21,7 @@
     <div class="tela">
         <div class="textoo">
             <h1>Energia gelada,<br> sabor que vicia</h1>
-            <p class="telefone">📞 (62) 3456-7890</p>
+            <p class="fone">📞 (62) 3456-7890</p>
         </div>
 
         <div class="imagens">
