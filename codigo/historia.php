@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-<div class="pagina">
-    <div class="conteudo">
+<div class="pagi">
+    <div class="cont">
         <img src="fundohistoria.png" class="fundoh"> 
-                <p id="tituloh">
+                <p id="titu">
                     QUEM NÒS SOMOS?
                 </p>
                 <p id="historia">
