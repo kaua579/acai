@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="./jquery.validate.min.js"></script>
-</head>
+
+    <style>
+        .error {
+            color: blue;
+        }
+    </style>
+
     <script>
         $(document).ready(function () {
             $("#formUsuario").validate({
-                // regras para cada campo
                 rules: {
                     nome: {
                         required: true,
@@ -20,7 +26,6 @@
                         required: true,
                     },
                 },
-                // mensagens de erro para cada regra
                 messages: {
                     nome: {
                         required: "Esse campo deve ser preenchido",
@@ -30,24 +35,38 @@
                         required: "Você deve informar um e-mail",
                     },
                 }
-            })
+            });
+
+            $("#mostrarSenha").click(function (e) {
+                e.preventDefault(); // impede o botão de enviar o formulário
+                let tipo = $("#senha").attr("type");
+                if (tipo === "password") {
+                    $("#senha").attr("type", "text");
+                    $("#mostrarSenha").text("Ocultar senha");
+                } else {
+                    $("#senha").attr("type", "password");
+                    $("#mostrarSenha").text("Mostrar senha");
+                }
+            });
         });
     </script>
-    <style>
-        .error {
-            color: blue;
-        }
-    </style>
+</head>
+
 <body>
     <form id="formUsuario" action="salvarUsuario.php" method="post">
         Nome: <br>
         <input type="text" name="nome" id="nome"> <br><br>
+
         E-mail: <br>
         <input type="text" name="email" id="email"> <br><br>
+
         Senha: <br>
-        <input type="text" name="senha" id="senha"> <br><br>
+        <input type="password" name="senha" id="senha">
+        <button type="button" id="mostrarSenha">Mostrar senha</button>
+        <br><br>
 
         <input type="submit" value="Cadastrar">
     </form>
 </body>
+
 </html>
