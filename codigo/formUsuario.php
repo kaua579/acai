@@ -7,6 +7,8 @@
     <title>Document</title>
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="./jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="./css/estilo.css">
+
 
     <style>
         .error {
@@ -52,7 +54,7 @@
     </script>
 </head>
 
-<body>
+<body class="fundo-usuario">
     <form id="formUsuario" action="salvarUsuario.php" method="post">
         Nome: <br>
         <input type="text" name="nome" id="nome"> <br><br>

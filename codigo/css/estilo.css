@@ -53,8 +53,26 @@
 }
 
 /* ---------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------formUsuario---------------------------------------------------------- */
+
+.fundo-usuario{
+  background-color: #760a84; /* ou a cor que quiser */
+  height: 100vh; /* ocupa toda a altura da tela */
+  margin: 0; /* remove a margem padrão */
+  padding: 20px;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
 #tituloc {
-    height: 150px;
+  height: 150px;
     position: absolute;
     top: 10%;
     left: 50%;
@@ -134,52 +152,52 @@
 
 /*  margens e padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Corpo da página */
 .pagina {
-    font-family: 'Arial', sans-serif; /* Fonte padrão */
-    background-color: #6a1b9a; /* Cor de fundo roxa */
-    color: white; /* Cor do texto */
+  font-family: 'Arial', sans-serif; /* Fonte padrão */
+  background-color: #6a1b9a; /* Cor de fundo roxa */
+  color: white; /* Cor do texto */
 }
 
 .conteudo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
     
 }
 
 .fundoh{
-    background-image: url('fundohistoria.png'); 
-    background-size: cover; 
-    background-position: center; 
-    width: 80%; 
-    max-width: 1200px;
-    height: 800px;
-    color: rgb(255, 255, 255); 
-    min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
+  background-image: url('fundohistoria.png'); 
+  background-size: cover; 
+  background-position: center; 
+  width: 80%; 
+  max-width: 1200px;
+  height: 800px;
+  color: rgb(255, 255, 255); 
+  min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
 }
 
 .titulo {
-    font-size: 3rem;
-    text-align: center;
-    color: #ffeb3b; 
-    margin-left: 350px;
-    margin-top: -600px;  
-    position: absolute;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffeb3b; 
+  margin-left: 350px;
+  margin-top: -600px;  
+  position: absolute;
 }
 
 .historia {
-    font-size: 1.5rem;
-    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
-    text-align: center; 
-    margin-bottom: 20px; /* Espaço entre os parágrafos */
-    margin-left: 60px;
+  font-size: 1.5rem;
+  line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+  text-align: center; 
+  margin-bottom: 20px; /* Espaço entre os parágrafos */
+  margin-left: 60px;
     
 }
 
@@ -187,14 +205,14 @@
 /* garante que a tela se adapte em dispositivos móveis */
 @media (max-width: 768px) {
     .fundoh {
-        width: 100%; /* Ajusta a largura para 100% em telas menores */
-        padding: 10px; /* Menos espaçamento interno em telas pequenas */
+      width: 100%; /* Ajusta a largura para 100% em telas menores */
+      padding: 10px; /* Menos espaçamento interno em telas pequenas */
     }
     .titulo {
-        font-size: 2rem; /* Tamanho de fonte menor para telas pequenas */
+      font-size: 2rem; /* Tamanho de fonte menor para telas pequenas */
     }
     .historia {
-        font-size: 1rem; /* Reduz o tamanho da fonte para dispositivos móveis */
+      font-size: 1rem; /* Reduz o tamanho da fonte para dispositivos móveis */
     }
 }
 
@@ -202,20 +220,20 @@
 
 
 .fundo {
-    background-color: #6e0b7b  ; /*#6a1b9a;  */
-    padding: 20px; 
-    min-height: 100vh;
-    position: relative; /* Necessário para posicionar as curvas dentro da div */
-    overflow: hidden; /* Esconde partes que passarem da tela */
+  background-color: #6e0b7b  ; /*#6a1b9a;  */
+  padding: 20px; 
+  min-height: 100vh;
+  position: relative; /* Necessário para posicionar as curvas dentro da div */
+  overflow: hidden; /* Esconde partes que passarem da tela */
 }
 
 
 .titulo-img {
-    max-width: 100%; 
-    height: auto; 
-    margin: 0 auto; 
-    display: block;
-    margin-bottom: 30px; 
+  max-width: 100%; 
+  height: auto; 
+  margin: 0 auto; 
+  display: block;
+  margin-bottom: 30px; 
 }
 
 /*  agrupa os produtos */
@@ -237,7 +255,7 @@
 
 /* quando o usuário passa o mouse sobre o produto */
 .produto:hover {
-    transform: scale(1.05); /* Aumenta o tamanho 5% (efeito de zoom) */
+  transform: scale(1.05); /* Aumenta o tamanho 5% (efeito de zoom) */
 }
 
 .produto img {
@@ -251,10 +269,10 @@
 
 /*  texto */
 .produto p {
-    font-size: 20px; 
-    font-weight: bold; /*  negrito */
-    margin-top: -18px; 
-    color: #ffeb3b; 
+  font-size: 20px; 
+  font-weight: bold; /*  negrito */
+  margin-top: -18px; 
+  color: #ffeb3b; 
 }
 
 /*Define o estilo do container do checkbox */
