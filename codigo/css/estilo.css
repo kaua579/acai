@@ -52,8 +52,56 @@
   
 }
 
-/* ---------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------home------------------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #7a1ea1; /* roxo */
+    color: #f2b400; /* amarelo */
+    text-align: center;
+}
+/* Menu simples */
+.menuu {
+    background-color: #6d0d91;
+    padding: 10px;
+}
+.menuu a {
+    color: #f2b400;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
 
+/* Área principal */
+.tela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Texto */
+.textoo h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.fone {
+    background-color: #f2b400;
+    color: #6d0d91;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Imagens */
+.imagens img {
+    width: 180px;
+    margin: 10px;
+    border-radius: 10px;
+}
 /* ---------------------------------------------formUsuario---------------------------------------------------------- */
 
 .fundo-usuario {
