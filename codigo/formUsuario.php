@@ -12,7 +12,7 @@
 
     <style>
         .error {
-            color: blue;
+            color: red;
         }
     </style>
 
@@ -55,6 +55,7 @@
 </head>
 
 <body class="fundo-usuario">
+    <div class="logo-cadastrar"></div> 
   <form id="formUsuario" class="form-container" action="salvarUsuario.php" method="post">
 
     <label for="nome" class="label-form">Nome:</label>
