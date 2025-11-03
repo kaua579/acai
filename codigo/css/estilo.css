@@ -52,130 +52,46 @@
   
 }
 
-<<<<<<< Updated upstream
 /* ---------------------------------------------home------------------------------------------------------------- */
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-
-/* menu superior  */
-.menuu {
-    background-color: #6a0dad; /* roxo escuro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 20px;
-}
-
-.menuu a {
-    color: #ffcc00; /* amarelo */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.menuu a:hover {
-    color: #ffffff;
-}
-
-/* conteudo principal */
-.tela {
-    background-color: #800080; /* roxo principal */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 100px;
-    color: #ffcc00;
-    height: 100vh; /* faz ocupar toda a altura da tela */
-}
-
-/* texto */
-.textoo {
-    max-width: 50%;
-}
-
-.textoo h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #ffcc00;
-    margin-bottom: 20px;
-    margin-left: 500px;
-}
-
-.textoo .fone {
-    background-color: #ffcc00;
-    color: #4b0082;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
-    display: inline-block;
-    border-radius: 5px;
-    margin-left: 570px;
-}
-
-/* imagem */
-.imagens  {
-    width: 950px;
-    border-radius: 10px;
-}
-
-=======
->>>>>>> Stashed changes
 /* ---------------------------------------------formUsuario---------------------------------------------------------- */
 
-  .fundo-usuario {
-    background-color: #760a84; /* Cor de fundo roxa da página */
-    height: 100vh;             /* Ocupa toda a altura da tela (viewport) */
-    display: flex;             /* Usa flexbox para facilitar centralização */
-    justify-content: center;   /* Centraliza o conteúdo horizontalmente */
-    align-items: center;       /* Centraliza o conteúdo verticalmente */
-    margin: 0;                 /* Remove margens padrão do navegador */
-  }
+.fundo-usuario {
+  background-color: #760a84; /* Cor de fundo roxa da página */
+  height: 100vh;             /* Ocupa toda a altura da tela (viewport) */
+  display: flex;             /* Usa flexbox para facilitar centralização */
+  justify-content: center;   /* Centraliza o conteúdo horizontalmente */
+  align-items: center;       /* Centraliza o conteúdo verticalmente */
+  margin: 0;                 /* Remove margens padrão do navegador */
+}
 
 
 
-  .campo {
-    background-color: rgba(255, 255, 255, 0.3); /* Branco translúcido = lilás suave */
-    border-radius: 15px;                        /* Bordas arredondadas */
-    width: 320px;                               /* Largura da caixinha */
-    height: 55px;                               /* Altura da caixinha */
-    display: flex;                              /* Flexbox pra alinhar o input dentro */
-    align-items: center;                        /* Centraliza o input verticalmente */
-    padding: 0 15px;                            /* Espaçamento interno lateral */
-    margin-bottom: 20px;     /* <-- adiciona espaço entre os campos */
-
-  }
-
-  .campo input {
-    background: none;      /* Remove o fundo branco padrão do input */
-    border: none;          /* Remove a borda padrão */
-    outline: none;         /* Remove o contorno azul quando clica */
-    width: 100%;           /* Faz o input ocupar toda a largura da caixa */
-    font-size: 16px;       /* Tamanho da fonte dentro do campo */
-    color: #2e0833;        /* Cor do texto digitado */
-  }
-
-  .campo:focus {
-    color: black; /* mantém a cor */
-  }
-
-.logo-cadastrar {
-  background-image: url(imagens/cadastrargat.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 500px;
-  height: 200px; 
-  position: absolute;
-  top: 120px;
+.campo {
+  background-color: rgba(255, 255, 255, 0.3); /* Branco translúcido = lilás suave */
+  border-radius: 15px;                        /* Bordas arredondadas */
+  width: 320px;                               /* Largura da caixinha */
+  height: 55px;                               /* Altura da caixinha */
+  display: flex;                              /* Flexbox pra alinhar o input dentro */
+  align-items: center;                        /* Centraliza o input verticalmente */
+  padding: 0 15px;                            /* Espaçamento interno lateral */
+  margin-bottom: 20px;     /* <-- adiciona espaço entre os campos */
 
 }
+
+.campo input {
+  background: none;      /* Remove o fundo branco padrão do input */
+  border: none;          /* Remove a borda padrão */
+  outline: none;         /* Remove o contorno azul quando clica */
+  width: 100%;           /* Faz o input ocupar toda a largura da caixa */
+  font-size: 16px;       /* Tamanho da fonte dentro do campo */
+  color: #2e0833;        /* Cor do texto digitado */
+}
+
+.campo:focus {
+  color: black; /* mantém a cor */
+}
+
 
 
 
