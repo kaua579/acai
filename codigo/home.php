@@ -21,7 +21,7 @@
     <div class="tela">
         <div class="textoo">
             <h1>Energia gelada,<br> sabor que vicia</h1>
-            <p class="fone">📞 (62) 3456-7890</p>
+            <p class="fone">📞 (62) 1234-5678</p>
         </div>
 
         <div class="imagens">

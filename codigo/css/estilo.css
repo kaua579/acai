@@ -250,7 +250,7 @@ body {
 /* Corpo da página */
 .pagi {
   font-family: 'Arial', sans-serif; /* Fonte padrão */
-  background-color: #6a1b9a; /* Cor de fundo roxa */
+  background-color:#800080; /* Cor de fundo roxa */
   color: white; /* Cor do texto */
 }
 
@@ -273,38 +273,28 @@ body {
   min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
 }
 
-.titu {
+#titu {
   font-size: 3rem;
   text-align: center;
   color: #ffeb3b; 
-  margin-left: 350px;
-  margin-top: -600px;  
+  margin-left: 750px;
+  margin-top: -600px;
+  font-weight: 700;  
   position: absolute;
 }
 
-.historia {
+#historia {
   font-size: 1.8rem;
   line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
-  text-align: center; 
+  text-align: center;
+  color: #ffeb3b;
+  font-weight: 500;   
   margin-bottom: 20px; /* Espaço entre os parágrafos */
   margin-left: 60px;
     
 }
 
 
-/* garante que a tela se adapte em dispositivos móveis */
-@media (max-width: 768px) {
-    .fundoh {
-      width: 100%; /* Ajusta a largura para 100% em telas menores */
-      padding: 10px; /* Menos espaçamento interno em telas pequenas */
-    }
-    .titu {
-      font-size: 2rem; /* Tamanho de fonte menor para telas pequenas */
-    }
-    .historia {
-      font-size: 1rem; /* Reduz o tamanho da fonte para dispositivos móveis */
-    }
-}
 
 /*-----------------------------------------------------pagina Produtos------------------------------------------------*/
 
