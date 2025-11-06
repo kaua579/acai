@@ -142,7 +142,7 @@
 .campo {
   background-color: rgba(255, 255, 255, 0.3); /* Branco translúcido = lilás suave */
   border-radius: 15px;                        /* Bordas arredondadas */
-  width: 320px;                               /* Largura da caixinha */
+  width: 340px;                               /* Largura da caixinha */
   height: 55px;                               /* Altura da caixinha */
   display: flex;                              /* Flexbox pra alinhar o input dentro */
   align-items: center;                        /* Centraliza o input verticalmente */
@@ -164,8 +164,54 @@
   color: black; /* mantém a cor */
 }
 
+.logo-cadastrar{
+  background-image: url(imagens/cadastrargat.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 450px;
+  height: 300px; 
+  position: absolute;
+  top: -15px;
+  margin-left: -25px
 
 
+}
+
+.botao-usuario{
+  position: relative;
+  background-color: #315c1d ;
+  color: white; 
+  font-size: 25px;            /* tamanho da letra */
+  padding: 10px 110px; /* espaço interno do botão */
+  text-decoration: none; /* tirar o sublinhado do link*/
+  font-weight: bold;
+  border-radius: 13px; /* bordas arredondadas */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  top: 10px;
+
+
+}
+
+#mostrarSenha {
+  background-color: #b05cc7; /* roxo claro combinando com o tema */
+  color: black;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 10px;
+  margin-left: 20px; /* espaçamento entre input e botão */
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#mostrarSenha:hover {
+  background-color: #8a42a3; /* roxo mais escuro no hover */
+  transform: scale(1.50);    /* leve zoom */
+}
+
+#mostrarSenha:active {
+  transform: scale(1.00);
+}
 
 
 /* ---------------------------------------------------------------------------------------------------------- */
@@ -875,7 +921,7 @@ section h2 {
 
 /* -------------------------------------carrinho---------------------------------------------------------------- */
 
-#corpo_carrinho {
+/* #corpo_carrinho {
       font-family: 'Poppins', sans-serif;
       background-color: #6a0572;  
       color: white;
@@ -927,7 +973,7 @@ section h2 {
     }
 
     /* Caixa lateral do total */
-    .valor_total {
+    /* .valor_total {
       background-color: white;
       color: #000;
       border-radius: 15px;
@@ -969,4 +1015,4 @@ section h2 {
 
     .botao-comprar:hover {
       background-color: #245f24;
-    }
+    } */ 

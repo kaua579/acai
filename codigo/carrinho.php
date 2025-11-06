@@ -3,10 +3,6 @@ session_start();
 require_once "funcoes.php";
 require_once "conexao.php";
 
-
-$produto = $_SESSION['produto'];
-$preco = $_SESSION['preco'];
-
 $acompanhamento = $_POST['acompanhamento'];
 $cobertura = $_POST['cobertura'];
 ?>
@@ -14,6 +10,7 @@ $cobertura = $_POST['cobertura'];
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,133 +21,76 @@ $cobertura = $_POST['cobertura'];
 
 <body id="corpo_carrinho">
 
-  <div class="div_produtos">
-    
-    <table>
-      
-        <tr>
-          <th>Produto</th>
-          <th>Preço</th>
-          <th>Quantidade</th>
-          <th>Subtotal</th>
-        </tr>
-      
-      
-        <tr>
-          <td></td>
-          
-        </tr>
-        <tr>
-          <td> </td>
-        
-        </tr>
-        <tr>
-          <td></td>
-        
-        </tr>
-        <tr>
-          <td></td>
-        
-        </tr>
-        <tr>
-          <td></td>
-         
-        </tr>
-      
-    </table>
-  </div>
+    <div class="div_produtos">
+
+        <?php
+        if (empty($_SESSION['carrinho'])) {
+            echo "carrinho vazio";
+        } else {
+            $total = 0;
+            echo "<table border='1'>";
+            echo "<tr>";
+            echo "<td>Produto</td>";
+            echo "<td>Preço</td>";
+            echo "<td>Remover</td>";
+            echo "</tr>";
+            foreach ($_SESSION['carrinho'] as $idproduto) {
+                $produto = pesquisarProdutoId($conexao, $idproduto);
+
+                echo "<tr>";
+                echo "<td>" . $produto['nome'] . ' ' .  $produto['tamanho'] . "</td>";
+                echo "<td> R$ <span class='preco_venda'>" . $produto['preco'] . "</span></td>";
+
+                $total += $produto['preco'];
+
+                echo "<td><a href='remover.php?id=$idproduto'>[remover]</a></td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+
+            echo "<p>Acompanhamentos selecionados</p>";
+            echo "<ul>";
+            foreach ($acompanhamento as $item) {
+                echo "<li>$item</li>";
+            }
+            echo "</ul>";
+
+            echo "<p>Coberturas selecionadas</p>";
+            echo "<ul>";
+            foreach ($cobertura as $item2) {
+                echo "<li>$item2</li>";
+            }
+            echo "</ul>";
 
 
-  <div class="valor_total">
-    <h3>Valor</h3>
-    <p>Itens</p>
-    <p>Preço Total: </p>
+            $qnt_acompanhamento = sizeof($acompanhamento);
+            $qnt_cobertura = sizeof($cobertura);
 
-    <button class="botao-comprar">Comprar</button>
-  </div>
+            if ($qnt_acompanhamento > 3) {
+                $add_acompanhamento = ($qnt_acompanhamento - 3) * 3;
+            } else {
+                $add_acompanhamento = 0;
+            }
 
-</body>
-</html>
+            $add_cobertura = $qnt_cobertura * 1.5;
 
-    <?php
-    // echo "<pre>imprimindo todos";
-    // print_r($acompanhamento);
-    // echo "</pre>";
+            $total += $add_acompanhamento + $add_cobertura;
 
-    // echo "<br><br><br><br>";
+            echo "<h3>Total da compra: R$ <span id='total'>$total</span></h3>";
+        }
+        ?>
 
-    // echo "Impressão de um por um acompanhamento: ";
-    // echo "<br>";
+    </div>
 
-    // foreach ($acompanhamento as $texto) {
-    //     echo "$texto<br>";
-    // }
+    <div class="valor_total">
+        <h3>Valor</h3>
+        <p>Itens</p>
+        <p>Preço Total: </p>
 
-    // echo "<br><br><br><br>";
-    // echo "Impressão da quantidade de acompanhamentos: <br>";
-    // $tamanho = sizeof($acompanhamento);
-    // echo $tamanho;
-
-    // if ($tamanho > 3) {
-    //     $tamanho = $tamanho - 3;
-    // }
-
-    // echo "<br><br><br><br>";
-    // $preco_por_adicional = 3;
-    // $adicional = $tamanho * $preco_por_adicional;
-    // echo "Vai pagar por adicional: $adicional";
-
-
-
-    // ////////////////////////////cobertura//////////////////////////////
-
-    // echo "<pre>imprimindo todos coberturas";
-    // print_r($cobertura);
-    // echo "</pre>";
-
-    // echo "<br><br><br><br>";
-
-    // echo "Impressão de um por um coberturas";
-    // echo "<br>";
-
-    // foreach ($cobertura as $texto2) {
-    //     echo "$texto2<br>";
-    // }
-
-    // echo "<br><br><br><br>";
-    // echo "Impressão da quantidade de coberturas: <br>";
-    // $tamanho_cobertura = sizeof($cobertura);
-    // echo $tamanho_cobertura;
-
-    // if ($tamanho_cobertura > 3) {
-    //     $tamanho_cobertura = $tamanho_cobertura - 3;
-    // }
-
-    // echo "<br><br><br><br>";
-    // $preco_por_adicional2 = 2;
-    // $adicional2 = $tamanho_cobertura * $preco_por_adicional2;
-    // echo "Vai pagar por adicional: $adicional2";
-
-    // //////////////////////////////produto////////////////////////////
-    // $tamanho_acai = $produto;
-    // echo "<pre>imprimindo açai";
-    // print_r($produto);
-    // echo "</pre>";
-
-    // echo "<br><br>";
-    // echo "Impressão do valor do açai: <br> ";
-    // echo  $preco;
-
-    // echo "<br><br><br><br>";
-    // echo "Total que vai pagar: <br> ";
-    // $total = $preco + $adicional + $adicional2;
-    // echo $total;
-    // echo "<br><br>";
-
-    ?>
+        <button class="botao-comprar">Comprar</button>
+    </div>
 
     <a href="produtos.php">Voltar</a>
-
 </body>
 
 </html>

@@ -12,7 +12,7 @@
 
     <style>
         .error {
-            color: red;
+            color: black;
         }
     </style>
 
@@ -44,10 +44,10 @@
                 let tipo = $("#senha").attr("type");
                 if (tipo === "password") {
                     $("#senha").attr("type", "text");
-                    $("#mostrarSenha").text("Ocultar senha");
+                    $("#mostrarSenha").text("👁️");
                 } else {
                     $("#senha").attr("type", "password");
-                    $("#mostrarSenha").text("Mostrar senha");
+                    $("#mostrarSenha").text("🙈");
                 }
             });
         });
@@ -71,10 +71,10 @@
     <label for="senha" class="label-form">Senha:</label>
     <div class="campo">
       <input type="password" name="senha" id="senha">
+      <button type="button" id="mostrarSenha">👁️</button> 
     </div>
 
-    <button type="button" id="mostrarSenha">Mostrar senha</button>
-    <input type="submit" value="Cadastrar" class="">
+    <input type="submit" value="Cadastrar" class="botao-usuario">
   </form>
 </body>
 
