@@ -28,7 +28,7 @@ $cobertura = $_POST['cobertura'];
             echo "carrinho vazio";
         } else {
             $total = 0;
-            echo "<table class=''> ";
+            echo "<table border='1'>";
             echo "<tr>";
             echo "<td class='td'>Produto</td>";
             echo "<td>Preço</td>";
