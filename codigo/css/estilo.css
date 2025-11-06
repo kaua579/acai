@@ -216,6 +216,17 @@
   margin-top: 180px; /* ajusta o valor pra descer mais ou menos */
 }
 
+/* --------------------------------login-------------------------------------------------------------------------- */
+
+.fundo-login {
+  background-color: #760a84; /* Cor de fundo roxa da página */
+  height: 100vh;             /* Ocupa toda a altura da tela (viewport) */
+  display: flex;             /* Usa flexbox para facilitar centralização */
+  margin: 0;                 /* Remove margens padrão do navegador */
+}
+
+
+
 /* ---------------------------------------------------------------------------------------------------------- */
 
 #tituloc {

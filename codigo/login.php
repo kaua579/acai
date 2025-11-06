@@ -6,10 +6,12 @@
     <title>Document</title>
     <script src="../jquery-3.7.1.min.js"></script>
     <script src="../jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="./css/estilo.css">
+
 </head>
-<body>
+<body class="fundo-login">
     
-    <h1>Login</h1>
+    <div></div>
     <form action="verificarLogin.php" method="post">
         E-mail: <br>
         <input type="text" name="email"> <br><br>
