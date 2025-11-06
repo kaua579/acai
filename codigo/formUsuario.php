@@ -58,7 +58,7 @@
     <div class="logo-cadastrar"></div> 
   <form id="formUsuario" class="form-container" action="salvarUsuario.php" method="post">
 
-    <label for="nome" class="label-form">Nome:</label>
+    <label for="nome" class="label-form"><h3>Nome:<h3></label>
     <div class="campo">
       <input type="text" name="nome" id="nome">
     </div>
