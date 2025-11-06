@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/estilo.css">
   <title>Document</title>
 </head>
-<body>
+<body class="paggi">
 
     <div class="menuu">
         <a href="historia.php">Quem somos?</a>
@@ -25,8 +25,7 @@
         </div>
 
         <div class="imagens">
-            <img src="acais.png" alt="acais">
-           
+            <img src="acais.png" alt="acais">  
         </div>
     </div>
 

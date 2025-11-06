@@ -9,7 +9,7 @@
 <body>
 <div class="pagi">
     <div class="cont">
-        <img src="fundohistoria.png" class="fundoh"> 
+        <img src="imgacai.png" class="fundoh"> 
                 <p id="titu">
                     QUEM NÒS SOMOS?
                 </p>
@@ -24,6 +24,8 @@
                     agora você pode fazer seu pedido na sua própria casa!
                 </p>
     </div>
+
+    
 </div>
 
 </body>
