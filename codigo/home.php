@@ -22,7 +22,7 @@
         <div class="textoo">
 
             <h1>Energia gelada,<br> sabor que vicia</h1>
-            <p class="fone">📞 (62) 1234-5678</p>
+            <p id="fone">📞 (62) 1234-5678</p>
             
         </div>
 
