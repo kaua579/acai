@@ -113,7 +113,7 @@
     padding: 10px 20px;
     font-size: 25px;
     font-weight: bold;
-    display: inline-block;
+    /* display: inline-block; */
     border-radius: 5px;
     margin-left: 550px;
     
@@ -340,8 +340,33 @@
   margin-bottom: 20px; /* Espaço entre os parágrafos */
   margin-left: 40px;
   text-justify: auto;
-    
 }
+
+.botao-hist {
+  position: relative;
+  margin-top: -70px;
+  margin-left: 1700px;   /* espaço à esquerda */
+  
+}
+
+.btn-voltarr{
+  background-color: #a8107c;     /* cor de fundo verde escuro */
+  text-decoration: none; /* tirar o sublinhado do link*/
+  color: #c4c2c4;                /* cor do texto */
+  border: none;                  /* remove borda padrão */
+  border-radius: 12px;            /* bordas arredondadas */
+  padding: 10px 80px;            /* espaçamento interno */
+  font-size: 20px;               /* tamanho do texto */
+  font-family: 'Arial', sans-serif; /* fonte simples */
+  text-transform: lowercase;     /* texto em minúsculas */
+  cursor: pointer;               /* muda o cursor */
+  transition: background-color 0.3s ease; /* animação suave */
+  position: relative;
+  z-index: 10;
+
+}
+    
+
 
 
 

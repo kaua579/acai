@@ -23,8 +23,8 @@
                     e com sabores de dar água na boca. Decidido a sempre trazer conforto aos nossos clientes, 
                     agora você pode fazer seu pedido na sua própria casa!
                 </p>
+                <a href="home.php" id="botao-hist"class="btn-voltarr">Sair</a>
     </div>
-
     
 </div>
 
