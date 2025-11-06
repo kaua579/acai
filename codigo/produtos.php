@@ -22,12 +22,10 @@
                          <img src="acai200ml.png" alt="200 ml">
                         <p>200 ML - R$9,90</p>
                         <label class="caixa-check">
-                             <input type="checkbox" name="check_200ml" value="1" onchange="toggleHidden(this, 'produto_200ml', 'preco_200ml')">
+                             <input type="checkbox" name="idproduto[]" value="1" onchange="toggleHidden(this, 'produto_200ml', 'preco_200ml')">
 
                                 <span class="checkmark"></span>
                             </label>
-                            <input type="hidden" name="produto" id="produto_200ml" value="200ml" disabled>
-                            <input type="hidden" name="preco" id="preco_200ml" value="9.90" disabled>
                         </div>
 
                         <!-- Produto 300ml -->
@@ -36,11 +34,9 @@
                          <img src="acai300ml.png" alt="300 ml">
                         <p>300 ML - R$14,90</p>
                         <label class="caixa-check">
-                             <input type="checkbox" name="check_300ml" value="1" onchange="toggleHidden(this, 'produto_300ml', 'preco_300ml')">
+                             <input type="checkbox" name="idproduto[]" value="2" onchange="toggleHidden(this, 'produto_300ml', 'preco_300ml')">
                                 <span class="checkmark"></span>
                             </label>
-                            <input type="hidden" name="produto" id="produto_300ml" value="300ml" disabled>
-                            <input type="hidden" name="preco" id="preco_300ml" value="14.90" disabled>
                         </div>
 
                         <!-- Produto 500ml -->
@@ -48,11 +44,9 @@
                             <img src="acai500ml.png" alt="500 ml">
                             <p>500 ML - R$17,90</p>
                             <label class="caixa-check">
-                                <input type="checkbox" name="check_500ml" value="1" onchange="toggleHidden(this, 'produto_500ml', 'preco_500ml')">
+                                <input type="checkbox" name="idproduto[]" value="3" onchange="toggleHidden(this, 'produto_500ml', 'preco_500ml')">
                                 <span class="checkmark"></span>
                             </label>
-                            <input type="hidden" name="produto" id="produto_500ml" value="500ml" disabled>
-                            <input type="hidden" name="preco" id="preco_500ml" value="17.90" disabled>
                         </div>
 
                         <!-- Produto 700ml -->
@@ -60,11 +54,9 @@
                             <img src="acai700ml.png" alt="700 ml">
                             <p>700 ML - R$25,90</p>
                             <label class="caixa-check">
-                                <input type="checkbox" name="check_700ml" value="1" onchange="toggleHidden(this, 'produto_700ml', 'preco_700ml')">
+                                <input type="checkbox" name="idproduto[]" value="4" onchange="toggleHidden(this, 'produto_700ml', 'preco_700ml')">
                                 <span class="checkmark"></span>
                             </label>
-                            <input type="hidden" name="produto" id="produto_700ml" value="700ml" disabled>
-                            <input type="hidden" name="preco" id="preco_700ml" value="25.90" disabled>
                         </div>
 
                         <!-- Produto 1L -->
@@ -72,11 +64,9 @@
                             <img src="acai1l.png" alt="1 L">
                             <p>1 L - R$32,90</p>
                             <label class="caixa-check">
-                                <input type="checkbox" name="check_1l" value="1" onchange="toggleHidden(this, 'produto_1l', 'preco_1l')">
+                                <input type="checkbox" name="idproduto[]" value="5" onchange="toggleHidden(this, 'produto_1l', 'preco_1l')">
                                 <span class="checkmark"></span>
                             </label>
-                            <input type="hidden" name="produto" id="produto_1l" value="1L" disabled>
-                            <input type="hidden" name="preco" id="preco_1l" value="32.90" disabled>
                         </div>
 
                     </div>
