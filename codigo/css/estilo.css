@@ -802,7 +802,7 @@ section h2 {
 
 /* -------------------------------------carrinho---------------------------------------------------------------- */
 
-#corpo_carrinho {
+/* #corpo_carrinho {
       font-family: 'Poppins', sans-serif;
       background-color: #6a0572;  
       color: white;
@@ -854,7 +854,7 @@ section h2 {
     }
 
     /* Caixa lateral do total */
-    .valor_total {
+    /* .valor_total {
       background-color: white;
       color: #000;
       border-radius: 15px;
@@ -896,4 +896,4 @@ section h2 {
 
     .botao-comprar:hover {
       background-color: #245f24;
-    }
+    } */ 
