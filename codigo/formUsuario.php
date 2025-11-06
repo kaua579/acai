@@ -70,7 +70,7 @@
     <label for="senha" class="label-form">Senha:</label>
     <div class="campo">
       <input type="password" name="senha" id="senha">
-      <button type="button" id="mostrarSenha">👁️</button> 
+      <button type="button" id="mostrarSenha">🙈</button> 
     </div>
 
     <input type="submit" value="Cadastrar" class="botao-usuario">
