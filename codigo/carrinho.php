@@ -75,22 +75,19 @@ $cobertura = $_POST['cobertura'];
             $add_cobertura = $qnt_cobertura * 1.5;
 
             $total += $add_acompanhamento + $add_cobertura;
-
-            echo "<h3>Total da compra: R$ <span id='total'>$total</span></h3>";
         }
         ?>
 
     </div>
 
     <div class="valor_total">
-        <h3>Valor</h3>
-        <p>Itens</p>
-        <p>Preço Total: </p>
-
-        <button class="botao-comprar">Comprar</button>
+      <?php
+       echo "<h3>Total da compra: R$ <span id='total'>$total</span></h3>"
+        ?>
+    <a class="botao_compra" href="produtos.php">Voltar</a>
+    
     </div>
 
-    <a href="produtos.php">Voltar</a>
 </body>
 
 </html>

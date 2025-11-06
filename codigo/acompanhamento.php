@@ -6,22 +6,22 @@ session_start();
 // Isso garante que o usuário realmente escolheu um produto na página anterior
 if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
-    // Se existirem, pega os valores salvos e coloca em variáveis locais
-    // Aqui, por exemplo, $produto pode valer "200ml" e $preco "9.90"
-    $produto = $_SESSION['produto'];
-    $preco = $_SESSION['preco'];
-
+  // Se existirem, pega os valores salvos e coloca em variáveis locais
+  // Aqui, por exemplo, $produto pode valer "200ml" e $preco "9.90"
+  $produto = $_SESSION['produto'];
+  $preco = $_SESSION['preco'];
 } else {
-    // Caso o usuário tenha vindo direto pra essa página (sem escolher produto),
-    // definimos valores padrões para evitar erros e mostrar uma mensagem adequada
-    $produto = "Produto não selecionado";
-    $preco = "";
+  // Caso o usuário tenha vindo direto pra essa página (sem escolher produto),
+  // definimos valores padrões para evitar erros e mostrar uma mensagem adequada
+  $produto = "Produto não selecionado";
+  $preco = "";
 }
 ?>
 
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
   <!-- FORMULÁRIO -->
   <form action="carrinho.php" method="post">
-  
+
     <!-- CONTAINER PRINCIPAL -->
     <div class="alinhar-checkbox">
 
@@ -117,7 +117,7 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
             </label>
           </div>
         </div>
-      </div>  
+      </div>
 
       <!-- GRUPO 2: COBERTURAS -->
       <div class="grupo-coberturas">
@@ -180,9 +180,8 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
     <div class="botao-continuar">
       <button type="submit" class="continuar-comprando">Continuar comprando</button>
-     </div>
+    </div>
   </form>
 </body>
+
 </html>
-
-
