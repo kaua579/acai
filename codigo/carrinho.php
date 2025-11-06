@@ -30,7 +30,7 @@ $cobertura = $_POST['cobertura'];
             $total = 0;
             echo "<table border='1'>";
             echo "<tr>";
-            echo "<td>Produto</td>";
+            echo "<td class='td'>Produto</td>";
             echo "<td>Preço</td>";
             echo "<td>Remover</td>";
             echo "</tr>";
@@ -62,7 +62,7 @@ $cobertura = $_POST['cobertura'];
             }
             echo "</ul>";
 
-
+            $qnt_itens = sizeof($_SESSION['carrinho']);
             $qnt_acompanhamento = sizeof($acompanhamento);
             $qnt_cobertura = sizeof($cobertura);
 
@@ -81,11 +81,20 @@ $cobertura = $_POST['cobertura'];
     </div>
 
     <div class="valor_total">
-      <?php
-       echo "<h3>Total da compra: R$ <span id='total'>$total</span></h3>"
+        <?php
+        echo "<h3>Total: <span id='total'>$qnt_itens</span></h3>";
+        echo "<h3>Valor total: R$ <span id='total'>$total</span></h3>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
         ?>
-    <a class="botao_compra" href="produtos.php">Voltar</a>
-    
+        <a class="botao_voltar" href="produtos.php">Voltar</a>
+
     </div>
 
 </body>
