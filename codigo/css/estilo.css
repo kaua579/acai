@@ -947,7 +947,6 @@ section h2 {
 
 /* -------------------------------------carrinho---------------------------------------------------------------- */
 
-<<<<<<< Updated upstream
 #corpo_carrinho {
       font-family: 'Poppins', sans-serif;
       background-color: #6a0572;  
@@ -958,10 +957,8 @@ section h2 {
       gap: 20px;
       padding: 40px;
     }
-=======
 /* ==== Estilo Geral ==== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
->>>>>>> Stashed changes
 
 #corpo_carrinho {
   background-color: #6a007f; /* Roxo de fundo */
@@ -1014,28 +1011,19 @@ section h2 {
   border-radius: 8px;
 }
 
-<<<<<<< Updated upstream
     /* Caixa lateral do total */
-    .valor_total {
-      background-color: white;
-      color: #000;
-      border-radius: 15px;
-      padding: 20px;
-      width: 25%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      height: fit-content;
-    }
-=======
-.div_produtos td a {
-  color: #b00020;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.4rem;
+.valor_total {
+  background-color: white;
+  color: #000;
+  border-radius: 15px;
+  padding: 20px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
 }
->>>>>>> Stashed changes
 
 .div_produtos td a:hover {
   color: #ff0033;
@@ -1062,11 +1050,6 @@ section h2 {
   transition: 0.2s;
 }
 
-<<<<<<< Updated upstream
-    .botao-comprar:hover {
-      background-color: #245f24;
-    }
-=======
 .quantidade button:hover {
   background-color: #6a007f;
   color: #fff;
@@ -1161,4 +1144,3 @@ a:hover {
   text-decoration: underline;
  
 }
->>>>>>> Stashed changes
