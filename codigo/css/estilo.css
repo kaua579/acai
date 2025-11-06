@@ -210,7 +210,7 @@
 }
 
 #mostrarSenha:active {
-  transform: scale(1.00);
+  transform: scale(1.);
 }
 
 
@@ -924,7 +924,7 @@ section h2 {
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
-.observacoes {
+.observacoes  {
   position: relative;
   color: #ffeb3b; /* Cor amarela */
   margin-top: 310px; /* Espaçamento superior */
@@ -938,7 +938,8 @@ section h2 {
   padding-left: 20px;
   font-size: 18px;
   line-height: 1.6;
-  font-size: 18px;            /* tamanho da letra */
+  font-size: 18px;
+             /* tamanho da letra */
 }
 
 /* -------------------------------------home---------------------------------------------------------------- */
@@ -946,7 +947,8 @@ section h2 {
 
 /* -------------------------------------carrinho---------------------------------------------------------------- */
 
-/* #corpo_carrinho {
+<<<<<<< Updated upstream
+#corpo_carrinho {
       font-family: 'Poppins', sans-serif;
       background-color: #6a0572;  
       color: white;
@@ -956,49 +958,65 @@ section h2 {
       gap: 20px;
       padding: 40px;
     }
+=======
+/* ==== Estilo Geral ==== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+>>>>>>> Stashed changes
 
-    
-    .div_produtos {
-      background-color: white;
-      color: #000;
-      border-radius: 15px;
-      padding: 20px;
-      width: 65%;
-    }
+#corpo_carrinho {
+  background-color: #6a007f; /* Roxo de fundo */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+}
 
-    .produtos h2 {
-      background-color: #7b1783;
-      color: #fff;
-      padding: 10px;
-      border-radius: 10px;
-      text-transform: uppercase;
-      font-size: 18px;
-    }
+/* ==== Container de produtos ==== */
+.div_produtos {
+  background: #fff;
+  color: #222;
+  border-radius: 20px;
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
+.div_produtos table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
 
-    th, td {
-      text-align: center;
-      padding: 10px;
-    }
+.div_produtos th, 
+.div_produtos td {
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+}
 
-    th {
-      font-size: 16px;
-      color: #fff;
-      background-color: #7b1783;
-    }
+.div_produtos th {
+  background-color: #6a007f;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
 
-    td img {
-      width: 60px;
-      border-radius: 10px;
-    }
+.div_produtos td img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
 
+<<<<<<< Updated upstream
     /* Caixa lateral do total */
-    /* .valor_total {
+    .valor_total {
       background-color: white;
       color: #000;
       border-radius: 15px;
@@ -1010,34 +1028,137 @@ section h2 {
       align-items: center;
       height: fit-content;
     }
+=======
+.div_produtos td a {
+  color: #b00020;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+>>>>>>> Stashed changes
 
-    .valor_total h3 {
-      background-color: #7b1783;
-      color: #fff;
-      width: 100%;
-      text-align: center;
-      border-radius: 10px;
-      padding: 10px;
-      text-transform: uppercase;
-      font-size: 18px;
-    }
+.div_produtos td a:hover {
+  color: #ff0033;
+}
 
-    .valor_total p {
-      font-size: 18px;
-      margin: 10px 0;
-      font-weight: bold;
-    }
+/* ==== Quantidade ==== */
+.quantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
 
-    .botao-comprar {
-      background-color: #1f4c1f;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 10px 25px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.quantidade button {
+  background-color: #fff;
+  border: 2px solid #6a007f;
+  color: #6a007f;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
+<<<<<<< Updated upstream
     .botao-comprar:hover {
       background-color: #245f24;
-    } */ 
+    }
+=======
+.quantidade button:hover {
+  background-color: #6a007f;
+  color: #fff;
+}
+
+.quantidade span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* ==== Total do carrinho lateral ==== */
+.valor_total {
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  padding: 30px;
+  width: 25%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.valor_total h3 {
+  color: #222;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.valor_total p {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.linha {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 15px 0;
+}
+
+/* ==== Botão Comprar ==== */
+.botao_compra {
+  background-color: #2f562f;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+  background-color: #3d703d;
+}
+
+.btn-comprar svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ==== Listas de acompanhamentos ==== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+ul li {
+  background-color: #f3f3f3;
+  margin-bottom: 5px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+a {
+  color: #040004;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+ 
+}
+>>>>>>> Stashed changes
