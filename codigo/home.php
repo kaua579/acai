@@ -11,26 +11,25 @@
 </head>
 <body class="paggi">
 
-    <div class="menuu">
-        <a href="historia.php">Quem somos?</a>
-        <a href="cardapio.php">Cardápio</a>
-        <a href="produtos.php">Produtos</a>
-        <a href="atendentes.php">Atendentes</a>
+  
+  <div class="menuu">
+    <a href="historia.php">Quem somos?</a>
+    <a href="cardapio.php">Cardápio</a>
+    <a href="produtos.php">Produtos</a>
+    <a href="atendentes.php">Atendentes</a>
+</div>
+
+  
+  <section class="tela">
+    <div class="textoo">
+      <h1>Energia gelada,<br> sabor que vicia!</h1>
+      <p>Experimente o melhor açaí da cidade — saudável, cremoso e irresistível. 💜</p>
+      <button class="botao-acai">📞 Peça já o seu!</button>
     </div>
 
-    <div class="tela">
-        <div class="textoo">
+    <img src="acais.png" alt="Copo de açaí delicioso" class="imagens">
 
-            <h1>Energia gelada,<br> sabor que vicia</h1>
-            <p id="fone">📞 (62) 1234-5678</p>
-            
-        </div>
-
-
-        <div class="imagens">
-            <img src="acais.png" alt="acais">  
-        </div>
-    </div>
+  </section>
 
 </body>
 </html>

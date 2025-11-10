@@ -23,8 +23,11 @@
                     e com sabores de dar água na boca. Decidido a sempre trazer conforto aos nossos clientes, 
                     agora você pode fazer seu pedido na sua própria casa!
                 </p>
-                <button class="botao-voltarr" onclick="window.location.href='home.php'">Voltar</button>
+                <div class="botao-hist">
+                <button class="btn-voltarr" onclick="window.location.href='home.php'">Voltar</button>
+            </div>
         </div>
+    </div>
 </div>
 
 </body>

@@ -52,77 +52,110 @@
 }
 
 /* ---------------------------------------------home------------------------------------------------------------- */
-.paggi{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+.paggi {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a0dad, #800080);
+  color: #ffcc00;
+  overflow-x: hidden;
 }
 
-/* menu  */
+/* Menu fixo e moderno */
 .menuu {
-    background-color: #6a0dad; /* roxo escuro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(106, 13, 173, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
 }
 
 .menuu a {
-    color: #ffcc00; /* amarelo */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 .menuu a:hover {
-    color: #ffffff;
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
-/* conteudo principal */
+/* Tela principal */
 .tela {
-    background-color: #800080; /* roxo principal */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 100px;
-    color: #ffcc00;
-    height: 100vh; /* faz ocupar toda a altura da tela */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 140px 10%;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
-/* texto */
+/* Texto principal */
 .textoo {
-   max-width: 60%;
+  flex: 1 1 40%;
 }
 
 .textoo h1 {
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 1.3;
-    color: #ffcc00;
-    margin-bottom: 15px;
-    margin-left: 550px;
-   
-
+  font-size: 58px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffcc00;
 }
 
-.fone {
-    background-color: #ffcc00;
-    color: #4b0082;
-    padding: 10px 20px;
-    font-size: 25px;
-    font-weight: bold;
-    /* display: inline-block; */
-    border-radius: 5px;
-    margin-left: 550px;
-    
+.textoo p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 40px;
 }
 
-/* imagem */
+/* Botão de ação */
+.botao-acai {
+  background-color: #ffcc00;
+  color: #4b0082;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.botao-acai:hover {
+  background-color: #fff;
+  color: #6a0dad;
+  transform: scale(1.05);
+}
+
+/* Imagem */
+.imagens {
+  flex: 1 1 45%;
+  text-align: right;
+}
+
 .imagens img {
-    width: 1300px;
-    border-radius: 10px;
-    max-width: 60%
+  width: 90%;
+  max-width: 550px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transition: 0.4s ease;
+}
+
+.imagens img:hover {
+  transform: scale(1.03);
 }
 
 /* ---------------------------------------------formUsuario---------------------------------------------------------- */
@@ -312,7 +345,7 @@
 .pagi {
   font-family: 'Arial', sans-serif; /* Fonte padrão */
   background-color:#800080; /* Cor de fundo roxa */
-  color: white; /* Cor do texto */
+ 
 }
 
 .cont {
@@ -324,13 +357,12 @@
 }
 
 .fundoh{
-  background-image: url('fundohistoria.png'); 
+  background-image: url('imgacai.png'); 
   background-size: cover; 
   background-position: center; 
   width: 80%; 
   max-width: 1200px;
   height: 800px;
-  color: rgb(255, 255, 255); 
   min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
 }
 
@@ -356,27 +388,29 @@
 }
 
 .botao-hist {
-  position: relative;
-  margin-top: -70px;
-  margin-left: 1700px;   /* espaço à esquerda */
+  position: absolute;
+  bottom: 30px; /* Coloca o botão na parte inferior */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o botão */
   
 }
 
 .btn-voltarr{
-  background-color: #a8107c;     /* cor de fundo verde escuro */
-  text-decoration: none; /* tirar o sublinhado do link*/
-  color: #c4c2c4;                /* cor do texto */
-  border: none;                  /* remove borda padrão */
-  border-radius: 12px;            /* bordas arredondadas */
-  padding: 10px 80px;            /* espaçamento interno */
-  font-size: 20px;               /* tamanho do texto */
-  font-family: 'Arial', sans-serif; /* fonte simples */
-  text-transform: lowercase;     /* texto em minúsculas */
-  cursor: pointer;               /* muda o cursor */
-  transition: background-color 0.3s ease; /* animação suave */
-  position: relative;
-  z-index: 10;
+  background-color: #a8107c; /* Cor do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #fff; /* Cor do texto do botão */
+  border: none; /* Remove a borda */
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 10px 40px; /* Espaçamento interno */
+  font-size: 20px; /* Tamanho do texto */
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase; /* Transforma o texto para maiúsculas */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave */
 
+}
+.btn-voltarr:hover {
+  background-color: #9b005a; /* Muda a cor ao passar o mouse */
 }
     
 
