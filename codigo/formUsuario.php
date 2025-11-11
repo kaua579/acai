@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,20 +58,21 @@
     <div class="logo-cadastrar"></div> 
   <form id="formUsuario" class="form-container form-cadastrar" action="salvarUsuario.php" method="post">
 
-    <label for="nome">Nome:</label>
+    <label for="nome" class="label-form">Nome:</label>
     <div class="campo">
       <input type="text" name="nome" id="nome">
+    </div>
     </div>  
 
-    <label for="email">E-mail:</label>
+    <label for="email" class="label-form">E-mail:</label>
     <div class="campo">
       <input type="text" name="email" id="email">
     </div>
 
-    <label for="senha">Senha:</label>
+    <label for="senha" class="label-form">Senha:</label>
     <div class="campo">
       <input type="password" name="senha" id="senha">
-      <button type="button" id="mostrarSenha">🙈</button> 
+      <button type="button" id="mostrarSenha">👁️</button> 
     </div>
 
     <input type="submit" value="Cadastrar" class="botao-usuario">
@@ -97,4 +99,3 @@
 
         <input type="submit" value="Cadastrar">
     </form>
-</body> -->
