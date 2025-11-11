@@ -304,6 +304,7 @@
   background-color: #760a84;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   /* Cor de fundo roxa da página */
   height: 100vh;
   /* Ocupa toda a altura da tela (viewport) */
@@ -342,6 +343,26 @@
 >>>>>>> Stashed changes
 }
 
+=======
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Container principal */
+.logo-login {
+  background-image: url(imagens/logologin.png);
+  background-repeat: no-repeat;
+  background-position: top center; /* coloca a imagem no topo */
+  background-size: 335px; /* aumenta o tamanho da imagem */
+  width: 400px;           /* um pouco mais largo para a imagem caber */
+  padding-top: 250px;     /* empurra os campos para baixo da imagem */
+  color: #fff;
+}
+
+>>>>>>> Stashed changes
 =======
   height: 100vh;
   display: flex;
@@ -548,7 +569,10 @@
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 /*-----------------------------------------------------paginaProdutos------------------------------------------------*/
