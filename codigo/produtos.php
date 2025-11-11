@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="./css/estilo.css">
     <title>Produtos - Açaí</title>
 </head>
-<body>      
-    <div class="fundo">
+<body class="fundo">      
+    
         <div class="slice-diagonal"></div>
         <div id="fundo-produtos">
              
@@ -128,7 +128,7 @@
                 </script>
             </div>
         </div>
-    </div>
+        
 </body>
 </html>
 
