@@ -302,6 +302,7 @@
 
 .fundo-login {
   background-color: #760a84;
+<<<<<<< Updated upstream
   /* Cor de fundo roxa da página */
   height: 100vh;
   /* Ocupa toda a altura da tela (viewport) */
@@ -320,8 +321,59 @@
   position: absolute;
   top: 80px;
   margin-left: -25px
+=======
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
+/* Container principal */
+.logo-login {
+  background-image: url(imagens/logologin.png);
+  background-repeat: no-repeat;
+  background-position: top center; /* coloca a imagem no topo */
+  background-size: 335px; /* aumenta o tamanho da imagem */
+  width: 400px;           /* um pouco mais largo para a imagem caber */
+  padding-top: 250px;     /* empurra os campos para baixo da imagem */
+  color: #fff;
+>>>>>>> Stashed changes
+}
+
+/* Campos de texto */
+.campo-login {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.campo-login::placeholder {
+  color: #e8c9ed;
+}
+
+/* Botão */
+.botao-loga {
+  width: 420px;
+  height: 60px;
+  background-color: #2e501b;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px; /* apenas um pequeno espaço, sem jogar lá pra baixo */
+}
+
+.botao-loga:hover {
+  background-color: #3c6d24;
+}
 /* ---------------------------------------------------------------------------------------------------------- */
 
 #tituloc {
@@ -475,7 +527,7 @@
 
 
 
-/*-----------------------------------------------------pagina Produtos------------------------------------------------*/
+/*-----------------------------------------------------paginaProdutos------------------------------------------------*/
 
 
 .fundo {
