@@ -12,12 +12,12 @@
 <body class="corpo-cardapio">
     <div class="corpo">
         <div class="menu">
-            <header>
+            <header id="cardapio">
                 <h1> Cardápio </h1>
             </header>
 
             <section class="tamanho">
-                <h2>Tamanhos</h2>
+                <h2 id="nome_tamnho">Tamanhos</h2>
                 <div class="tamanho2">
                     <div class="tamanho-item">
                         <h3>200ml</h3>
@@ -43,7 +43,7 @@
             </section>
 
             <section class="acompanhamentos">
-                <h2>Acompanhamentos</h2>
+                <h2 id="acompanhamento">Acompanhamentos</h2>
                 <div class="acomp-itens">
                     <div class="acomp-item"> Banana - R$2,50</div>
                     <div class="acomp-item"> Morango - R$2,50</div>
@@ -65,7 +65,7 @@
             </section>
 
             <section class="cobertura">
-                <h2>Coberturas</h2>
+                <h2 id="cobertura">Coberturas</h2>
                 <div class="cobert-itens">
                     <div class="cobert-item"> Leite Condensado - R$1,50</div>
                     <div class="cobert-item"> Doce de Leite - R$1,50</div>
