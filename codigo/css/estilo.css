@@ -1309,3 +1309,13 @@ body.corpo-cardapio {
 #corpo_atendente {
   background: linear-gradient(135deg, #6a0dad, #800080);
 }
+
+#voltar {
+  display: inline-block;
+  background-color: #30045a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px
+}
