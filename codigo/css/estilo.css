@@ -8,31 +8,44 @@
   height: 100vh;
 }
 
-.botao-cadastrar{
+.botao-cadastrar {
   position: relative;
-  top: 540px; /* desce 40px */
-  background-color: #315c1d ;
-  color: white; 
-  font-size: 25px;            /* tamanho da letra */
-  padding: 25px 120px; /* espaço interno do botão */
+  top: 540px;
+  /* desce 40px */
+  background-color: #315c1d;
+  color: white;
+  font-size: 25px;
+  /* tamanho da letra */
+  padding: 25px 120px;
+  /* espaço interno do botão */
   font-weight: bold;
-  border-radius: 13px; /* bordas arredondadas */
-  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
-  margin-left: 785px;   /* espaço à esquerda */
+  border-radius: 13px;
+  /* bordas arredondadas */
+  transition: background-color 0.3s ease;
+  /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  margin-left: 785px;
+  /* espaço à esquerda */
 }
 
-.botao-login{
+.botao-login {
   position: relative;
-  top: 580px; /* espaço acima do botão */
-  display: inline-block; /* faz o botão ser exibido como um bloco */
-  background-color: #315c1d ;
-  color: white; 
-  font-size: 25px;            /* tamanho da letra */
-  padding: 25px 143px; /* espaço interno do botão */
+  top: 580px;
+  /* espaço acima do botão */
+  display: inline-block;
+  /* faz o botão ser exibido como um bloco */
+  background-color: #315c1d;
+  color: white;
+  font-size: 25px;
+  /* tamanho da letra */
+  padding: 25px 143px;
+  /* espaço interno do botão */
   font-weight: bold;
-  border-radius: 13px; /* bordas arredondadas */
-  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
-  margin-left: 785px;   /* espaço à esquerda */
+  border-radius: 13px;
+  /* bordas arredondadas */
+  transition: background-color 0.3s ease;
+  /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  margin-left: 785px;
+  /* espaço à esquerda */
 
 
 }
@@ -43,12 +56,13 @@
   background-size: contain;
   background-position: center;
   width: 650px;
-  height: 320px; 
+  height: 320px;
   position: absolute;
   top: 200px;
-  margin-left: 640px;   /* espaço à esquerda */
-  
-  
+  margin-left: 640px;
+  /* espaço à esquerda */
+
+
 }
 
 /* ---------------------------------------------home------------------------------------------------------------- */
@@ -132,8 +146,8 @@
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
 }
 
 .botao-fone:hover {
@@ -152,7 +166,7 @@
   width: 90%;
   max-width: 700px;
   border-radius: 20px;
-  
+
   transition: 0.4s ease;
 }
 
@@ -163,88 +177,116 @@
 /* ---------------------------------------------formUsuario---------------------------------------------------------- */
 
 .fundo-usuario {
-  background-color: #760a84; /* Cor de fufont-family: 'Poppins', sans-serif;
+  background-color: #760a84;
+  /* Cor de fufont-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #6a0dad, #800080);
   color: #ffcc00;
   overflow-x: hidden;ndo roxa da página */
-  height: 100vh;             /* Ocupa toda a altura da tela (viewport) */
-  display: flex;             /* Usa flexbox para facilitar centralização */
-  justify-content: center;   /* Centraliza o conteúdo horizontalmente */
-  align-items: center;       /* Centraliza o conteúdo verticalmente */
-  margin: 0;                 /* Remove margens padrão do navegador */
+  height: 100vh;
+  /* Ocupa toda a altura da tela (viewport) */
+  display: flex;
+  /* Usa flexbox para facilitar centralização */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente */
+  margin: 0;
+  /* Remove margens padrão do navegador */
 }
 
 
 
 .campo {
-  background-color: rgba(255, 255, 255, 0.3); /* Branco translúcido = lilás suave */
-  border-radius: 15px;                        /* Bordas arredondadas */
-  width: 340px;                               /* Largura da caixinha */
-  height: 55px;                               /* Altura da caixinha */
-  display: flex;                              /* Flexbox pra alinhar o input dentro */
-  align-items: center;                        /* Centraliza o input verticalmente */
-  padding: 0 15px;                            /* Espaçamento interno lateral */
-  margin-bottom: 20px;     /* <-- adiciona espaço entre os campos */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Branco translúcido = lilás suave */
+  border-radius: 15px;
+  /* Bordas arredondadas */
+  width: 340px;
+  /* Largura da caixinha */
+  height: 55px;
+  /* Altura da caixinha */
+  display: flex;
+  /* Flexbox pra alinhar o input dentro */
+  align-items: center;
+  /* Centraliza o input verticalmente */
+  padding: 0 15px;
+  /* Espaçamento interno lateral */
+  margin-bottom: 20px;
+  /* <-- adiciona espaço entre os campos */
 
 }
 
 .campo input {
-  background: none;      /* Remove o fundo branco padrão do input */
-  border: none;          /* Remove a borda padrão */
-  outline: none;         /* Remove o contorno azul quando clica */
-  width: 100%;           /* Faz o input ocupar toda a largura da caixa */
-  font-size: 16px;       /* Tamanho da fonte dentro do campo */
-  color: #2e0833;        /* Cor do texto digitado */
+  background: none;
+  /* Remove o fundo branco padrão do input */
+  border: none;
+  /* Remove a borda padrão */
+  outline: none;
+  /* Remove o contorno azul quando clica */
+  width: 100%;
+  /* Faz o input ocupar toda a largura da caixa */
+  font-size: 16px;
+  /* Tamanho da fonte dentro do campo */
+  color: #2e0833;
+  /* Cor do texto digitado */
 }
 
 .campo:focus {
-  color: black; /* mantém a cor */
+  color: black;
+  /* mantém a cor */
 }
 
-.logo-cadastrar{
+.logo-cadastrar {
   background-image: url(imagens/cadastrargat.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 450px;
-  height: 300px; 
+  height: 300px;
   position: absolute;
   top: 80px;
   margin-left: -25px
-
-
 }
 
-.botao-usuario{
+.botao-usuario {
   position: relative;
-  background-color: #315c1d ;
-  color: white; 
-  font-size: 25px;            /* tamanho da letra */
-  padding: 10px 125px; /* espaço interno do botão */
-  text-decoration: none; /* tirar o sublinhado do link*/
+  background-color: #315c1d;
+  color: white;
+  font-size: 25px;
+  /* tamanho da letra */
+  padding: 10px 125px;
+  /* espaço interno do botão */
+  text-decoration: none;
+  /* tirar o sublinhado do link*/
   font-weight: bold;
-  border-radius: 13px; /* bordas arredondadas */
-  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  border-radius: 13px;
+  /* bordas arredondadas */
+  transition: background-color 0.3s ease;
+  /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
   top: 5px;
 
 
 }
 
 #mostrarSenha {
-  background-color: #b05cc7; /* roxo claro combinando com o tema */
+  background-color: #b05cc7;
+  /* roxo claro combinando com o tema */
   color: black;
   border: none;
   border-radius: 15px;
   padding: 8px 10px;
-  margin-left: 20px; /* espaçamento entre input e botão */
+  margin-left: 20px;
+  /* espaçamento entre input e botão */
   cursor: pointer;
   font-size: 10px;
 }
 
 #mostrarSenha:hover {
-  background-color: #8a42a3; /* roxo mais escuro no hover */
-  transform: scale(1.50);    /* leve zoom */
+  background-color: #8a42a3;
+  /* roxo mais escuro no hover */
+  transform: scale(1.50);
+  /* leve zoom */
 }
 
 #mostrarSenha:active {
@@ -252,24 +294,29 @@
 }
 
 .form-cadastrar {
-  margin-top: 180px; /* ajusta o valor pra descer mais ou menos */
+  margin-top: 180px;
+  /* ajusta o valor pra descer mais ou menos */
 }
 
 /* --------------------------------login-------------------------------------------------------------------------- */
 
 .fundo-login {
-  background-color: #760a84; /* Cor de fundo roxa da página */
-  height: 100vh;             /* Ocupa toda a altura da tela (viewport) */
-  display: flex;             /* Usa flexbox para facilitar centralização */
-  margin: 0;                 /* Remove margens padrão do navegador */
+  background-color: #760a84;
+  /* Cor de fundo roxa da página */
+  height: 100vh;
+  /* Ocupa toda a altura da tela (viewport) */
+  display: flex;
+  /* Usa flexbox para facilitar centralização */
+  margin: 0;
+  /* Remove margens padrão do navegador */
 }
 
-.logo-login{
+.logo-login {
   background-image: url(imagens/logologin.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 450px;
-  height: 300px; 
+  height: 300px;
   position: absolute;
   top: 80px;
   margin-left: -25px
@@ -279,78 +326,79 @@
 
 #tituloc {
   height: 150px;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #tamanhos {
-    background-color: #fcb12b;
-    /* cor amarela */
-    color: #3a0058;
-    /* texto roxo escuro */
-    font-weight: 900;
-    /* negrito bem forte */
-    font-family: 'Bebas Neue', sans-serif;
-    text-align: center;
-    padding: 10px 50px;
-    /* espaço em cima e embaixo */
-    border-radius: 10px;
-    /* cantos arredondados */
-    font-size: 30;
-    /* tamanho da fonte */
-    width: 500px;
-    /* tamanho só do conteúdo */
-    margin: 200px auto 0 auto;
-    /* centralizar na página */
-    letter-spacing: 2px;
+  background-color: #fcb12b;
+  /* cor amarela */
+  color: #3a0058;
+  /* texto roxo escuro */
+  font-weight: 900;
+  /* negrito bem forte */
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  padding: 10px 50px;
+  /* espaço em cima e embaixo */
+  border-radius: 10px;
+  /* cantos arredondados */
+  font-size: 30;
+  /* tamanho da fonte */
+  width: 500px;
+  /* tamanho só do conteúdo */
+  margin: 200px auto 0 auto;
+  /* centralizar na página */
+  letter-spacing: 2px;
 }
+
 .texto_amarelo
 
 /* Estilo para o botão de login */
 .login-btn {
-    width: 107%;
-    padding: 12px;
-    background-color: #315c1d;
-    /* Cor verde do botão */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
+  width: 107%;
+  padding: 12px;
+  background-color: #315c1d;
+  /* Cor verde do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 
 /* Links abaixo do formulário */
 .forgot-signup {
-    margin-top: 15px;
-    font-size: 14px;
+  margin-top: 15px;
+  font-size: 14px;
 }
 
 .forgot-signup a {
-    color: #3498db;
-    text-decoration: none;
+  color: #3498db;
+  text-decoration: none;
 }
 
 .forgot-signup a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 
 
 .link {
-    width: 20%;
-    padding: 12px;
-    background-color: #315c1d;
-    /* Cor verde do botão */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    text-align: center;
+  width: 20%;
+  padding: 12px;
+  background-color: #315c1d;
+  /* Cor verde do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /*-----------------------------------------------------pagina historia-----------------------------------------*/
@@ -431,20 +479,23 @@
 
 
 .fundo {
-  background-color: #6e0b7b  ; /*#6a1b9a;  */
-  padding: 20px; 
+  background-color: #6e0b7b;
+  /*#6a1b9a;  */
+  padding: 20px;
   min-height: 100vh;
-  position: relative; /* Necessário para posicionar as curvas dentro da div */
-  overflow: hidden; /* Esconde partes que passarem da tela */
+  position: relative;
+  /* Necessário para posicionar as curvas dentro da div */
+  overflow: hidden;
+  /* Esconde partes que passarem da tela */
 }
 
 
 .titulo-img {
-  max-width: 100%; 
-  height: auto; 
-  margin: 0 auto; 
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
   display: block;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 /*  agrupa os produtos */
@@ -458,41 +509,54 @@
 }
 
 .produto {
-  position: relative;      /* Define o card como referência para posicionar elementos dentro dele */
-  display: inline-block;   /* Faz os produtos ficarem lado a lado na tela */
-  margin: 20px;            /* Espaço entre um card e outro */
-  text-align: center;      /* Centraliza o texto e a imagem dentro do card */
+  position: relative;
+  /* Define o card como referência para posicionar elementos dentro dele */
+  display: inline-block;
+  /* Faz os produtos ficarem lado a lado na tela */
+  margin: 20px;
+  /* Espaço entre um card e outro */
+  text-align: center;
+  /* Centraliza o texto e a imagem dentro do card */
 }
 
 /* quando o usuário passa o mouse sobre o produto */
 .produto:hover {
-  transform: scale(1.05); /* Aumenta o tamanho 5% (efeito de zoom) */
+  transform: scale(1.05);
+  /* Aumenta o tamanho 5% (efeito de zoom) */
 }
 
 .produto img {
-  width: 180px;         /* tamanho fixo pra todas as imagens */
-  height: 300px;        /* altura fixa pra alinhar os cards */
-  object-fit: contain;    /* corta um pedacinho se precisar, pra preencher certinho */
+  width: 180px;
+  /* tamanho fixo pra todas as imagens */
+  height: 300px;
+  /* altura fixa pra alinhar os cards */
+  object-fit: contain;
+  /* corta um pedacinho se precisar, pra preencher certinho */
   width: 195px;
-  border-radius: 10px;  /* bordas arredondadas */
+  border-radius: 10px;
+  /* bordas arredondadas */
 }
 
 
 /*  texto */
 .produto p {
-  font-size: 20px; 
-  font-weight: bold; /*  negrito */
-  margin-top: -18px; 
-  color: #ffeb3b; 
+  font-size: 20px;
+  font-weight: bold;
+  /*  negrito */
+  margin-top: -18px;
+  color: #ffeb3b;
 }
 
 /*Define o estilo do container do checkbox */
 .caixa-check {
-  position: relative;   /* permite posicionar o checkmark dentro */
+  position: relative;
+  /* permite posicionar o checkmark dentro */
   display: inline-block;
-  width: 25px;          /* tamanho da caixinha */
+  width: 25px;
+  /* tamanho da caixinha */
   height: 25px;
-  cursor: pointer;      /* mostra o cursor de "mãozinha" ao passar */
+  cursor: pointer;
+  /* mostra o cursor de "mãozinha" ao passar */
 }
 
 .caixa-check {
@@ -503,7 +567,8 @@
 
 /*Esconde o checkbox padrão do navegador */
 .caixa-check input {
-  opacity: 0;   /* invisível */
+  opacity: 0;
+  /* invisível */
   width: 0;
   height: 0;
 }
@@ -515,15 +580,19 @@
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #e2baff;  /* cor inicial (roxinho claro) */
+  background-color: #e2baff;
+  /* cor inicial (roxinho claro) */
   border-radius: 6px;
-  transition: all 0.2s ease;  /* transição suave */
+  transition: all 0.2s ease;
+  /* transição suave */
 }
 
 /*Quando o checkbox é marcado, muda a cor */
-.caixa-check input:checked + .checkmark {
-  background-color: #a455ff; /* roxo escuro */
+.caixa-check input:checked+.checkmark {
+  background-color: #a455ff;
+  /* roxo escuro */
 }
+
 /*Cria o "check" (✔) invisível inicialmente */
 .caixa-check .checkmark::after {
   content: "";
@@ -532,7 +601,7 @@
 }
 
 /*Exibe o "check" quando o input é marcado */
-.caixa-check input:checked + .checkmark::after {
+.caixa-check input:checked+.checkmark::after {
   display: block;
   left: 8px;
   top: 3px;
@@ -544,14 +613,21 @@
 }
 
 .checkmark {
-  position: absolute;      /* Fica sobre o local do input invisível */
-  top: 0;                  /* Alinha ao topo da área da label */
-  left: 0;                 /* Alinha à esquerda da área da label */
-  width: 25px;             /* Tamanho do quadradinho visível */
+  position: absolute;
+  /* Fica sobre o local do input invisível */
+  top: 0;
+  /* Alinha ao topo da área da label */
+  left: 0;
+  /* Alinha à esquerda da área da label */
+  width: 25px;
+  /* Tamanho do quadradinho visível */
   height: 25px;
-  background-color: #d19df5;  /* Cor de fundo (lilás claro) */
-  border-radius: 6px;         /* Arredonda os cantos */
-  transition: 0.2s;           /* Suaviza o efeito de mudança quando marcado */
+  background-color: #d19df5;
+  /* Cor de fundo (lilás claro) */
+  border-radius: 6px;
+  /* Arredonda os cantos */
+  transition: 0.2s;
+  /* Suaviza o efeito de mudança quando marcado */
 }
 
 
@@ -559,29 +635,41 @@
 
 /*  botão de compra */
 .btn-comprar {
-  display: inline-block; /* faz o botão ser exibido como um bloco */
-  margin-top: 10px; /* espaço acima do botão */
-  background-color: #315c1d ;
-  color: white; 
-  padding: 10px 20px; /* espaço interno do botão */
-  text-decoration: none; /* tirar o sublinhado do link*/
+  display: inline-block;
+  /* faz o botão ser exibido como um bloco */
+  margin-top: 10px;
+  /* espaço acima do botão */
+  background-color: #315c1d;
+  color: white;
+  padding: 10px 20px;
+  /* espaço interno do botão */
+  text-decoration: none;
+  /* tirar o sublinhado do link*/
   font-weight: bold;
-  border-radius: 5px; /* bordas arredondadas */
-  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  border-radius: 5px;
+  /* bordas arredondadas */
+  transition: background-color 0.3s ease;
+  /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
 }
 
 
 /* quando passa o mouse sobre o botão) */
 .btn-comprar:hover {
-    background-color: #45a049; /* Altera a cor de fundo do botão para um verde mais escuro */
+  background-color: #45a049;
+  /* Altera a cor de fundo do botão para um verde mais escuro */
 }
 
 .form-geral {
-  display: flex;             /* organiza os itens em linha ou coluna */
-  flex-direction: column;    /* deixa os produtos e o botão em coluna */
-  align-items: center;       /* centraliza tudo horizontalmente */
-  gap: 20px;                 /* espaço entre os elementos */
-  margin-top: 30px;          /* espaço do topo */
+  display: flex;
+  /* organiza os itens em linha ou coluna */
+  flex-direction: column;
+  /* deixa os produtos e o botão em coluna */
+  align-items: center;
+  /* centraliza tudo horizontalmente */
+  gap: 20px;
+  /* espaço entre os elementos */
+  margin-top: 30px;
+  /* espaço do topo */
 }
 
 
@@ -598,7 +686,8 @@
   background-attachment: fixed;
   height: 100vh;
   margin: 0;
-  position: relative; /* necessário para posicionar elementos dentro */
+  position: relative;
+  /* necessário para posicionar elementos dentro */
 }
 
 /* imagem decorativa (obg.png) */
@@ -608,15 +697,21 @@
   background-size: contain;
   background-position: center;
   width: 100%;
-  height: 250px; /* aumenta pra ser visível */
+  height: 250px;
+  /* aumenta pra ser visível */
   position: absolute;
-  top: 130px; /* controla onde aparece verticalmente */
+  top: 130px;
+  /* controla onde aparece verticalmente */
   left: 0;
-  opacity: 0.8; /* opcional: leve transparência */
-    filter: 
-    brightness(1.1)    /* deixa mais clara (1 = normal) */
-    contrast(1.4)      /* aumenta contraste */
-    saturate(1.8);     /* reforça as cores */
+  opacity: 0.8;
+  /* opcional: leve transparência */
+  filter:
+    brightness(1.1)
+    /* deixa mais clara (1 = normal) */
+    contrast(1.4)
+    /* aumenta contraste */
+    saturate(1.8);
+  /* reforça as cores */
 }
 
 
@@ -631,9 +726,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* centraliza verticalmente */
+  height: 100vh;
+  /* centraliza verticalmente */
   position: relative;
-  z-index: 2; /* fica sobre a onda */
+  z-index: 2;
+  /* fica sobre a onda */
 }
 
 /* ícones */
@@ -648,25 +745,38 @@
   width: 100px;
   height: auto;
 }
+
 .botao-agradecimento {
   position: relative;
   margin-top: -40px;
-  margin-left: 1675px;   /* espaço à esquerda */
+  margin-left: 1675px;
+  /* espaço à esquerda */
 }
 
 
-.btn-voltar{
-  background-color: #a8107c;     /* cor de fundo verde escuro */
-  text-decoration: none; /* tirar o sublinhado do link*/
-  color: #c4c2c4;                /* cor do texto */
-  border: none;                  /* remove borda padrão */
-  border-radius: 12px;            /* bordas arredondadas */
-  padding: 10px 80px;            /* espaçamento interno */
-  font-size: 20px;               /* tamanho do texto */
-  font-family: 'Arial', sans-serif; /* fonte simples */
-  text-transform: lowercase;     /* texto em minúsculas */
-  cursor: pointer;               /* muda o cursor */
-  transition: background-color 0.3s ease; /* animação suave */
+.btn-voltar {
+  background-color: #a8107c;
+  /* cor de fundo verde escuro */
+  text-decoration: none;
+  /* tirar o sublinhado do link*/
+  color: #c4c2c4;
+  /* cor do texto */
+  border: none;
+  /* remove borda padrão */
+  border-radius: 12px;
+  /* bordas arredondadas */
+  padding: 10px 80px;
+  /* espaçamento interno */
+  font-size: 20px;
+  /* tamanho do texto */
+  font-family: 'Arial', sans-serif;
+  /* fonte simples */
+  text-transform: lowercase;
+  /* texto em minúsculas */
+  cursor: pointer;
+  /* muda o cursor */
+  transition: background-color 0.3s ease;
+  /* animação suave */
   position: relative;
   z-index: 10;
 
@@ -697,13 +807,17 @@
 
 /* === ESTILO DOS CHECKBOX === */
 .checkbox {
-  display: flex; /* Alinha texto e checkbox lado a lado */
-  align-items: center; /* Centraliza verticalmente */
+  display: flex;
+  /* Alinha texto e checkbox lado a lado */
+  align-items: center;
+  /* Centraliza verticalmente */
   cursor: pointer;
   font-family: 'TT-Berlinerins', sans-serif;
   color: #ffffff;
-  font-size: 25px; /* ← aumente aqui o tamanho da letra */
-  line-height: 1.2; /* melhora o espaçamento vertical */
+  font-size: 25px;
+  /* ← aumente aqui o tamanho da letra */
+  line-height: 1.2;
+  /* melhora o espaçamento vertical */
 }
 
 /* Esconde o checkbox padrão */
@@ -713,24 +827,26 @@
 
 /* Quadradinho personalizado */
 .checkmark {
-  width: 26px; /* ← tamanho maior do quadrado */
+  width: 26px;
+  /* ← tamanho maior do quadrado */
   height: 26px;
   border: 2px solid #800080;
   border-radius: 5px;
   background-color: #f2aaf2;
   position: relative;
-  margin-right: 12px; /* espaço entre quadrado e texto */
+  margin-right: 12px;
+  /* espaço entre quadrado e texto */
   transition: all 0.2s ease-in-out;
 }
 
 /* Estado marcado */
-.checkbox input:checked + .checkmark {
+.checkbox input:checked+.checkmark {
   background-color: #f2aaf2;
   border-color: #f2aaf2;
 }
 
 /* Desenho do "check" */
-.checkbox input:checked + .checkmark::after {
+.checkbox input:checked+.checkmark::after {
   content: '';
   position: absolute;
   left: 7px;
@@ -749,10 +865,11 @@
 }
 
 .alinhar-checkbox {
-    display: flex; 
-    justify-content:space-between; 
-    gap: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
 }
+
 /* ----------------------------------------------------------- */
 #tigela {
   position: absolute;
@@ -760,11 +877,11 @@
   right: 610px;
   width: 500px;
   z-index: 10;
-  
-  
+
+
 }
 
- 
+
 /* ------------------------------------------------------------------------------- */
 /* Grupo de acompanhamentos */
 .grupo-acompanhamentos {
@@ -784,6 +901,7 @@
 .titulo-grupo {
   margin-bottom: 30px;
 }
+
 /* ---------------------------------------------------------------------------------- */
 /* Colunas de acompanhamentos */
 .colunas-acompanhamento {
@@ -804,7 +922,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  
+
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -812,74 +930,105 @@
 .botao-continuar {
   position: relative;
   margin-top: -100px;
-  margin-left: 1500px;   /* espaço à esquerda */
+  margin-left: 1500px;
+  /* espaço à esquerda */
 
 
 }
 
 .continuar-comprando {
-  background-color: #2f561c;     /* cor de fundo verde escuro */
-  color: #ffffff;                /* cor do texto */
-  border: none;                  /* remove borda padrão */
-  border-radius: 8px;            /* bordas arredondadas */
-  padding: 12px 40px;            /* espaçamento interno */
-  font-size: 20px;               /* tamanho do texto */
-  font-family: 'Arial', sans-serif; /* fonte simples */
-  text-transform: lowercase;     /* texto em minúsculas */
-  cursor: pointer;               /* muda o cursor */
-  transition: background-color 0.3s ease; /* animação suave */
+  background-color: #2f561c;
+  /* cor de fundo verde escuro */
+  color: #ffffff;
+  /* cor do texto */
+  border: none;
+  /* remove borda padrão */
+  border-radius: 8px;
+  /* bordas arredondadas */
+  padding: 12px 40px;
+  /* espaçamento interno */
+  font-size: 20px;
+  /* tamanho do texto */
+  font-family: 'Arial', sans-serif;
+  /* fonte simples */
+  text-transform: lowercase;
+  /* texto em minúsculas */
+  cursor: pointer;
+  /* muda o cursor */
+  transition: background-color 0.3s ease;
+  /* animação suave */
 }
 
 .continuar-comprando:hover {
-  background-color: #3b6d25;     /* tom mais claro no hover */
+  background-color: #3b6d25;
+  /* tom mais claro no hover */
 }
 
 /* ------------------------------------------------------------------------------------ */
 .titulo-acompanhamentos {
-  background-color: #f9b233; /* fundo amarelo */
-  color: #4b0d3a;            /* texto roxo escuro */
-  font-family: 'TT-Berlinerins', sans-serif; /* sua fonte personalizada */
-  font-size: 40px;            /* tamanho da letra */
-  text-align: center;         /* centraliza o texto */
-  padding: 10px 30px;         /* espaço interno */
-  border-radius: 15px;        /* bordas arredondadas */
-  display: inline-block;      /* faz o fundo se ajustar ao texto */
+  background-color: #f9b233;
+  /* fundo amarelo */
+  color: #4b0d3a;
+  /* texto roxo escuro */
+  font-family: 'TT-Berlinerins', sans-serif;
+  /* sua fonte personalizada */
+  font-size: 40px;
+  /* tamanho da letra */
+  text-align: center;
+  /* centraliza o texto */
+  padding: 10px 30px;
+  /* espaço interno */
+  border-radius: 15px;
+  /* bordas arredondadas */
+  display: inline-block;
+  /* faz o fundo se ajustar ao texto */
   position: relative;
   left: 80px;
   margin-top: 25px;
 }
 
 .titulo-coberturas {
-  background-color: #f9b233; /* fundo amarelo */
-  color: #4b0d3a;            /* texto roxo escuro */
-  font-family: 'TT-Berlinerins', sans-serif; /* sua fonte personalizada */
-  font-size: 40px;            /* tamanho da letra */
-  text-align: center;         /* centraliza o texto */
-  padding: 10px 30px;         /* espaço interno */
-  border-radius: 15px;        /* bordas arredondadas */
-  display: inline-block;      /* faz o fundo se ajustar ao texto */
+  background-color: #f9b233;
+  /* fundo amarelo */
+  color: #4b0d3a;
+  /* texto roxo escuro */
+  font-family: 'TT-Berlinerins', sans-serif;
+  /* sua fonte personalizada */
+  font-size: 40px;
+  /* tamanho da letra */
+  text-align: center;
+  /* centraliza o texto */
+  padding: 10px 30px;
+  /* espaço interno */
+  border-radius: 15px;
+  /* bordas arredondadas */
+  display: inline-block;
+  /* faz o fundo se ajustar ao texto */
   position: relative;
   left: 155px;
   margin-top: 25px;
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
-.observacoes  {
+.observacoes {
   position: relative;
-  color: #ffeb3b; /* Cor amarela */
-  margin-top: 310px; /* Espaçamento superior */
+  color: #ffeb3b;
+  /* Cor amarela */
+  margin-top: 310px;
+  /* Espaçamento superior */
   text-align: left;
-  
-  
+
+
 }
 
 .observacoes ul {
-  list-style-type: disc; /* bolinhas padrão */
+  list-style-type: disc;
+  /* bolinhas padrão */
   padding-left: 20px;
   font-size: 18px;
   line-height: 1.6;
   font-size: 18px;
-             /* tamanho da letra */
+  /* tamanho da letra */
 }
 
 /* -------------------------------------home---------------------------------------------------------------- */
@@ -887,205 +1036,79 @@
 
 /* -------------------------------------carrinho---------------------------------------------------------------- */
 
-#corpo_carrinho {
-      font-family: 'Poppins', sans-serif;
-      background-color: #6a0572;  
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 40px;
-    }
-/* ==== Estilo Geral ==== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 #corpo_carrinho {
-  background-color: #6a007f; /* Roxo de fundo */
-  font-family: 'Roboto', sans-serif;
+  background-color: #6A0D83; /* Roxo de fundo */
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 40px;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  padding: 40px;
 }
 
-/* ==== Container de produtos ==== */
+/*  CONTAINER DOS PRODUTOS */
 .div_produtos {
   background: #fff;
-  color: #222;
-  border-radius: 20px;
-  padding: 20px;
-  width: 70%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #000;
+  border-radius: 25px;
+  padding: 20px 30px;
+  width: 65%;
+  
 }
 
 .div_produtos table {
   width: 100%;
   border-collapse: collapse;
-  border: none;
 }
 
-.div_produtos th, 
 .div_produtos td {
   text-align: center;
   padding: 15px;
-  font-size: 1rem;
-  border-bottom: 1px solid #ccc;
+  border: none;
 }
 
-.div_produtos th {
-  background-color: #6a007f;
+.div_produtos tr:first-child {
+  background-color: #6A0D83;
   color: white;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-}
-
-.div_produtos td img {
-  width: 80px;
-  height: auto;
-  border-radius: 8px;
-}
-
-    /* Caixa lateral do total */
-.valor_total {
-  background-color: white;
-  color: #000;
-  border-radius: 15px;
-  padding: 20px;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: fit-content;
-}
-
-.div_produtos td a:hover {
-  color: #ff0033;
-}
-
-/* ==== Quantidade ==== */
-.quantidade {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.quantidade button {
-  background-color: #fff;
-  border: 2px solid #6a007f;
-  color: #6a007f;
   font-weight: bold;
-  font-size: 1.1rem;
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  cursor: pointer;
+}
+
+.div_produtos tr:not(:first-child):hover {
+  background-color: #f8f0ff;
   transition: 0.2s;
 }
 
-.quantidade button:hover {
-  background-color: #6a007f;
-  color: #fff;
+.div_produtos a:hover {
+  color: #6A0D83;
 }
 
-.quantidade span {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-/* ==== Total do carrinho lateral ==== */
 .valor_total {
-  background: #fff;
-  color: #222;
-  border-radius: 12px;
-  padding: 30px;
-  width: 25%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  padding: 20px 30px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.valor_total h3 {
-  color: #222;
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-.valor_total p {
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.linha {
-  width: 100%;
-  height: 2px;
-  background-color: #ccc;
-  margin: 15px 0;
-}
-
-/* ==== Botão Comprar ==== */
-.botao_compra {
-  background-color: #2f562f;
+/*  BOTÃO VOLTAR  */
+.botao_voltar {
+  
+  display: inline-block;
+  background-color: #6A0D83;
   color: #fff;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 12px 25px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background 0.3s;
-}
-
-.btn-comprar:hover {
-  background-color: #3d703d;
-}
-
-.btn-comprar svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* ==== Listas de acompanhamentos ==== */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-
-ul li {
-  background-color: #f3f3f3;
-  margin-bottom: 5px;
-  padding: 6px 10px;
-  border-radius: 5px;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-a {
-  color: #040004;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  
 }
 
-a:hover {
-  text-decoration: underline;
- 
-}
 /* /////////////////////////////////////////////cardapio/////////////////////////////////////////////////////////////// */
-/*  Estilos gerais  */
 body.corpo-cardapio {
   background: linear-gradient(90deg, purple, rgb(60, 5, 73));
   font-family: 'Poppins', sans-serif;
@@ -1110,9 +1133,8 @@ body.corpo-cardapio {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ====== Cabeçalho ====== */
-#cardapio
- {
+/* Cabeçalho  */
+#cardapio {
   background: linear-gradient(90deg, #a94cdf, #480d4e);
   text-align: center;
   font-size: 3rem;
@@ -1124,7 +1146,7 @@ body.corpo-cardapio {
 
 
 
-/* ====== Tamanhos ====== */
+/*  Tamanhos  */
 .tamanho2 {
   text-align: center;
   display: flex;
@@ -1140,13 +1162,13 @@ body.corpo-cardapio {
   width: 150px;
   padding: 10px;
   font-weight: bold;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
 }
 
 .tamanho-item:hover {
   transform: scale(1.05);
-  
+
 }
 
 .tamanho-item h3 {
@@ -1180,8 +1202,7 @@ body.corpo-cardapio {
 
 /*  Coberturas */
 .cobert-itens {
-  text-align: center
-;
+  text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
@@ -1202,25 +1223,10 @@ body.corpo-cardapio {
   text-align: center;
 }
 
-#acompanhamento{
+#acompanhamento {
   text-align: center;
 }
 
 #cobertura {
   text-align: center;
 }
-
-/* dmddio */
-
-
-
-
-
-
-
-
-
-
-
-
-
