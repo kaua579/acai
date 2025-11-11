@@ -49,7 +49,7 @@
             </tbody>
         </table>
         <br>
-        <button onclick="window.location.href='home.php'">Voltar</button>
+        <button id="voltar" onclick="window.location.href='home.php'">Voltar</button>
     </body>
 
     </html>
