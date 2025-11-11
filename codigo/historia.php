@@ -21,8 +21,8 @@
         seu pedido sem sair de casa!
       </p>
 
-      <div class="botao-hist">
-        <button class="btn-voltarr" onclick="window.location.href='home.php'">Voltar</button>
+      <div class="botao_hist">
+        <button class="b_voltarr" onclick="window.location.href='home.php'">Voltar</button>
       </div>
 </body>
 </html>

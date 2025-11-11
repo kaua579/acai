@@ -447,11 +447,11 @@
   text-align: justify;
 }
 
-.botao-hist {
+.botao_hist {
   margin-top: 10px;
 }
 
-.btn-voltarr {
+.b_voltarr {
   background: #ffeb3b;
   color: #4b0082;
   border: none;
@@ -465,7 +465,7 @@
   box-shadow: 0 4px 12px rgba(255, 235, 59, 0.3);
 }
 
-.btn-voltarr:hover {
+.b_voltarr:hover {
   background: #fff;
   color: #6a0dad;
   transform: scale(1.05);
@@ -479,7 +479,7 @@
 
 
 .fundo {
-  background-color: #6e0b7b;
+  background: linear-gradient(135deg, #6a0dad, #800080);
   /*#6a1b9a;  */
   padding: 20px;
   min-height: 100vh;
@@ -1229,4 +1229,7 @@ body.corpo-cardapio {
 
 #cobertura {
   text-align: center;
+}
+#corpo_atendente{
+  background: linear-gradient(135deg, #6a0dad, #800080);
 }
