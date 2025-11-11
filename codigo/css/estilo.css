@@ -301,25 +301,7 @@
 /* --------------------------------login-------------------------------------------------------------------------- */
 
 .fundo-login {
-  background-color: #760a84;
-  /* Cor de fundo roxa da página */
-  height: 100vh;
-  /* Ocupa toda a altura da tela (viewport) */
-  display: flex;
-  /* Usa flexbox para facilitar centralização */
-  margin: 0;
-  /* Remove margens padrão do navegador */
-}
-
-.logo-login {
-  background-image: url(imagens/logologin.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 450px;
-  height: 300px;
-  position: absolute;
-  top: 80px;
-  margin-left: -25px;
+  background-color: #760a84; /* fundo roxo */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -327,50 +309,93 @@
   margin: 0;
 }
 
-/* Container principal */
+/* container com imagem */
 .logo-login {
   background-image: url(imagens/logologin.png);
   background-repeat: no-repeat;
-  background-position: top center; /* coloca a imagem no topo */
-  background-size: 335px; /* aumenta o tamanho da imagem */
-  width: 400px;           /* um pouco mais largo para a imagem caber */
-  padding-top: 250px;     /* empurra os campos para baixo da imagem */
+  background-position: center 55px; 
+  background-size: 280px;
+  width: 700px;
+  height: 400px;
   color: #fff;
-}x1
+  padding-top: 215px; /* cria espaço pra imagem sem mover o form */
+}
 
-/* Campos de texto */
+/* formulário */
+.form-login {
+  width: 320px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* label */
+.form-login label {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #d2a6de;
+  margin-bottom: 5px;
+}
+
+/* campos */
 .campo-login {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+  background-color: #ab64b8;
+  border-radius: 12px;
   width: 100%;
-  height: 40px;
-  color: #fff;
+  height: 38px;
+  color: white;
   border: none;
   padding: 10px;
-  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .campo-login::placeholder {
   color: #e8c9ed;
 }
 
-/* Botão */
+/* botão */
 .botao-loga {
-  width: 420px;
-  height: 60px;
-  background-color: #2e501b;
+  width: 338px;
+  background-color: #2e501b; /* verde escuro */
   color: white;
   font-weight: bold;
-  padding: 20px;
+  padding: 15px;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 20px; /* apenas um pequeno espaço, sem jogar lá pra baixo */
+  font-size: 16px;
 }
 
 .botao-loga:hover {
   background-color: #3c6d24;
 }
+
+/* container da senha */
+.campo-senha {
+  position: relative;
+}
+
+/* botão dentro do campo */
+#mostrarSenha {
+  position: absolute;
+  right: 12px; /* distância da borda direita */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  padding: 0;
+}
+
+#mostrarSenha:hover {
+  opacity: 0.8;
+}
+
+
+
 /* ---------------------------------------------------------------------------------------------------------- */
 
 #tituloc {
@@ -524,7 +549,7 @@
 
 
 
-/*-----------------------------------------------------paginaProdutos------------------------------------------------*/
+/*-----------------------------------------------------pagina Produtos------------------------------------------------*/
 
 
 .fundo {
@@ -1087,7 +1112,8 @@
 
 
 #corpo_carrinho {
-  background-color: #6A0D83; /* Roxo de fundo */
+  background-color: #6A0D83;
+  /* Roxo de fundo */
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 40px;
@@ -1105,7 +1131,7 @@
   border-radius: 25px;
   padding: 20px 30px;
   width: 65%;
-  
+
 }
 
 .div_produtos table {
@@ -1146,7 +1172,7 @@
 
 /*  BOTÃO VOLTAR  */
 .botao_voltar {
-  
+
   display: inline-block;
   background-color: #6A0D83;
   color: #fff;
@@ -1154,7 +1180,7 @@
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 10px;
-  
+
 }
 
 /* /////////////////////////////////////////////cardapio/////////////////////////////////////////////////////////////// */
@@ -1280,6 +1306,6 @@ body.corpo-cardapio {
   text-align: center;
 }
 
-#corpo_atendente{
+#corpo_atendente {
   background: linear-gradient(135deg, #6a0dad, #800080);
 }
