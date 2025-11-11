@@ -523,7 +523,6 @@
 .caixa-check input:checked + .checkmark {
   background-color: #a455ff; /* roxo escuro */
 }
-
 /*Cria o "check" (✔) invisível inicialmente */
 .caixa-check .checkmark::after {
   content: "";
