@@ -258,7 +258,16 @@
   margin: 0;                 /* Remove margens padrão do navegador */
 }
 
-
+.logo-login{
+  background-image: url(imagens/logologin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 450px;
+  height: 300px; 
+  position: absolute;
+  top: 80px;
+  margin-left: -25px
+}
 
 /* ---------------------------------------------------------------------------------------------------------- */
 

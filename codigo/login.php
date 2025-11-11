@@ -10,8 +10,7 @@
 
 </head>
 <body class="fundo-login">
-    
-    <div></div>
+    <div class="logo-login"></div> 
     <form action="verificarLogin.php" method="post">
         E-mail: <br>
         <input type="text" name="email"> <br><br>
