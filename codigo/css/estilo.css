@@ -179,66 +179,91 @@
 /* ---------------------------------------------formUsuario---------------------------------------------------------- */
 
 .fundo-usuario {
-  background-color: #760a84; /* Cor de fundo roxa da página */
-  height: 100vh;             /* Ocupa toda a altura da tela (viewport) */
-  display: flex;             /* Usa flexbox para facilitar centralização */
-  justify-content: center;   /* Centraliza o conteúdo horizontalmente */
-  align-items: center;       /* Centraliza o conteúdo verticalmente */
-  margin: 0;                 /* Remove margens padrão do navegador */
+  background-color: #760a84;
+  /* Cor de fundo roxa da página */
+  height: 100vh;
+  /* Ocupa toda a altura da tela (viewport) */
+  display: flex;
+  /* Usa flexbox para facilitar centralização */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente */
+  margin: 0;
+  /* Remove margens padrão do navegador */
 }
 
 
 
 .campo {
-  background-color: rgba(255, 255, 255, 0.3); /* Branco translúcido = lilás suave */
-  border-radius: 15px;                        /* Bordas arredondadas */
-  width: 340px;                               /* Largura da caixinha */
-  height: 55px;                               /* Altura da caixinha */
-  display: flex;                              /* Flexbox pra alinhar o input dentro */
-  align-items: center;                        /* Centraliza o input verticalmente */
-  padding: 0 15px;                            /* Espaçamento interno lateral */
-  margin-bottom: 20px;     /* <-- adiciona espaço entre os campos */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Branco translúcido = lilás suave */
+  border-radius: 15px;
+  /* Bordas arredondadas */
+  width: 340px;
+  /* Largura da caixinha */
+  height: 55px;
+  /* Altura da caixinha */
+  display: flex;
+  /* Flexbox pra alinhar o input dentro */
+  align-items: center;
+  /* Centraliza o input verticalmente */
+  padding: 0 15px;
+  /* Espaçamento interno lateral */
+  margin-bottom: 20px;
+  /* <-- adiciona espaço entre os campos */
 
 }
 
 .campo input {
-  background: none;      /* Remove o fundo branco padrão do input */
-  border: none;          /* Remove a borda padrão */
-  outline: none;         /* Remove o contorno azul quando clica */
-  width: 100%;           /* Faz o input ocupar toda a largura da caixa */
-  font-size: 16px;       /* Tamanho da fonte dentro do campo */
-  color: #2e0833;        /* Cor do texto digitado */
+  background: none;
+  /* Remove o fundo branco padrão do input */
+  border: none;
+  /* Remove a borda padrão */
+  outline: none;
+  /* Remove o contorno azul quando clica */
+  width: 100%;
+  /* Faz o input ocupar toda a largura da caixa */
+  font-size: 16px;
+  /* Tamanho da fonte dentro do campo */
+  color: #2e0833;
+  /* Cor do texto digitado */
 }
 
 .campo:focus {
-  color: black; /* mantém a cor */
+  color: black;
+  /* mantém a cor */
 }
 
-.logo-cadastrar{
+.logo-cadastrar {
   background-image: url(imagens/cadastrargat.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 450px;
-  height: 300px; 
+  height: 300px;
   position: absolute;
   top: -15px;
   top: 80px;
   margin-left: -25px
-
-
 }
 
-.botao-usuario{
+.botao-usuario {
   position: relative;
-  background-color: #315c1d ;
-  color: white; 
-  font-size: 25px;            /* tamanho da letra */
-  padding: 10px 110px; /* espaço interno do botão */
-  padding: 10px 125px; /* espaço interno do botão */
-  text-decoration: none; /* tirar o sublinhado do link*/
+  background-color: #315c1d;
+  color: white;
+  font-size: 25px;
+  /* tamanho da letra */
+  padding: 10px 110px;
+  /* espaço interno do botão */
+  padding: 10px 125px;
+  /* espaço interno do botão */
+  text-decoration: none;
+  /* tirar o sublinhado do link*/
   font-weight: bold;
-  border-radius: 13px; /* bordas arredondadas */
-  transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
+  border-radius: 13px;
+  /* bordas arredondadas */
+  transition: background-color 0.3s ease;
+  /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
   top: 10px;
   top: 5px;
 
@@ -246,20 +271,24 @@
 }
 
 #mostrarSenha {
-  background-color: #b05cc7; /* roxo claro combinando com o tema */
+  background-color: #b05cc7;
+  /* roxo claro combinando com o tema */
   color: black;
   border: none;
   border-radius: 15px;
   padding: 8px 10px;
-  margin-left: 20px; /* espaçamento entre input e botão */
+  margin-left: 20px;
+  /* espaçamento entre input e botão */
   cursor: pointer;
   font-size: 10px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #mostrarSenha:hover {
-  background-color: #8a42a3; /* roxo mais escuro no hover */
-  transform: scale(1.50);    /* leve zoom */
+  background-color: #8a42a3;
+  /* roxo mais escuro no hover */
+  transform: scale(1.50);
+  /* leve zoom */
 }
 
 #mostrarSenha:active {
@@ -267,84 +296,72 @@
 }
 
 .form-cadastrar {
-  margin-top: 180px; /* ajusta o valor pra descer mais ou menos */
+  margin-top: 180px;
+  /* ajusta o valor pra descer mais ou menos */
 }
 
 /* --------------------------------login-------------------------------------------------------------------------- */
 
+/*
+ * 1. Ajuste no Fundo de Login para centralizar o bloco logo + formulário
+ */
 .fundo-login {
-  background-color: #760a84; /* fundo roxo */
+  background-color: #760a84;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  transform: translateY(-50px); /* sobe tudo 50px */
+
 }
 
-/* container com imagem */
+.botao-usuario {
+  /* Copiado do seu CSS de Cadastro, mas pode ser adicionado aqui se não estiver no estilo.css */
+  position: relative;
+  background-color: #315c1d;
+  color: white;
+  font-size: 25px;
+  padding: 10px 125px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 13px;
+  transition: background-color 0.3s ease;
+  top: 5px;
+  /* Garante que o botão use a largura total de 340px */
+  width: 370px;
+  box-sizing: border-box;
+  /* Inclui padding na largura total */
+}
+
+#mostrarSenha {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  padding: 0;
+  margin-left: 10px;
+}
+
+#mostrarSenha:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Novo ajuste para o formulário de login */
+
+/* Alinhamento do Logo (Logo deve estar acima do formulário) */
 .logo-login {
   background-image: url(imagens/logologin.png);
   background-repeat: no-repeat;
-  background-position: center 55px; 
-  background-size: 280px;
-  width: 700px;
+  background-size: 450px;
+  background-position: center;
+  width: 400px;
   height: 400px;
-  color: #fff;
-  padding-top: 215px; /* cria espaço pra imagem sem mover o form */
+  margin-bottom: -65px; /* antes era 100px */
+
 }
-
-/* formulário */
-.form-login {
-  width: 320px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-/* label */
-.form-login label {
-  display: block;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #d2a6de;
-  margin-bottom: 5px;
-}
-
-/* campos */
-.campo-login {
-  background-color: #ab64b8;
-  border-radius: 12px;
-  width: 100%;
-  height: 38px;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-.campo-login::placeholder {
-  color: #e8c9ed;
-}
-
-/* botão */
-.botao-loga {
-  width: 338px;
-  background-color: #2e501b; /* verde escuro */
-  color: white;
-  font-weight: bold;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.botao-loga:hover {
-  background-color: #3c6d24;
-}
-
-
-
 
 /* ---------------------------------------------------------------------------------------------------------- */
 

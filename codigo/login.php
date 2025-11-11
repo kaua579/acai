@@ -9,94 +9,61 @@
   <link rel="stylesheet" href="./css/estilo.css">
   
   <style>
+    /* Estilo para a mensagem de erro da validação */
     .error {
-      color: red; /* cor das mensagens de erro */
+      color: black;
       font-size: 15px;
       display: block;
+      margin-left: 5px;
     }
 
-    /* container da senha para alinhar o botão dentro */
-    .campo-senha {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-
-    /* botão dentro do campo */
-    #mostrarSenha {
-      position: absolute;
-      right: 10px; /* distância da borda direita */
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 18px;
-      color: white;
-      padding: 0;
-    }
-
-    #mostrarSenha:hover {
-      opacity: 0.8;
-    }
   </style>
 
   <script>
     $(document).ready(function () {
-      // Validação do formulário
-      $(".form-login").validate({
+      $("#formLogin").validate({
         rules: {
-          email: {
-            required: true,
-            email: true
-          },
-          senha: {
-            required: true,
-            minlength: 3
-          }
+          email: { required: true, email: true },
+          senha: { required: true, minlength: 3 }
         },
         messages: {
-          email: {
-            required: "Você deve informar um e-mail",
-            email: "Digite um e-mail válido"
-          },
-          senha: {
-            required: "Você deve informar a senha",
-            minlength: "A senha deve ter pelo menos 3 caracteres"
-          }
+          email: { required: "Você deve informar um e-mail", email: "Digite um e-mail válido" },
+          senha: { required: "Você deve informar a senha", minlength: "A senha deve ter pelo menos 3 caracteres" }
         }
       });
 
-      // Mostrar / esconder senha
       $("#mostrarSenha").click(function (e) {
         e.preventDefault(); 
         let tipo = $("#senha").attr("type");
         if (tipo === "password") {
           $("#senha").attr("type", "text");
-          $("#mostrarSenha").text("👁️");
+          $("#mostrarSenha").text("🙈"); 
         } else {
           $("#senha").attr("type", "password");
-          $("#mostrarSenha").text("🙈");
+          $("#mostrarSenha").text("👁️");
         }
       });
     });
   </script>
 </head>
 <body class="fundo-login">
-  <div class="logo-login">
-    <form action="verificarLogin.php" method="post" class="form-login">
-      <label for="email">E-mail</label>
-      <input type="text" id="email" name="email" class="campo-login">
+  <div class="logo-login"></div> 
 
-      <label for="senha">Senha</label>
-      <div class="campo-senha">
-        <input type="password" id="senha" name="senha" class="campo-login">
-        <button type="button" id="mostrarSenha">🙈</button> 
-      </div>
+  <form id="formLogin" action="verificarLogin.php" method="post">
+    <label for="email" class="label-form">E-mail</label>
+    <div class="campo">
+      <input type="text" id="email" name="email">
+    </div>
 
-      <button type="submit" name="logar" class="botao-loga">Login</button>
-    </form>
-  </div>
+    <label for="senha" class="label-form">Senha</label>
+    <div class="campo">
+      <input type="password" id="senha" name="senha">
+      <button type="button" id="mostrarSenha">👁️</button>
+    </div>
+
+    <input type="submit" value="Login" name="logar" class="botao-usuario">
+  
+  </form>
 </body>
 </html>
 
@@ -104,8 +71,8 @@
 
 
 
-    
-    <!-- <!DOCTYPE html>
+
+<!-- <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
