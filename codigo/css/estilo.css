@@ -9,6 +9,7 @@
 }
 
 .botao-cadastrar {
+  text-decoration: none;
   position: relative;
   top: 540px;
   /* desce 40px */
@@ -23,11 +24,12 @@
   /* bordas arredondadas */
   transition: background-color 0.3s ease;
   /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
-  margin-left: 785px;
+  margin-left: 760px;
   /* espaço à esquerda */
 }
 
 .botao-login {
+  text-decoration: none;
   position: relative;
   top: 580px;
   /* espaço acima do botão */
@@ -44,7 +46,7 @@
   /* bordas arredondadas */
   transition: background-color 0.3s ease;
   /* Adiciona uma transição suave na cor de fundo do botão quando o mouse passa sobre ele */
-  margin-left: 785px;
+  margin-left: 760px;
   /* espaço à esquerda */
 
 
@@ -59,7 +61,7 @@
   height: 320px;
   position: absolute;
   top: 200px;
-  margin-left: 640px;
+  margin-left: 615px;
   /* espaço à esquerda */
 
 
@@ -805,14 +807,6 @@
 }
 
 
-/*------------------------------------------------------ Fontes ----------------------------------------------------- */
-
-@font-face {
-  font-family: 'TT Berlinerins';
-  src: url('../../fonts/TT-Berlinerins.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 
 /*-----------------------------------------------------------------------------------------------------------------------
