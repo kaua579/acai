@@ -23,11 +23,12 @@
   <section class="tela">
     <div class="textoo">
       <h1>Energia gelada,<br> sabor que vicia!</h1>
-      <p>Experimente o melhor açaí da cidade — saudável, cremoso e irresistível. 💜</p>
-      <button class="botao-acai">📞 Peça já o seu!</button>
+      <p>Experimente o melhor açaí da cidade, saudável, cremoso e irresistível.</p>
+      <button class="botao-fone">📞 (62) 9 9999-9999</button>
     </div>
-
-    <img src="acais.png" alt="Copo de açaí delicioso" class="imagens">
+    <div class="imagens">
+    <img src="acais.png" alt="copos de açaí " class="imagens">
+    </div>
 
   </section>
 

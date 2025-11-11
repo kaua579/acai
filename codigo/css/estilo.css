@@ -61,7 +61,7 @@
   overflow-x: hidden;
 }
 
-/* Menu fixo e moderno */
+
 .menuu {
   position: fixed;
   top: 0;
@@ -90,7 +90,8 @@
   transform: scale(1.1);
 }
 
-/* Tela principal */
+
+
 .tela {
   display: flex;
   align-items: center;
@@ -101,7 +102,7 @@
   box-sizing: border-box;
 }
 
-/* Texto principal */
+
 .textoo {
   flex: 1 1 40%;
 }
@@ -120,8 +121,8 @@
   margin-bottom: 40px;
 }
 
-/* Botão de ação */
-.botao-acai {
+
+.botao-fone {
   background-color: #ffcc00;
   color: #4b0082;
   padding: 14px 35px;
@@ -132,15 +133,16 @@
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  
 }
 
-.botao-acai:hover {
+.botao-fone:hover {
   background-color: #fff;
   color: #6a0dad;
   transform: scale(1.05);
 }
 
-/* Imagem */
+
 .imagens {
   flex: 1 1 45%;
   text-align: right;
@@ -148,9 +150,9 @@
 
 .imagens img {
   width: 90%;
-  max-width: 550px;
+  max-width: 700px;
   border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  
   transition: 0.4s ease;
 }
 
@@ -161,7 +163,12 @@
 /* ---------------------------------------------formUsuario---------------------------------------------------------- */
 
 .fundo-usuario {
-  background-color: #760a84; /* Cor de fundo roxa da página */
+  background-color: #760a84; /* Cor de fufont-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a0dad, #800080);
+  color: #ffcc00;
+  overflow-x: hidden;ndo roxa da página */
   height: 100vh;             /* Ocupa toda a altura da tela (viewport) */
   display: flex;             /* Usa flexbox para facilitar centralização */
   justify-content: center;   /* Centraliza o conteúdo horizontalmente */
@@ -233,7 +240,6 @@
   margin-left: 20px; /* espaçamento entre input e botão */
   cursor: pointer;
   font-size: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #mostrarSenha:hover {
@@ -350,78 +356,73 @@
 /*-----------------------------------------------------pagina historia-----------------------------------------*/
 
 
-/* Corpo da página */
-.pagi {
-  font-family: 'Arial', sans-serif; /* Fonte padrão */
-  background-color:#800080; /* Cor de fundo roxa */
- 
-}
 
-.cont {
+.pagi {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a0dad, #800080);
+  color: #ffeb3b;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
-    
+  min-height: 100vh;
+  text-align: center;
 }
 
-.fundoh{
-  background-image: url('imgacai.png'); 
-  background-size: cover; 
-  background-position: center; 
-  width: 80%; 
-  max-width: 1200px;
-  height: 800px;
-  min-height: 100vh; /* conteúdo ocupe toda a altura da tela */
+.fundoh {
+  width: 450px;
+  height: auto;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.fundoh:hover {
+  transform: scale(1.1);
 }
 
 #titu {
-  font-size: 3rem;
-  text-align: center;
-  color: #ffeb3b; 
-  margin-left: 750px;
-  margin-top: -600px;
-  font-weight: 700;  
-  position: absolute;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffeb3b;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 #historia {
-  font-size: 1.8rem;
-  line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
-  text-align: center;
-  color: #ffeb3b;
-  font-weight: 500;   
-  margin-bottom: 20px; /* Espaço entre os parágrafos */
-  margin-left: 40px;
-  text-justify: auto;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: #f2c307;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  text-align: justify;
 }
 
 .botao-hist {
-  position: absolute;
-  bottom: 30px; /* Coloca o botão na parte inferior */
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza o botão */
-  
+  margin-top: 10px;
 }
 
-.btn-voltarr{
-  background-color: #a8107c; /* Cor do botão */
-  text-decoration: none; /* Remove o sublinhado do link */
-  color: #fff; /* Cor do texto do botão */
-  border: none; /* Remove a borda */
-  border-radius: 12px; /* Bordas arredondadas */
-  padding: 10px 40px; /* Espaçamento interno */
-  font-size: 20px; /* Tamanho do texto */
-  font-family: 'Arial', sans-serif;
-  text-transform: uppercase; /* Transforma o texto para maiúsculas */
+.btn-voltarr {
+  background: #ffeb3b;
+  color: #4b0082;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transição suave */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 235, 59, 0.3);
+}
 
-}
 .btn-voltarr:hover {
-  background-color: #9b005a; /* Muda a cor ao passar o mouse */
+  background: #fff;
+  color: #6a0dad;
+  transform: scale(1.05);
 }
-    
+
 
 
 
