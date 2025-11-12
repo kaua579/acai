@@ -1,5 +1,7 @@
+
 <?php
 session_start();
+require_once 'verificarLogado.php';
 require_once "funcoes.php";
 require_once "conexao.php";
 
@@ -93,7 +95,7 @@ $cobertura = $_POST['cobertura'];
         echo "<br>";
         echo "<br>";
         ?>
-        <a class="botao_voltar" href="produtos.php">Voltar</a>
+        <a class="botao_voltar" href="agradecimento.php">Comprar</a>
 
     </div>
 

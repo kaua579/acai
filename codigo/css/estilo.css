@@ -783,11 +783,10 @@
   position: relative;
   margin-top: 900px;
   margin-left: 1675px;
-  /* espaço à esquerda */
+  
 }
 
-
-.btn-voltar {
+.btn_sair {
   background-color: #a8107c;
   color: #c4c2c4;
   border: none;
@@ -799,11 +798,23 @@
   cursor: pointer;
 }
 
-.btn-voltar:hover {
+.btn_sair:hover {
   background-color: #7a0d5e;
 }
-
-
+.btn_voltar {
+  background-color: #a8107c;
+  color: #c4c2c4;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 80px;
+  font-size: 20px;
+  text-transform: lowercase;
+  text-decoration: none;
+  margin-top: -35px;
+  cursor: pointer;
+  margin-right: 1660px;
+  
+}
 
 /*-----------------------------------------------------------------------------------------------------------------------
 
@@ -1120,7 +1131,7 @@
 
 }
 
-/* /////////////////////////////////////////////cardapio/////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////cardapio/////////////////////////////////////////////////////////////// */
 body.corpo-cardapio {
   background: linear-gradient(90deg, purple, rgb(60, 5, 73));
   font-family: 'Poppins', sans-serif;
@@ -1256,3 +1267,15 @@ body.corpo-cardapio {
   padding: 10px 20px;
   border-radius: 10px
 }
+
+.botao_cardapio{
+  display: inline-block;
+  background-color: #30045a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10pxz
+  
+}
+ 

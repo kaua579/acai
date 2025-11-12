@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once 'verificarLogado.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,8 +22,10 @@
   </p>
 
 <div class="botao-agradecimento">
-    <a href="index.php" class="btn-voltar">Sair</a>
+    <a href="index.php" class="btn_sair">Sair</a>
 </div>
+
+  <a href="home.php" class="btn_voltar">Voltar</a>
 
 </body>
 

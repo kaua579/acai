@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once 'verificarLogado.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -78,6 +82,9 @@
             </section>
         </div>
     </div>
+        <a class="botao_cardapio" href="home.php">Voltar</a>
+        
+
 </body>
 
 </html>
