@@ -1,10 +1,7 @@
 <?php
-session_start();
-require_once 'verificarLogado.php';
-?>
-<?php
 // (essas variáveis foram criadas na página "salvar_produto.php")
 session_start();
+require_once 'verificarLogado.php';
 
 // Verifica se as variáveis de sessão "produto" e "preco" existem
 // Isso garante que o usuário realmente escolheu um produto na página anterior

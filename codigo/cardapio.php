@@ -10,7 +10,7 @@ require_once 'verificarLogado.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio de Açaí</title>
     <link rel="stylesheet" href="./css/estilo.css">
-      
+
 </head>
 
 <body class="corpo-cardapio">
@@ -82,8 +82,8 @@ require_once 'verificarLogado.php';
             </section>
         </div>
     </div>
-        <a class="botao_cardapio" href="home.php">Voltar</a>
-        
+    <a class="botao_cardapio" href="home.php">Voltar</a>
+
 
 </body>
 
