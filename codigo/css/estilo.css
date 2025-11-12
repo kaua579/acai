@@ -718,20 +718,23 @@
 /* ---------------------------------------------------------------------------------------------------------------------- */
 
 
-/*---------------------------------------------- Agradecimento----------------------------------------------------------------*/
+/*----------------------------------------------Agradecimento-------------------------------------------*/
 
 #fundo-agrad {
   background-image: url(imagens/agrde.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
   height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  /* necessário para posicionar elementos dentro */
 }
 
-/* imagem decorativa (obg.png) */
+/* imagem decorativa */
 .tresrisco {
   background-image: url(imagens/obg.png);
   background-repeat: no-repeat;
@@ -739,57 +742,46 @@
   background-position: center;
   width: 100%;
   height: 250px;
-  /* aumenta pra ser visível */
+  opacity: 0.9;
   position: absolute;
-  top: 130px;
-  /* controla onde aparece verticalmente */
-  left: 0;
-  opacity: 0.8;
-  /* opcional: leve transparência */
-  filter:
-    brightness(1.1)
-    /* deixa mais clara (1 = normal) */
-    contrast(1.4)
-    /* aumenta contraste */
-    saturate(1.8);
-  /* reforça as cores */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  z-index: 1;
+  top: 280px;
 }
 
-
-/* centraliza o texto */
+/* texto central */
 #textoagradecimento {
   color: white;
   font-family: 'TT-Berlinerins', Arial, sans-serif;
-  font-size: 6rem;
-  line-height: 1.3;
+  font-size: 5rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /* centraliza verticalmente */
-  position: relative;
+  line-height: 1.2;
   z-index: 2;
-  /* fica sobre a onda */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
-/* ícones */
+/* ícones no topo direito */
 .social {
   position: absolute;
   top: 20px;
   right: 30px;
-  z-index: 3;
 }
 
 #icones {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
+/* botão inferior central */
 .botao-agradecimento {
   position: relative;
-  margin-top: -40px;
+  margin-top: 900px;
   margin-left: 1675px;
   /* espaço à esquerda */
 }
@@ -797,32 +789,19 @@
 
 .btn-voltar {
   background-color: #a8107c;
-  /* cor de fundo verde escuro */
-  text-decoration: none;
-  /* tirar o sublinhado do link*/
   color: #c4c2c4;
-  /* cor do texto */
   border: none;
-  /* remove borda padrão */
   border-radius: 12px;
-  /* bordas arredondadas */
   padding: 10px 80px;
-  /* espaçamento interno */
   font-size: 20px;
-  /* tamanho do texto */
-  font-family: 'Arial', sans-serif;
-  /* fonte simples */
   text-transform: lowercase;
-  /* texto em minúsculas */
+  text-decoration: none;
   cursor: pointer;
-  /* muda o cursor */
-  transition: background-color 0.3s ease;
-  /* animação suave */
-  position: relative;
-  z-index: 10;
-
 }
 
+.btn-voltar:hover {
+  background-color: #7a0d5e;
+}
 
 
 
@@ -1064,10 +1043,9 @@
   /* tamanho da letra */
 }
 
-/* -------------------------------------home---------------------------------------------------------------- */
 
 
-/* -------------------------------------carrinho---------------------------------------------------------------- */
+/* ------------------------------------carrinho------------------------------------------------------ */
 
 
 #corpo_carrinho {
