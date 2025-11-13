@@ -67,115 +67,6 @@
 
 }
 
-/* ---------------------------------------------home------------------------------------------------------------- */
-.paggi {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #6a0dad, #800080);
-  color: #ffcc00;
-  overflow-x: hidden;
-}
-
-
-.menuu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(106, 13, 173, 0.85);
-  backdrop-filter: blur(8px);
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  padding: 20px 0;
-  z-index: 1000;
-  transition: background 0.3s ease-in-out;
-}
-
-.menuu a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.menuu a:hover {
-  color: #ffffff;
-  transform: scale(1.1);
-}
-
-
-
-.tela {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 140px 10%;
-  height: 100vh;
-  box-sizing: border-box;
-}
-
-
-.textoo {
-  flex: 1 1 40%;
-}
-
-.textoo h1 {
-  font-size: 58px;
-  line-height: 1.2;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #ffcc00;
-}
-
-.textoo p {
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-
-.botao-fone {
-  background-color: #ffcc00;
-  color: #4b0082;
-  padding: 14px 35px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
-}
-
-.botao-fone:hover {
-  background-color: #fff;
-  color: #6a0dad;
-  transform: scale(1.05);
-}
-
-
-.imagens {
-  flex: 1 1 45%;
-  text-align: right;
-}
-
-.imagens img {
-  width: 90%;
-  max-width: 700px;
-  border-radius: 20px;
-
-  transition: 0.4s ease;
-}
-
-.imagens img:hover {
-  transform: scale(1.03);
-}
-
 /* ---------------------------------------------formUsuario---------------------------------------------------------- */
 
 .fundo-usuario {
@@ -302,9 +193,7 @@
 
 /* --------------------------------login-------------------------------------------------------------------------- */
 
-/*
- * 1. Ajuste no Fundo de Login para centralizar o bloco logo + formulário
- */
+
 .fundo-login {
   background-color: #760a84;
   height: 100vh;
@@ -312,12 +201,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(-50px); /* sobe tudo 50px */
+  transform: translateY(-50px);
+  /* sobe tudo 50px */
 
 }
 
 .botao-usuario {
-  /* Copiado do seu CSS de Cadastro, mas pode ser adicionado aqui se não estiver no estilo.css */
   position: relative;
   background-color: #315c1d;
   color: white;
@@ -328,10 +217,8 @@
   border-radius: 13px;
   transition: background-color 0.3s ease;
   top: 5px;
-  /* Garante que o botão use a largura total de 340px */
   width: 370px;
   box-sizing: border-box;
-  /* Inclui padding na largura total */
 }
 
 #mostrarSenha {
@@ -349,9 +236,6 @@
   transform: scale(1.1);
 }
 
-/* Novo ajuste para o formulário de login */
-
-/* Alinhamento do Logo (Logo deve estar acima do formulário) */
 .logo-login {
   background-image: url(imagens/logologin.png);
   background-repeat: no-repeat;
@@ -359,88 +243,124 @@
   background-position: center;
   width: 400px;
   height: 400px;
-  margin-bottom: -65px; /* antes era 100px */
+  margin-bottom: -65px;
+  /* antes era 100px */
 
 }
 
-/* ---------------------------------------------------------------------------------------------------------- */
-
-#tituloc {
-  height: 150px;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#tamanhos {
-  background-color: #fcb12b;
-  /* cor amarela */
-  color: #3a0058;
-  /* texto roxo escuro */
-  font-weight: 900;
-  /* negrito bem forte */
-  font-family: 'Bebas Neue', sans-serif;
-  text-align: center;
-  padding: 10px 50px;
-  /* espaço em cima e embaixo */
-  border-radius: 10px;
-  /* cantos arredondados */
-  font-size: 30;
-  /* tamanho da fonte */
-  width: 500px;
-  /* tamanho só do conteúdo */
-  margin: 200px auto 0 auto;
-  /* centralizar na página */
-  letter-spacing: 2px;
-}
-
-.texto_amarelo
-
-/* Estilo para o botão de login */
-.login-btn {
-  width: 107%;
-  padding: 12px;
-  background-color: #315c1d;
-  /* Cor verde do botão */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
+/* ---------------------------------------------home------------------------------------------------------------- */
+.paggi {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a0dad, #800080);
+  color: #ffcc00;
+  overflow-x: hidden;
 }
 
 
-/* Links abaixo do formulário */
-.forgot-signup {
-  margin-top: 15px;
-  font-size: 14px;
+.menuu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(106, 13, 173, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
 }
 
-.forgot-signup a {
-  color: #3498db;
+.menuu a {
+  color: #ffcc00;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-.forgot-signup a:hover {
-  text-decoration: underline;
+.menuu a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
 
 
-.link {
-  width: 20%;
-  padding: 12px;
-  background-color: #315c1d;
-  /* Cor verde do botão */
-  color: white;
+.tela {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 140px 10%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+
+.textoo {
+  flex: 1 1 40%;
+}
+
+.textoo h1 {
+  font-size: 58px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffcc00;
+}
+
+.textoo p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+
+.botao-fone {
+  background-color: #ffcc00;
+  color: #4b0082;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 30px;
   cursor: pointer;
-  margin-bottom: 20px;
-  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
 }
+
+.botao-fone:hover {
+  background-color: #fff;
+  color: #6a0dad;
+  transform: scale(1.05);
+}
+
+
+.imagens {
+  flex: 1 1 45%;
+  text-align: right;
+}
+
+.imagens img {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 20px;
+  
+  transition: 0.4s ease;
+}
+
+.imagens img:hover {
+  transform: scale(1.03);
+}
+
+
+
+
+
 
 /*-----------------------------------------------------pagina historia-----------------------------------------*/
 
@@ -512,6 +432,152 @@
   transform: scale(1.05);
 }
 
+/* ///////////////////////////////////////////cardapio/////////////////////////////////////////////////////////////// */
+body.corpo-cardapio {
+  background: linear-gradient(90deg, purple, rgb(60, 5, 73));
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.corpo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.menu {
+  background-color: #4B0070;
+  border-radius: 25px;
+  padding: 30px 40px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabeçalho  */
+#cardapio {
+  background: linear-gradient(90deg, #a94cdf, #480d4e);
+  text-align: center;
+  font-size: 3rem;
+  color: #FFD229;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+
+
+/*  Tamanhos  */
+.tamanho2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.tamanho-item {
+  background-color: #FFB800;
+  color: #4B0070;
+  border-radius: 50px;
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.tamanho-item:hover {
+  transform: scale(1.05);
+
+}
+
+.tamanho-item h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.tamanho-item p {
+  font-size: 1.1rem;
+  margin: 5px 0 0 0;
+}
+
+/* Acompanhamentos */
+.acomp-itens {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  background-color: #4B0070;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.acomp-item {
+  background-color: #FFD229;
+  color: #4B0070;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: 600;
+}
+
+/*  Coberturas */
+.cobert-itens {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  background-color: #4B0070;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cobert-item {
+  background-color: #FFD229;
+  color: #4B0070;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: 600;
+}
+
+#nome_tamnho {
+  text-align: center;
+}
+
+#acompanhamento {
+  text-align: center;
+}
+
+#cobertura {
+  text-align: center;
+}
+
+#corpo_atendente {
+  background: linear-gradient(135deg, #6a0dad, #800080);
+}
+
+#voltar {
+  display: inline-block;
+  background-color: #30045a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px
+}
+
+.botao_cardapio {
+  display: inline-block;
+  background-color: #30045a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10pxz
+}
 
 
 
@@ -712,111 +778,6 @@
   margin-top: 30px;
   /* espaço do topo */
 }
-
-
-
-/* ---------------------------------------------------------------------------------------------------------------------- */
-
-
-/*----------------------------------------------Agradecimento-------------------------------------------*/
-
-#fundo-agrad {
-  background-image: url(imagens/agrde.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-/* imagem decorativa */
-.tresrisco {
-  background-image: url(imagens/obg.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  height: 250px;
-  opacity: 0.9;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  z-index: 1;
-  top: 280px;
-}
-
-/* texto central */
-#textoagradecimento {
-  color: white;
-  font-family: 'TT-Berlinerins', Arial, sans-serif;
-  font-size: 5rem;
-  text-align: center;
-  line-height: 1.2;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-
-/* ícones no topo direito */
-.social {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-}
-
-#icones {
-  width: 80px;
-  height: auto;
-}
-
-/* botão inferior central */
-.botao-agradecimento {
-  position: relative;
-  margin-top: 900px;
-  margin-left: 1675px;
-  
-}
-
-.btn_sair {
-  background-color: #a8107c;
-  color: #c4c2c4;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 80px;
-  font-size: 20px;
-  text-transform: lowercase;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.btn_sair:hover {
-  background-color: #7a0d5e;
-}
-.btn_voltar {
-  background-color: #a8107c;
-  color: #c4c2c4;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 80px;
-  font-size: 20px;
-  text-transform: lowercase;
-  text-decoration: none;
-  margin-top: -35px;
-  cursor: pointer;
-  margin-right: 1660px;
-  
-}
-
-/*-----------------------------------------------------------------------------------------------------------------------
 
 /* -----------------------------------------acompanhamentos-------------------------------------------- */
 #fundo-acompanhamento {
@@ -1054,8 +1015,6 @@
   /* tamanho da letra */
 }
 
-
-
 /* ------------------------------------carrinho------------------------------------------------------ */
 
 
@@ -1130,151 +1089,101 @@
   border-radius: 10px;
 
 }
+/*----------------------------------------------Agradecimento-------------------------------------------*/
 
-/* ///////////////////////////////////////////cardapio/////////////////////////////////////////////////////////////// */
-body.corpo-cardapio {
-  background: linear-gradient(90deg, purple, rgb(60, 5, 73));
-  font-family: 'Poppins', sans-serif;
+#fundo-agrad {
+  background-image: url(imagens/agrde.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  color: #fff;
-}
-
-.corpo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding: 40px 0;
+  align-items: center;
+  position: relative;
 }
 
-.menu {
-  background-color: #4B0070;
-  border-radius: 25px;
-  padding: 30px 40px;
-  width: 80%;
-  max-width: 900px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+/* imagem decorativa */
+.tresrisco {
+  background-image: url(imagens/obg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 250px;
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  z-index: 1;
+  top: 280px;
 }
 
-/* Cabeçalho  */
-#cardapio {
-  background: linear-gradient(90deg, #a94cdf, #480d4e);
+/* texto central */
+#textoagradecimento {
+  color: white;
+  font-family: 'TT-Berlinerins', Arial, sans-serif;
+  font-size: 5rem;
   text-align: center;
-  font-size: 3rem;
-  color: #FFD229;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
-}
-
-
-
-/*  Tamanhos  */
-.tamanho2 {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
-.tamanho-item {
-  background-color: #FFB800;
-  color: #4B0070;
-  border-radius: 50px;
-  width: 150px;
-  padding: 10px;
-  font-weight: bold;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s;
-}
-
-.tamanho-item:hover {
-  transform: scale(1.05);
-
-}
-
-.tamanho-item h3 {
-  font-size: 1.3rem;
+  line-height: 1.2;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0;
 }
 
-.tamanho-item p {
-  font-size: 1.1rem;
-  margin: 5px 0 0 0;
+/* ícones no topo direito */
+.social {
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
 
-/* Acompanhamentos */
-.acomp-itens {
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  background-color: #4B0070;
-  padding: 20px;
-  border-radius: 10px;
+#icones {
+  width: 80px;
+  height: auto;
 }
 
-.acomp-item {
-  background-color: #FFD229;
-  color: #4B0070;
-  border-radius: 8px;
-  padding: 8px;
-  font-weight: 600;
+/* botão inferior central */
+.botao-agradecimento {
+  position: relative;
+  margin-top: 900px;
+  margin-left: 1675px;
+
 }
 
-/*  Coberturas */
-.cobert-itens {
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  background-color: #4B0070;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.cobert-item {
-  background-color: #FFD229;
-  color: #4B0070;
-  border-radius: 8px;
-  padding: 8px;
-  font-weight: 600;
-}
-
-#nome_tamnho {
-  text-align: center;
-}
-
-#acompanhamento {
-  text-align: center;
-}
-
-#cobertura {
-  text-align: center;
-}
-
-#corpo_atendente {
-  background: linear-gradient(135deg, #6a0dad, #800080);
-}
-
-#voltar {
-  display: inline-block;
-  background-color: #30045a;
-  color: #fff;
+.btn_sair {
+  background-color: #a8107c;
+  color: #c4c2c4;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 80px;
+  font-size: 20px;
+  text-transform: lowercase;
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 10px
+  cursor: pointer;
 }
 
-.botao_cardapio{
-  display: inline-block;
-  background-color: #30045a;
-  color: #fff;
+.btn_sair:hover {
+  background-color: #7a0d5e;
+}
+
+.btn_voltar {
+  background-color: #a8107c;
+  color: #c4c2c4;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 80px;
+  font-size: 20px;
+  text-transform: lowercase;
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 10pxz
-  
+  margin-top: -35px;
+  cursor: pointer;
+  margin-right: 1660px;
+
 }
