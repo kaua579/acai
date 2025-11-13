@@ -413,17 +413,13 @@
 }
 
 .b_voltarr {
-  background: #ffeb3b;
-  color: #4b0082;
-  border: none;
-  border-radius: 30px;
-  padding: 14px 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 235, 59, 0.3);
+  display: inline-block;
+  background-color: #30045a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px
 }
 
 .b_voltarr:hover {
@@ -576,7 +572,8 @@ body.corpo-cardapio {
   text-decoration: none;
   font-weight: bold;
   padding: 10px 20px;
-  border-radius: 10pxz
+  border-radius: 10px
+  
 }
 
 
