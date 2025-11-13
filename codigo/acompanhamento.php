@@ -2,17 +2,12 @@
 session_start();
 require_once 'verificarLogado.php';
 
-// Verifica se as variáveis de sessão "produto" e "preco" existem
-// Isso garante que o usuário realmente escolheu um produto na página anterior
 if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 
-  // Se existirem, pega os valores salvos e coloca em variáveis locais
-  // Aqui, por exemplo, $produto pode valer "200ml" e $preco "9.90"
+
   $produto = $_SESSION['produto'];
   $preco = $_SESSION['preco'];
 } else {
-  // Caso o usuário tenha vindo direto pra essa página (sem escolher produto),
-  // definimos valores padrões para evitar erros e mostrar uma mensagem adequada
   $produto = "Produto não selecionado";
   $preco = "";
 }
@@ -32,20 +27,16 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
 <body id="fundo-acompanhamento">
   <img src="./css/imagens/tigela1.png" id="tigela">
 
-  <!-- FORMULÁRIO -->
   <form action="carrinho.php" method="post">
 
-    <!-- CONTAINER PRINCIPAL -->
     <div class="alinhar-checkbox">
 
-      <!-- GRUPO 1: ACOMPANHAMENTOS -->
       <div class="grupo-acompanhamentos">
         <div class="titulo-grupo">
           <h1 class="titulo-acompanhamentos">Acompanhamentos</h1>
         </div>
 
         <div class="colunas-acompanhamento">
-          <!-- Coluna 1 -->
           <div id="parte1" class="coluna">
             <label class="checkbox">Banana
               <input type="checkbox" name="acompanhamento[]" value="Banana">
@@ -81,7 +72,6 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
             </label>
           </div>
 
-          <!-- Coluna 2 -->
           <div class="coluna">
             <label class="checkbox">Mel
               <input type="checkbox" name="acompanhamento[]" value="Mel">
@@ -119,14 +109,12 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
         </div>
       </div>
 
-      <!-- GRUPO 2: COBERTURAS -->
       <div class="grupo-coberturas">
         <div class="titulo-grupo">
           <h1 class="titulo-coberturas">Coberturas</h1>
         </div>
 
         <div class="colunas-cobertura">
-          <!-- Coluna 1 -->
           <div id="parte2" class="coluna">
             <label class="checkbox">Leite Condensado
               <input type="checkbox" name="cobertura[]" value="Leite Condensado">
@@ -146,7 +134,6 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
             </label>
           </div>
 
-          <!-- Coluna 2 -->
           <div class="coluna">
             <label class="checkbox">Doce de Leite
               <input type="checkbox" name="cobertura[]" value="Doce de Leite">
@@ -169,7 +156,6 @@ if (isset($_SESSION['produto']) && isset($_SESSION['preco'])) {
       </div>
     </div>
 
-    <!-- OBSERVAÇÕES -->
     <div class="observacoes">
       <ul>
         <li>Complementos de graça (no máximo 3);</li>
