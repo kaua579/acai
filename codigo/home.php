@@ -20,6 +20,7 @@ require_once "verificarLogado.php";
     <a href="cardapio.php">Cardápio</a>
     <a href="produtos.php">Produtos</a>
     <a href="atendentes.php">Atendentes</a>
+    <a href="listarPedido.php">Ver Pedido</a>
   </div>
 
 
