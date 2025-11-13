@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
   <script src="./jquery-3.7.1.min.js"></script>
   <script src="./jquery.validate.min.js"></script>
   <link rel="stylesheet" href="./css/estilo.css">
-  
+
   <style>
     /* Estilo para a mensagem de erro da validação */
     .error {
@@ -16,28 +17,39 @@
       display: block;
       margin-left: 5px;
     }
-
   </style>
 
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       $("#formLogin").validate({
         rules: {
-          email: { required: true, email: true },
-          senha: { required: true, minlength: 3 }
+          email: {
+            required: true,
+            email: true
+          },
+          senha: {
+            required: true,
+            minlength: 3
+          }
         },
         messages: {
-          email: { required: "Você deve informar um e-mail", email: "Digite um e-mail válido" },
-          senha: { required: "Você deve informar a senha", minlength: "A senha deve ter pelo menos 3 caracteres" }
+          email: {
+            required: "Você deve informar um e-mail",
+            email: "Digite um e-mail válido"
+          },
+          senha: {
+            required: "Você deve informar a senha",
+            minlength: "A senha deve ter pelo menos 3 caracteres"
+          }
         }
       });
 
-      $("#mostrarSenha").click(function (e) {
-        e.preventDefault(); 
+      $("#mostrarSenha").click(function(e) {
+        e.preventDefault();
         let tipo = $("#senha").attr("type");
         if (tipo === "password") {
           $("#senha").attr("type", "text");
-          $("#mostrarSenha").text("🙈"); 
+          $("#mostrarSenha").text("🙈");
         } else {
           $("#senha").attr("type", "password");
           $("#mostrarSenha").text("👁️");
@@ -46,8 +58,9 @@
     });
   </script>
 </head>
+
 <body class="fundo-login">
-  <div class="logo-login"></div> 
+  <div class="logo-login"></div>
 
   <form id="formLogin" action="verificarLogin.php" method="post">
     <label for="email" class="label-form">E-mail</label>
@@ -62,9 +75,10 @@
     </div>
 
     <input type="submit" value="Login" name="logar" class="botao-usuario">
-  
+
   </form>
 </body>
+
 </html>
 
 
