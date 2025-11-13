@@ -17,7 +17,6 @@ if (isset($_POST['idproduto'])) {
 
     header("Location: acompanhamento.php");
     exit();
-
 } else {
     // Caso o formulário não tenha enviado os dados esperados (produto e preço),
     // mostra uma mensagem de erro para o usuário.

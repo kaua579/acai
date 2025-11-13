@@ -24,4 +24,3 @@ if (mysqli_num_rows($resultado) == 0) {
         header("Location: index.php");
     }
 }
-?>

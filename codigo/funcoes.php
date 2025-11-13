@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Salvar o usuário no Banco de Dados
  * 
@@ -205,7 +206,7 @@ function listarClientes($conexao)
  * @return bool  caso a atualização seja realizada com sucesso.
  * @throws false caso ocorra uma falha na atualização.
  */
-function editarCliente($conexao, $cpf, $endereco,$pontos, $idcliente, $tb_usuario_idusuario) 
+function editarCliente($conexao, $cpf, $endereco, $pontos, $idcliente, $tb_usuario_idusuario)
 {
     $sql = "UPDATE tb_cliente SET cpf=?, endereco=?, pontos=?, tb_usuario_idusuario=? WHERE idcliente=?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -286,7 +287,7 @@ function salvarProduto($conexao, $nome, $tamanho, $complemento_g, $complemento_p
     $sql = "INSERT INTO tb_produto (nome, tamanho, complemento_g, complemento_p, cobertura) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssss', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura );
+    mysqli_stmt_bind_param($comando, 'sssss', $nome, $tamanho, $complemento_g, $complemento_p, $cobertura);
 
     mysqli_stmt_execute($comando);
 
@@ -427,7 +428,7 @@ function pesquisarProdutoId($conexao, $idproduto)
  * 
  * @return void Não retorna nenhum valor.
  */
-function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atendente, $tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente) 
+function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atendente, $tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente)
 {
     $sql = "INSERT INTO tb_pedido (observacao, horario_inicio, horario_final, status, valor_p, taxa_entrega, data, nota_atendente, tb_endereco_idendereco, tb_atendente_idatendente, tb_cliente_idcliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -437,7 +438,6 @@ function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $s
     mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
-    
 }
 /**
  * Lista todos os pedidos cadastrados no Banco de Dados
@@ -461,7 +461,7 @@ function salvarPedido($conexao, $observacao, $horario_inicio, $horario_final, $s
  * 
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
  */
-function listarPedido($conexao) 
+function listarPedido($conexao)
 {
     $sql = "SELECT * FROM tb_pedido";
     $comando = mysqli_prepare($conexao, $sql);
@@ -499,12 +499,12 @@ function listarPedido($conexao)
  * @return bool  caso a atualização seja realizada com sucesso.
  * @throws false caso ocorra uma falha na atualização.
  */
-function editarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atedente,$tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente, $idpedido )
+function editarPedido($conexao, $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atedente, $tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente, $idpedido)
 {
     $sql = "UPDATE tb_pedido SET observacao=?, horario_inicio=?, horario_final=?, status=?, valor_p=?, taxa_entrega=?, data=?, nota_atendente=?, tb_endereco_idendereco=?, tb_atendente_idatendente=?, tb_cliente_idcliente=?  WHERE idpedido=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssssdisdiiii',  $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atedente,$tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente, $idpedido);
+    mysqli_stmt_bind_param($comando, 'ssssdisdiiii',  $observacao, $horario_inicio, $horario_final, $status, $valor_p, $taxa_entrega, $data, $nota_atedente, $tb_endereco_idendereco, $tb_atendente_idatendente, $tb_cliente_idcliente, $idpedido);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
@@ -524,7 +524,7 @@ function editarPedido($conexao, $observacao, $horario_inicio, $horario_final, $s
 function deletarPedido($conexao, $idpedido)
 {
     $sql = "DELETE FROM tb_pedido WHERE idpedido = ?";
-    
+
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'i', $idpedido);
@@ -545,7 +545,7 @@ function deletarPedido($conexao, $idpedido)
  * @return array $pedido Um array associativo com os dados do pedido, ou `null` caso não encontre o pedido.
  * @throws 0 caso não encontre o pedido com o ID fornecido.
  */
-function pesquisarPedidoId($conexao, $idpedido) 
+function pesquisarPedidoId($conexao, $idpedido)
 {
     $sql = "SELECT * FROM tb_pedido WHERE idpedido = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -716,10 +716,10 @@ function pesquisarPagamentoId($conexao, $idpagamento)
  * @return bool  caso o atendente seja registrado com sucesso.
  * @throws false caso ocorra uma falha na inserção.
  */
-function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
+function salvarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao, $tb_usuario_idusuario)
 {
     $sql = "INSERT INTO tb_atendente (idade, horario_chegada, horario_saida, descricao, tb_usuario_idusuario) VALUES (?, ?, ?, ?, ?)";
-    
+
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'ssssi', $idade, $horario_chegada, $horario_saida, $descricao, $tb_usuario_idusuario);
@@ -777,12 +777,12 @@ function listarAtendente($conexao)
  * @return bool  caso a atualização seja realizada com sucesso.
  * @throws 0 caso ocorra uma falha na atualização.
  */
-function editarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario)
+function editarAtendente($conexao, $idade, $horario_chegada, $horario_saida, $descricao, $tb_usuario_idusuario)
 {
     $sql = "UPDATE tb_atendente SET idade=?, horario_chegada=?,  horario_saida=?, descricao=?  WHERE tb_usuario_idusuario=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'ssssi', $idade, $horario_chegada, $horario_saida, $descricao , $tb_usuario_idusuario);
+    mysqli_stmt_bind_param($comando, 'ssssi', $idade, $horario_chegada, $horario_saida, $descricao, $tb_usuario_idusuario);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
@@ -1007,7 +1007,7 @@ function pesquisarEntregaid($conexao, $identrega)
  */
 function avaliarAtendente($conexao, $nota_atendente, $idpedido)
 {
- $sql = "UPDATE tb_pedido SET nota_atendente=? WHERE  idpedido=?" ;
+    $sql = "UPDATE tb_pedido SET nota_atendente=? WHERE  idpedido=?";
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'di', $nota_atendente, $idpedido);

@@ -17,7 +17,7 @@
     </style>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $("#formUsuario").validate({
                 rules: {
                     nome: {
@@ -39,7 +39,7 @@
                 }
             });
 
-            $("#mostrarSenha").click(function (e) {
+            $("#mostrarSenha").click(function(e) {
                 e.preventDefault(); // impede o botão de enviar o formulário
                 let tipo = $("#senha").attr("type");
                 if (tipo === "password") {
@@ -55,28 +55,28 @@
 </head>
 
 <body class="fundo-usuario">
-    <div class="logo-cadastrar"></div> 
-  <form id="formUsuario" class="form-container form-cadastrar" action="salvarUsuario.php" method="post">
+    <div class="logo-cadastrar"></div>
+    <form id="formUsuario" class="form-container form-cadastrar" action="salvarUsuario.php" method="post">
 
-    <label for="nome" class="label-form">Nome:</label>
-    <div class="campo">
-      <input type="text" name="nome" id="nome">
-    </div>
-    </div>  
+        <label for="nome" class="label-form">Nome:</label>
+        <div class="campo">
+            <input type="text" name="nome" id="nome">
+        </div>
+        </div>
 
-    <label for="email" class="label-form">E-mail:</label>
-    <div class="campo">
-      <input type="text" name="email" id="email">
-    </div>
+        <label for="email" class="label-form">E-mail:</label>
+        <div class="campo">
+            <input type="text" name="email" id="email">
+        </div>
 
-    <label for="senha" class="label-form">Senha:</label>
-    <div class="campo">
-      <input type="password" name="senha" id="senha">
-      <button type="button" id="mostrarSenha">👁️</button> 
-    </div>
+        <label for="senha" class="label-form">Senha:</label>
+        <div class="campo">
+            <input type="password" name="senha" id="senha">
+            <button type="button" id="mostrarSenha">👁️</button>
+        </div>
 
-    <input type="submit" value="Cadastrar" class="botao-usuario">
-  </form>
+        <input type="submit" value="Cadastrar" class="botao-usuario">
+    </form>
 </body>
 
 

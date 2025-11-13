@@ -13,4 +13,3 @@ $sql = "INSERT INTO tb_usuario (nome, email, senha, tipo) VALUES ('$nome', '$ema
 mysqli_query($conexao, $sql);
 
 header("Location: index.php");
-?>
