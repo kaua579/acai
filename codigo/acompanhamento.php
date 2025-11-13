@@ -1,5 +1,4 @@
 <?php
-// (essas variáveis foram criadas na página "salvar_produto.php")
 session_start();
 require_once 'verificarLogado.php';
 
