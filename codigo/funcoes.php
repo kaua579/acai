@@ -477,6 +477,45 @@ function listarPedido($conexao)
 
     return $lista_pedido;
 }
+
+
+function listarPedidoCompleto($conexao)
+{
+    $sql = "SELECT * FROM tb_pedido";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+
+    $lista_pedido = [];
+    while ($pedido = mysqli_fetch_assoc($resultados)) {
+        $id_atendente = $pedido['tb_atendente_idatendente'];
+        $id_cliente = $pedido['tb_cliente_idcliente'];
+
+        $atendente = pesquisarAtendenteId($conexao, $id_atendente);
+        $cliente = pesquisarClienteId($conexao, $id_cliente);
+
+        $id_usuario_atendente = $atendente['tb_usuario_idusuario'];
+        $id_usuario_cliente = $cliente['tb_usuario_idusuario'];
+
+        $usuario_atendente = pesquisarUsuario($conexao, $id_usuario_atendente);
+        $usuario_cliente = pesquisarUsuario($conexao, $id_usuario_cliente);
+
+        $nome_atendente = $usuario_atendente['nome'];
+        $nome_cliente = $usuario_cliente['nome'];
+
+        $pedido['nome_atendente'] = $nome_atendente;
+        $pedido['nome_cliente'] = $nome_cliente;
+
+        $lista_pedido[] = $pedido;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_pedido;
+}
+
+
+
 /**
  * Editar um pedido no Banco de Dados
  * 
